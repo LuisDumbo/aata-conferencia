@@ -2,20 +2,36 @@ name: Publish Website to cPanel 2.0
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
-  ftp-deploy:
-    name: Deploy via FTPS (cPanel)
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
         with:
-          fetch-depth: 1
+          php-version: "8.2"
+          tools: composer:v2
+
+      - name: Install PHP dependencies (vendor)
+        run: composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Build assets (Vite)
+        run: npm run build
 
       - name: Deploy to cPanel via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -42,5 +58,7 @@ jobs:
             **/tests/**/*
             **/.env
             **/.env.*
+            storage/logs/**/*
+            storage/framework/**/*
             README.md
             LICENSE.txt

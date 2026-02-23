@@ -31,7 +31,7 @@ jobs:
           log-level: verbose
 
           local-dir: ./
-          server-dir: ifatsearm26.aata.ao/
+          server-dir: /ifatseaarm26.aata.ao/
 
           exclude: |
             **/.git*

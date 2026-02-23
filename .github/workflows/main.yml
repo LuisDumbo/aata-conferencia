@@ -12,22 +12,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
         with:
-          php-version: "8.2"
-          tools: composer:v2
+          fetch-depth: 1
 
-      - name: Install PHP dependencies (vendor)
-        run: composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
-
+      # Build do Vite no Actions (para gerar public/build/manifest.json)
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: Install Node dependencies
+      - name: Install Node deps
         run: npm ci
 
       - name: Build assets (Vite)
@@ -55,6 +49,7 @@ jobs:
             **/.github/**/*
             **/.vscode/**/*
             **/node_modules/**/*
+            **/vendor/**/*
             **/tests/**/*
             **/.env
             **/.env.*

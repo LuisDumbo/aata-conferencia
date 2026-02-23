@@ -21,6 +21,7 @@
                         <div class="leading-tight">
                             <p class="text-base font-extrabold text-slate-900">
                                 CONFERÊNCIA INTERNACIONAL
+                                
                             </p>
                             <p class="text-sm text-slate-500">
                                 Website Oficial do Evento

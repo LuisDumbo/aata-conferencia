@@ -8,14 +8,14 @@ on:
 
 jobs:
   ftp-deploy:
-    name: Deploy via FTP (cPanel)
+    name: Deploy via FTPS (cPanel)
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1   # evita puxar histórico grande
+          fetch-depth: 1
 
       - name: Deploy to cPanel via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -28,11 +28,13 @@ jobs:
           port: 21
           security: loose
           timeout: 600000
+          log-level: verbose
 
           local-dir: ./
-          server-dir: /public_html/   # <<< troque para a pasta do teu site
+          server-dir: /public_html/
 
           exclude: |
+            **/.git*
             **/.git*/**
             **/.github/**/*
             **/.vscode/**/*
@@ -40,7 +42,5 @@ jobs:
             **/tests/**/*
             **/.env
             **/.env.*
-            **/storage/logs/**/*
-            **/storage/framework/**/*
             README.md
             LICENSE.txt

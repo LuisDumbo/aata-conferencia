@@ -7,45 +7,7 @@
         <div class="absolute inset-0 bg-gradient-to-r from-indigo-950/95 via-indigo-900/70 to-indigo-900/25"></div>
 
         <!-- NAVBAR -->
-        <header class="relative z-10">
-            <div class="max-w-6xl mx-auto px-4 pt-6">
-                <div
-                    class="bg-white rounded-2xl shadow-lg px-4 py-3 sm:px-6 sm:py-4 flex items-center justify-between gap-3">
-                    <!-- logo -->
-                    <a href="#home" class="flex items-center gap-4">
-                        <div class="w-16 h-16 flex items-center justify-center">
-                            <img src="{{ asset('assets/logo.jpeg') }}" alt="Logo"
-                                class="w-full h-full object-contain">
-                        </div>
-
-                        <div class="leading-tight">
-                            <p class="text-base font-extrabold text-slate-900">
-                                CONFERÊNCIA INTERNACIONAL
-                                
-                            </p>
-                            <p class="text-sm text-slate-500">
-                                Website Oficial do Evento
-                            </p>
-                        </div>
-                    </a>
-
-                    <!-- links -->
-                    <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-700">
-                        <a href="#home" class="hover:text-slate-950">INÍCIO</a>
-                        <a href="#about" class="hover:text-slate-950">SOBRE</a>
-                        <a href="#speakers" class="hover:text-slate-950">PALESTRANTES</a>
-                        <a href="#partners" class="hover:text-slate-950">PARCEIROS & PATROCINADORES</a>
-                        <a href="#contact" class="hover:text-slate-950">CONTACTO</a>
-                    </nav>
-
-                    <!-- CTA -->
-                    <a href="#register"
-                        class="bg-indigo-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-indigo-800">
-                        INSCRIÇÃO
-                    </a>
-                </div>
-            </div>
-        </header>
+        <livewire:components.navbar />
 
         <!-- HERO CONTENT -->
         <div class="relative z-10">
@@ -144,4 +106,12 @@
             </div>
         </div>
     </section>
+
+
+    <livewire:components.countdown eventStart="2026-06-23T09:00:00" />
+
+
+    <livewire:components.about />
+    <livewire:components.speakers />
+    <livewire:components.partners />
 </div>

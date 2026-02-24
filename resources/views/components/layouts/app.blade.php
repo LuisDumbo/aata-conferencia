@@ -13,6 +13,11 @@
 <body>
 
     {{ $slot }}
+
+    <livewire:components.footer />
+
+    @livewireScripts
+    @stack('scripts')
 </body>
 
 </html>

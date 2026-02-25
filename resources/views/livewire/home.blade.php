@@ -114,4 +114,5 @@
     <livewire:components.about />
     <livewire:components.speakers />
     <livewire:components.partners />
+    <livewire:components.hero-banner />
 </div>

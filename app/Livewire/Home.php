@@ -19,7 +19,7 @@ class Home extends Component
             'tagline' => 'Promover a segurança e a excelência operacional em África através da implementação e
 Manutenção de sistemas CNS/ATM modernos.',
             'dates' => '23–26 de Junho de 2026',
-            'venue' => 'Centro de Convenções de Luanda, Luanda, Angola',
+            'venue' => ' Hotel Diamante',
 
             // Imagem do hero (pode ser local: asset("images/hero.jpg"))
             'hero_bg_url' => 'https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=2400&q=80',

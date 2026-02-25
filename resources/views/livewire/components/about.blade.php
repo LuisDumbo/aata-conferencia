@@ -49,7 +49,7 @@
                 </p>
 
                 <div class="mt-8">
-                    <a href="#sobre"
+                    <a href="{{ route('about') }}"
                         class="inline-flex items-center justify-center rounded-lg bg-indigo-700 px-6 py-3
                               text-sm font-extrabold text-white shadow-sm
                               hover:bg-indigo-800 transition-colors">
@@ -62,8 +62,8 @@
             <div class="flex justify-center lg:justify-end">
                 <div class="w-full max-w-[560px]">
                     <div class="rounded-none overflow-hidden shadow-none">
-                        <img src="{{ asset('assets/logo.jpeg') }}"
-                            alt="Evento / Conferência" class="w-full object-cover">
+                        <img src="{{ asset('assets/logo.jpeg') }}" alt="Evento / Conferência"
+                            class="w-full object-cover">
                     </div>
                 </div>
             </div>

@@ -1,6 +1,8 @@
 <div>
-    {{-- Do your work, then step back. --}}
+    {{-- The whole world belongs to you. --}}
+
     <livewire:components.page-nav-bar :title="$title" :subtitle="$subtitle" />
 
-    <livewire:components.contact-form />
+
+    <livewire:components.partners-grid />
 </div>

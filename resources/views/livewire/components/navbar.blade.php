@@ -34,6 +34,12 @@
                         PALESTRANTES
                     </a>
 
+                    <a href="{{ route('partners') }}"
+                        class="{{ request()->routeIs('partners') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
+                        PARCEIROS
+                    </a>
+
+
                     <a href="{{ route('contact') }}"
                         class="{{ request()->routeIs('contact') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
                         CONTACTO
@@ -79,6 +85,11 @@
                 <a @click="open=false" href="{{ route('speakers') }}"
                     class="{{ request()->routeIs('speakers') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
                     PALESTRANTES
+                </a>
+
+                <a @click="open=false" href="{{ route('partners') }}"
+                    class="{{ request()->routeIs('partners') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
+                    PARCEIROS
                 </a>
 
                 <a @click="open=false" href="{{ route('contact') }}"

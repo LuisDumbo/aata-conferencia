@@ -1,4 +1,6 @@
 <div>
     {{-- The whole world belongs to you. --}}
     <livewire:components.page-nav-bar :title="$title" :subtitle="$subtitle"/>
+
+    <livewire:components.speakers-gallery />
 </div>

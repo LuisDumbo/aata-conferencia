@@ -16,36 +16,18 @@ class SpeakersGallery extends Component
 
     public function render()
     {
-        // ✅ Opção 1: vindo do banco (recomendado)
-        // $speakers = Speaker::query()
-        //     ->orderBy('id', 'desc')
-        //     ->take($this->perPage)
-        //     ->get();
-        //
-        // $total = Speaker::count();
+        // 🔹 Buscar todos os oradores do ficheiro config/speakers.php
+        $all = collect(config('speakers', []));
 
-        // ✅ Opção 2: exemplo (troque pelos seus dados)
-        $all = collect([
-            ['name' => 'Sam Mahlangu', 'role' => 'IFATSEA AFRICA REGIONAL DIRECTOR', 'photo' => 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=1200&q=80'],
-            ['name' => 'Ing Frank Kofi Apeagyei', 'role' => 'IFATSEA PRESIDENT', 'photo' => 'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?auto=format&fit=crop&w=1200&q=80'],
-            ['name' => 'Ing. Nuako Victor Asiamah', 'role' => 'AIR TRAFFIC SAFETY ELECTRONICS PERSONNEL (GAA)', 'photo' => 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=1200&q=80'],
-            ['name' => 'Robert Jere Omusonga', 'role' => 'CHIEF OFFICER AIR NAVIGATION SERVICES', 'photo' => 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=1200&q=80'],
-            ['name' => 'Sam Mahlangu', 'role' => 'IFATSEA AFRICA REGIONAL DIRECTOR', 'photo' => 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=1200&q=80'],
-            ['name' => 'Ing Frank Kofi Apeagyei', 'role' => 'IFATSEA PRESIDENT', 'photo' => 'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?auto=format&fit=crop&w=1200&q=80'],
-            ['name' => 'Ing. Nuako Victor Asiamah', 'role' => 'AIR TRAFFIC SAFETY ELECTRONICS PERSONNEL (GAA)', 'photo' => 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=1200&q=80'],
-            ['name' => 'Robert Jere Omusonga', 'role' => 'CHIEF OFFICER AIR NAVIGATION SERVICES', 'photo' => 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=1200&q=80'],
-
-            ['name' => 'Sam Mahlangu', 'role' => 'IFATSEA AFRICA REGIONAL DIRECTOR', 'photo' => 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=1200&q=80'],
-            ['name' => 'Ing Frank Kofi Apeagyei', 'role' => 'IFATSEA PRESIDENT', 'photo' => 'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?auto=format&fit=crop&w=1200&q=80'],
-            ['name' => 'Ing. Nuako Victor Asiamah', 'role' => 'AIR TRAFFIC SAFETY ELECTRONICS PERSONNEL (GAA)', 'photo' => 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=1200&q=80'],
-            ['name' => 'Robert Jere Omusonga', 'role' => 'CHIEF OFFICER AIR NAVIGATION SERVICES', 'photo' => 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=1200&q=80'],
-
-            // ...adicione mais itens aqui (ou use BD)
-        ]);
-
+        // Total de registos
         $total = $all->count();
-        $speakers = $all->take($this->perPage)->values();
 
+        // Paginação manual (Load More)
+        $speakers = $all
+            ->take($this->perPage)
+            ->values();
+
+        // Verifica se ainda há mais registos
         $hasMore = $speakers->count() < $total;
 
         return view('livewire.components.speakers-gallery', [

@@ -32,7 +32,7 @@
                     <div class="swiper-wrapper">
                         @foreach ($speakers as $sp)
                             <div class="swiper-slide h-auto">
-                                <a href="#"
+                                <a href="{{ route('speakers.show', $sp['slug']) }}" 
                                     class="group relative block h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm
                    transition-all duration-300 ease-out
                    hover:-translate-y-2 hover:shadow-xl hover:border-indigo-200">

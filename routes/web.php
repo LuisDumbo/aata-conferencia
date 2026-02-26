@@ -4,6 +4,7 @@ use App\Livewire\Home;
 use App\Livewire\Pages\AboutPage;
 use App\Livewire\Pages\ContactPage;
 use App\Livewire\Pages\PartnersPage;
+use App\Livewire\Pages\Speakers\Show;
 use App\Livewire\Pages\SpeakersPage;
 use Illuminate\Support\Facades\Route;
 
@@ -11,5 +12,6 @@ Route::get('/', Home::class)->name('home');
 
 Route::get('/sobre', AboutPage::class)->name('about');
 Route::get('/palestrantes', SpeakersPage::class)->name('speakers');
+Route::get('/palestrantes/{slug}', Show::class)->name('speakers.show');
 Route::get('/contacto', ContactPage::class)->name('contact');
 Route::get('/parceiros', PartnersPage::class)->name('partners');

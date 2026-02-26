@@ -33,20 +33,33 @@
                         @foreach ($speakers as $sp)
                             <div class="swiper-slide h-auto">
                                 <a href="#"
-                                    class="group block h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm
-              transition-all duration-300 ease-out
-              hover:-translate-y-2 hover:shadow-xl hover:border-indigo-200">
+                                    class="group relative block h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm
+                   transition-all duration-300 ease-out
+                   hover:-translate-y-2 hover:shadow-xl hover:border-indigo-200">
 
                                     <div class="flex items-center gap-4">
+
+                                        <!-- FOTO / INICIAIS -->
                                         <div
-                                            class="h-12 w-12 rounded-xl bg-indigo-700/10 text-indigo-800 flex items-center justify-center font-extrabold
-                       transition-all duration-300 group-hover:bg-indigo-700 group-hover:text-white">
-                                            {{ $sp['initials'] }}
+                                            class="h-14 w-14 rounded-xl overflow-hidden flex items-center justify-center
+                            bg-indigo-700/10 text-indigo-800 font-extrabold text-sm
+                            transition-all duration-300
+                            group-hover:bg-indigo-700 group-hover:text-white">
+
+                                            @if (!empty($sp['photo']))
+                                                <img src="{{ asset($sp['photo']) }}" alt="{{ $sp['name'] }}"
+                                                    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                            @else
+                                                {{ $sp['initials'] }}
+                                            @endif
+
                                         </div>
 
+                                        <!-- NOME E CARGO -->
                                         <div>
                                             <p
-                                                class="text-base font-extrabold text-slate-900 group-hover:text-indigo-700 transition-colors duration-300">
+                                                class="text-base font-extrabold text-slate-900 
+                              group-hover:text-indigo-700 transition-colors duration-300">
                                                 {{ $sp['name'] }}
                                             </p>
                                             <p class="text-sm text-slate-600">
@@ -55,6 +68,7 @@
                                         </div>
                                     </div>
 
+                                    <!-- TEMA -->
                                     <div class="mt-4">
                                         <p class="text-xs font-bold uppercase tracking-widest text-slate-500">
                                             Tema
@@ -64,11 +78,11 @@
                                         </p>
                                     </div>
 
-                                    <!-- efeito de brilho suave -->
+                                    <!-- EFEITO DE BRILHO SUAVE -->
                                     <div
                                         class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100
-                    transition-opacity duration-300 pointer-events-none
-                    bg-gradient-to-br from-indigo-50/40 to-transparent">
+                        transition-opacity duration-300 pointer-events-none
+                        bg-gradient-to-br from-indigo-50/40 to-transparent">
                                     </div>
 
                                 </a>

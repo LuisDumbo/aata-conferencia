@@ -17,7 +17,7 @@ class Speakers extends Component
                 'role' => 'Chefe de Operações',
                 'org' => 'Organização',
                 'topic' => 'Reforço da competência operacional através de práticas modernas de segurança.',
-                'photo' => null, // ex: 'images/speakers/ana.jpg'
+                'photo' => 'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?auto=format&fit=crop&w=1200&q=80',
             ],
             [
                 'initials' => 'JM',
@@ -25,7 +25,7 @@ class Speakers extends Component
                 'role' => 'Engenheiro Sénior',
                 'org' => 'Empresa',
                 'topic' => 'Sistemas CNS/ATM resilientes: fiabilidade, manutenção e modernização.',
-                'photo' => null,
+                'photo' => 'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?auto=format&fit=crop&w=1200&q=80',
             ],
             [
                 'initials' => 'CN',
@@ -33,7 +33,7 @@ class Speakers extends Component
                 'role' => 'Gestora de Programas',
                 'org' => 'Instituição',
                 'topic' => 'Governação, normas e transformação sustentável em infraestruturas críticas.',
-                'photo' => null,
+                'photo' => 'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?auto=format&fit=crop&w=1200&q=80',
             ],
             [
                 'initials' => 'AS',
@@ -41,7 +41,7 @@ class Speakers extends Component
                 'role' => 'Chefe de Operações',
                 'org' => 'Organização',
                 'topic' => 'Reforço da competência operacional através de práticas modernas de segurança.',
-                'photo' => null, // ex: 'images/speakers/ana.jpg'
+                'photo' => 'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?auto=format&fit=crop&w=1200&q=80',
             ],
             [
                 'initials' => 'JM',
@@ -49,7 +49,7 @@ class Speakers extends Component
                 'role' => 'Engenheiro Sénior',
                 'org' => 'Empresa',
                 'topic' => 'Sistemas CNS/ATM resilientes: fiabilidade, manutenção e modernização.',
-                'photo' => null,
+                'photo' => 'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?auto=format&fit=crop&w=1200&q=80',
             ],
             [
                 'initials' => 'CN',
@@ -57,15 +57,15 @@ class Speakers extends Component
                 'role' => 'Gestora de Programas',
                 'org' => 'Instituição',
                 'topic' => 'Governação, normas e transformação sustentável em infraestruturas críticas.',
-                'photo' => null,
+                'photo' => 'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?auto=format&fit=crop&w=1200&q=80',
             ],
-              [
+            [
                 'initials' => 'JM',
                 'name' => 'João Mendes',
                 'role' => 'Engenheiro Sénior',
                 'org' => 'Empresa',
                 'topic' => 'Sistemas CNS/ATM resilientes: fiabilidade, manutenção e modernização.',
-                'photo' => null,
+                'photo' => 'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?auto=format&fit=crop&w=1200&q=80',
             ],
             [
                 'initials' => 'CN',
@@ -73,7 +73,7 @@ class Speakers extends Component
                 'role' => 'Gestora de Programas',
                 'org' => 'Instituição',
                 'topic' => 'Governação, normas e transformação sustentável em infraestruturas críticas.',
-                'photo' => null,
+                'photo' => 'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?auto=format&fit=crop&w=1200&q=80',
             ],
         ];
     }

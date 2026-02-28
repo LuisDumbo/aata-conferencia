@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 1
 
-      # Build do Vite no Actions (para gerar public/build/manifest.json)
+      # Build do Vite
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -27,6 +27,14 @@ jobs:
       - name: Build assets (Vite)
         run: npm run build
 
+      # 🔎 TESTE DE REDE (ANTES DO DEPLOY)
+      - name: Network check (FTP/FTPS)
+        run: |
+          set -x
+          echo "Testing port 21..."
+          nc -vz -w 7 ${{ secrets.FTP_SERVER }} 21
+
+      # 🚀 DEPLOY
       - name: Deploy to cPanel via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:

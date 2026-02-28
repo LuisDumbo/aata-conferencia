@@ -19,6 +19,8 @@ class SpeakersGallery extends Component
         // 🔹 Buscar todos os oradores do ficheiro config/speakers.php
         $all = collect(config('speakers', []));
 
+        dd($all );
+
         // Total de registos
         $total = $all->count();
 

@@ -1,4 +1,4 @@
-name: Publish Website to cPanel 2.0
+name: Publish Website to cPanel (Laravel)
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,17 +27,25 @@ jobs:
       - name: Build assets (Vite)
         run: npm run build
 
-      - name: Deploy to cPanel via FTPS (Laravel)
+      # Se você NÃO usa SSH/Composer no servidor, você PRECISA gerar o vendor aqui
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          tools: composer
+
+      - name: Install Composer deps (vendor)
+        run: composer install --no-dev --prefer-dist --optimize-autoloader --no-interaction
+
+      - name: Deploy to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
 
-          protocol: ftps
+          protocol: ftp
           port: 21
-          security: loose
-          passive: true
           timeout: 600000
           log-level: verbose
 

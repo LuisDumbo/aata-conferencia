@@ -1,4 +1,4 @@
-name: Publish Website to cPanel (Laravel)
+name: Publish Website to cPanel (Laravel) via SFTP
 
 on:
   push:
@@ -12,9 +12,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
 
+      # Node + Vite
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -27,7 +26,7 @@ jobs:
       - name: Build assets (Vite)
         run: npm run build
 
-      # Se você NÃO usa SSH/Composer no servidor, você PRECISA gerar o vendor aqui
+      # PHP + Composer (gera vendor/)
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -37,34 +36,14 @@ jobs:
       - name: Install Composer deps (vendor)
         run: composer install --no-dev --prefer-dist --optimize-autoloader --no-interaction
 
-      - name: Deploy to cPanel via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      # Enviar via SFTP
+      - name: Upload to cPanel via SFTP
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-
-          protocol: ftp
-          port: 21
-          timeout: 600000
-          log-level: verbose
-
-          local-dir: ./
-          server-dir: /ifatseaarm26.aata.ao/
-
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.github/**/*
-            **/.vscode/**/*
-            **/node_modules/**/*
-            **/tests/**/*
-            **/.env
-            **/.env.*
-            storage/logs/**/*
-            storage/framework/cache/**/*
-            storage/framework/sessions/**/*
-            storage/framework/views/**/*
-            **/*.log
-            README.md
-            LICENSE.txt
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: ${{ secrets.SFTP_PORT }}
+          source: "."
+          target: ${{ secrets.SFTP_TARGET }}
+          overwrite: true

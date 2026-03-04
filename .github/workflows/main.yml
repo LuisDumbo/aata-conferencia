@@ -8,18 +8,17 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
-      # Build do Vite no Actions (para gerar public/build/manifest.json)
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: "npm"
 
       - name: Install Node deps
         run: npm ci
@@ -27,7 +26,7 @@ jobs:
       - name: Build assets (Vite)
         run: npm run build
 
-      - name: Deploy to cPanel via FTPS
+      - name: Deploy to cPanel via FTPS (Laravel)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -37,6 +36,7 @@ jobs:
           protocol: ftps
           port: 21
           security: loose
+          passive: true
           timeout: 600000
           log-level: verbose
 
@@ -49,11 +49,13 @@ jobs:
             **/.github/**/*
             **/.vscode/**/*
             **/node_modules/**/*
-            **/vendor/**/*
             **/tests/**/*
             **/.env
             **/.env.*
             storage/logs/**/*
-            storage/framework/**/*
+            storage/framework/cache/**/*
+            storage/framework/sessions/**/*
+            storage/framework/views/**/*
+            **/*.log
             README.md
             LICENSE.txt

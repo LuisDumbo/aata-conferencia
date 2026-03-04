@@ -5,27 +5,42 @@ on:
     branches:
       - main
 
+# ✅ Dá permissão ao GITHUB_TOKEN para fazer push (resolver 403)
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # ✅ ajuda em operações de branch/push
+
       - name: Directory Permissions
         run: chmod -R 777 storage bootstrap/cache
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
       - run: npm install
       - run: npm run build
+
       - name: Commit built assets
         run: |
           git config --local user.email "achyutkneupane@gmail.com"
           git config --local user.name "Achyut Neupane"
+
           git checkout -B deploy
           git add -f public/
-          git commit -m "Build front-end assets"
+
+          # ✅ não falha se não houver mudanças
+          git diff --cached --quiet || git commit -m "Build front-end assets"
+
           git push -f origin deploy
+
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -41,13 +56,16 @@ jobs:
             cd ${{ secrets.MASTER_SSH_PATH }}
             chmod +x ./deploy.sh
             ./deploy.sh
+
   delete:
     name: Delete deploy branch
     runs-on: ubuntu-latest
     needs: deploy
     steps:
-      - name: Checkout branch
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # ✅
+
       - name: Delete deploy branch
         run: |
           git config --local user.email "achyutkneupane@gmail.com"

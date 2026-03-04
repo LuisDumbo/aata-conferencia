@@ -32,7 +32,7 @@
                     <div class="swiper-wrapper">
                         @foreach ($speakers as $sp)
                             <div class="swiper-slide h-auto">
-                                <a href="{{ route('speakers.show', $sp['slug']) }}" 
+                                <a href="{{ route('speakers.show', $sp['slug']) }}"
                                     class="group relative block h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm
                    transition-all duration-300 ease-out
                    hover:-translate-y-2 hover:shadow-xl hover:border-indigo-200">
@@ -107,7 +107,7 @@
                     </p>
                 </div>
 
-                <a href="#speakers"
+                <a href="{{ route('speakers') }}"
                     class="inline-flex items-center justify-center rounded-lg border border-slate-300 px-5 py-2.5 text-sm font-semibold hover:bg-slate-50">
                     Ver lista completa
                 </a>

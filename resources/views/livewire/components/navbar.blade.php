@@ -5,7 +5,7 @@
         <div class="bg-white rounded-2xl shadow-lg px-4 py-3 sm:px-6 sm:py-4 flex items-center justify-between gap-3">
 
             <!-- logo -->
-            <a href="#home" class="flex items-center gap-4">
+            <a href="{{ route('home') }}" class="flex items-center gap-4">
                 <div class="w-16 h-16 flex items-center justify-center">
                     <img src="{{ asset('assets/logo.jpeg') }}" alt="Logo" class="w-full h-full object-contain">
                 </div>

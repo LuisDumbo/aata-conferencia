@@ -27,7 +27,7 @@
             <div class="mt-8">
                 <a href="#download"
                     class="inline-flex items-center gap-2 rounded-md bg-indigo-700 px-6 py-3 text-sm font-semibold text-white hover:bg-indigo-800">
-                    <span>⬇</span>
+                    <i class="fa-solid fa-download"></i>
                     <span>TRANSFERIR</span>
                 </a>
             </div>
@@ -74,7 +74,7 @@
                     <div class="mt-8">
                         <a href="#register"
                             class="inline-flex items-center gap-2 rounded-md bg-amber-600 px-6 py-3 text-sm font-semibold text-white hover:bg-amber-700">
-                            <span>↗</span>
+                        
                             <span>INSCREVER-SE AGORA</span>
                         </a>
                     </div>

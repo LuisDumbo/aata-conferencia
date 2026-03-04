@@ -3,8 +3,8 @@
     <livewire:components.page-nav-bar :title="$title" :subtitle="$subtitle" />
 
     <div class="max-w-5xl mx-auto px-4 py-10">
-        <a href="{{ route('speakers') }}" 
-            class="inline-flex items-center text-sm font-semibold text-slate-600 hover:text-indigo-700">
+        <a href="{{ route('speakers') }}"
+            class="relative z-50 inline-flex items-center text-sm font-semibold text-slate-600 hover:text-indigo-700">
             ← Voltar aos oradores
         </a>
 

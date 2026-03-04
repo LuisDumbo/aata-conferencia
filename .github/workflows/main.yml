@@ -3,7 +3,7 @@ name: Deploy to Master
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to Master
+      - name: Deploy to main
         uses: appleboy/ssh-action@master
         with:
           username: ${{ secrets.MASTER_SSH_USERNAME }}

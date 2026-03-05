@@ -1,9 +1,9 @@
-name: Deploy Laravel via FTP (robust)
+name: Deploy Laravel via FTPS to ifatseaarm26.aata.ao
 
 on:
   push:
     branches:
-      - main
+      - main   # troque para master se for o seu caso
 
 concurrency:
   group: production
@@ -19,6 +19,12 @@ jobs:
         with:
           fetch-depth: 1
 
+      # Garante que NUNCA vai tentar subir .git/.github
+      - name: Remove git folders from workspace
+        run: |
+          rm -rf .git
+          rm -rf .github
+
       - name: Deploy to FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -26,35 +32,26 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
 
+          # pela mensagem TLSSocket no erro, você está em FTPS
           protocol: ftps
           port: 21
 
+          # mais folga para servidores lentos
           timeout: 300000
 
-          # use uma pasta que JA EXISTE (crie manualmente no servidor)
+          # SUA PASTA (conforme a imagem)
           server-dir: /ifatseaarm26.aata.ao/
 
           exclude: |
-            .git/**
-            **/.git/**
             **/.git*
-            .github/**
+            **/.git/**
             **/.github/**
-            vendor/**
             **/vendor/**
-            node_modules/**
             **/node_modules/**
-            tests/**
             **/tests/**
-            .env
-            .env.*
             **/.env
             **/.env.*
-            storage/logs/**
             **/storage/logs/**
-            storage/framework/cache/**
-            storage/framework/sessions/**
-            storage/framework/views/**
             **/storage/framework/cache/**
             **/storage/framework/sessions/**
             **/storage/framework/views/**

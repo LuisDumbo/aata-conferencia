@@ -1,13 +1,9 @@
-name: Deploy Laravel via FTPS to ifatseaarm26.aata.ao
+name: Publish Website to cPanel 2.0
 
 on:
   push:
-    branches:
-      - main   # troque para master se for o seu caso
-
-concurrency:
-  group: production
-  cancel-in-progress: true
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -19,39 +15,45 @@ jobs:
         with:
           fetch-depth: 1
 
-      # Garante que NUNCA vai tentar subir .git/.github
-      - name: Remove git folders from workspace
-        run: |
-          rm -rf .git
-          rm -rf .github
+      # Build do Vite no Actions (para gerar public/build/manifest.json)
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
 
-      - name: Deploy to FTPS
+      - name: Install Node deps
+        run: npm ci
+
+      - name: Build assets (Vite)
+        run: npm run build
+
+      - name: Deploy to cPanel via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
 
-          # pela mensagem TLSSocket no erro, você está em FTPS
           protocol: ftps
           port: 21
+          security: loose
+          timeout: 600000
+          log-level: verbose
 
-          # mais folga para servidores lentos
-          timeout: 300000
-
-          # SUA PASTA (conforme a imagem)
+          local-dir: ./
           server-dir: /ifatseaarm26.aata.ao/
 
           exclude: |
             **/.git*
-            **/.git/**
-            **/.github/**
-            **/vendor/**
-            **/node_modules/**
-            **/tests/**
+            **/.git*/**
+            **/.github/**/*
+            **/.vscode/**/*
+            **/node_modules/**/*
+            **/vendor/**/*
+            **/tests/**/*
             **/.env
             **/.env.*
-            **/storage/logs/**
-            **/storage/framework/cache/**
-            **/storage/framework/sessions/**
-            **/storage/framework/views/**
+            storage/logs/**/*
+            storage/framework/**/*
+            README.md
+            LICENSE.txt

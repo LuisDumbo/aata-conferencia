@@ -3,50 +3,34 @@ name: Deploy Laravel via FTP
 on:
   push:
     branches:
-      - main   # troque para master se for o seu caso
-
-concurrency:
-  group: production
-  cancel-in-progress: true
+      - main   # ou master dependendo do seu repo
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: "8.2"
+          php-version: '8.2'
           tools: composer:v2
 
-      - name: Install Composer dependencies
+      - name: Install dependencies
         run: composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader
 
-      # Opcional: se você tem frontend (Vite), descomente este bloco
-      # - name: Setup Node
-      #   uses: actions/setup-node@v4
-      #   with:
-      #     node-version: "20"
-      #     cache: "npm"
-      # - name: Build assets
-      #   run: |
-      #     npm ci
-      #     npm run build
-
-      # Cria caches do Laravel no runner (não precisa de servidor)
-      - name: Laravel optimize (no server required)
+      - name: Prepare Laravel cache
         run: |
           cp .env.example .env
-          php artisan key:generate --force
-          php artisan config:cache
+          php artisan key:generate
+          php artisan config:cache || true
           php artisan route:cache || true
           php artisan view:cache || true
 
-      - name: FTP Deploy (sync only changes)
+      - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -54,7 +38,8 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
-          server-dir: /ifatseaarm26.aata.ao/  # ajuste para o diretório correto no seu host
+          server-dir: /ifatseaarm26.aata.ao/
+          timeout: 120000
           exclude: |
             **/.git*
             **/.github/**

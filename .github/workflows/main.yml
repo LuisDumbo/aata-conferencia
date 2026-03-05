@@ -1,9 +1,9 @@
-name: Deploy Laravel via FTP (no vendor)
+name: Deploy Laravel via FTP (stable)
 
 on:
   push:
     branches:
-      - main # ou master
+      - main
 
 concurrency:
   group: production
@@ -12,21 +12,31 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Deploy to FTP (sync only changes)
+      - name: Network check to FTP
+        run: |
+          getent hosts "${{ secrets.FTP_SERVER }}" || true
+          timeout 10 bash -c 'cat < /dev/null > /dev/tcp/${{ secrets.FTP_SERVER }}/21' \
+            && echo "Port 21 OK" || (echo "Port 21 FAIL" && exit 1)
+
+      - name: Deploy to FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftp
+
+          protocol: ftps
           port: 21
+
+          # dá folga pra servidores lentos
+          timeout: 300000
+
+          # ajuste este caminho conforme o seu hosting
           server-dir: /ifatseaarm26.aata.ao/
-          timeout: 120000
+
           exclude: |
             **/.git*
             **/.github/**

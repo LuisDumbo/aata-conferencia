@@ -1,36 +1,23 @@
-name: Deploy Laravel via FTP
+name: Deploy Laravel via FTP (no vendor)
 
 on:
   push:
     branches:
-      - main   # ou master dependendo do seu repo
+      - main # ou master
+
+concurrency:
+  group: production
+  cancel-in-progress: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.2'
-          tools: composer:v2
-
-      - name: Install dependencies
-        run: composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader
-
-      - name: Prepare Laravel cache
-        run: |
-          cp .env.example .env
-          php artisan key:generate
-          php artisan config:cache || true
-          php artisan route:cache || true
-          php artisan view:cache || true
-
-      - name: Deploy to FTP
+      - name: Deploy to FTP (sync only changes)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -43,6 +30,7 @@ jobs:
           exclude: |
             **/.git*
             **/.github/**
+            **/vendor/**
             **/node_modules/**
             **/tests/**
             **/.env

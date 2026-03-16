@@ -52,7 +52,7 @@ jobs:
           script: |
             set -e
 
-            cd /ifatseaarm26.aata.ao
+            cd ifatseaarm26.aata.ao
 
             php artisan down || true
 

@@ -18,17 +18,20 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
 
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "npm"
 
+
       - name: Instalar dependências JS
         run: npm ci
 
       - name: Build frontend com Vite
         run: npm run build
+
 
   deploy:
     name: Deploy para produção
@@ -43,6 +46,7 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
+          passphrase: ${{ secrets.SERVER_SSH_PASSPHRASE }}
           port: ${{ secrets.SERVER_PORT }}
           script_stop: true
           script: |

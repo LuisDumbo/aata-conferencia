@@ -42,7 +42,7 @@ jobs:
           target: "/mnt/home8/aataao/ifatseaarm26.aata.ao"
           rm: false
 
-      - name: Executar deploy Laravel via SSH
+      - name: Executar comandos Laravel via SSH
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.SERVER_HOST }}
@@ -56,17 +56,6 @@ jobs:
 
             cd /mnt/home8/aataao/ifatseaarm26.aata.ao
 
-            php artisan down || true
-
-            composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
-
-            php artisan migrate --force
-            php artisan optimize:clear
             php artisan config:cache
             php artisan route:cache
             php artisan view:cache
-            php artisan storage:link || true
-
-            chmod -R 775 storage bootstrap/cache
-
-            php artisan up

@@ -8,106 +8,104 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-            {{-- CARD --}}
             <article class="text-center">
                 <div
-                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[120px] flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png"
-                        alt="Air Traffic and Navigation Services" class="max-h-16 w-auto object-contain">
+                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[160px] flex items-center justify-center">
+                    <img src="{{ asset('assets/parceiros/angola-gov.jpg') }}" alt="MinTrans"
+                        class="h-full max-h-[100px] w-auto object-contain">
                 </div>
-                <p class="mt-3 text-sm text-indigo-900 font-medium">
-                    Air Traffic and Navigation Services
-                </p>
+                <p class="mt-3 text-sm text-indigo-900 font-medium">MinTrans</p>
             </article>
 
             <article class="text-center">
                 <div
-                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[120px] flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png"
-                        alt="ACAMS Airport Tower Solutions" class="max-h-16 w-auto object-contain">
+                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[160px] flex items-center justify-center">
+                    <img src="{{ asset('assets/parceiros/enna.jfif') }}" alt="ENNA-EP"
+                        class="h-full max-h-[100px] w-auto object-contain">
                 </div>
-                <p class="mt-3 text-sm text-indigo-900 font-medium">
-                    ACAMS Airport Tower Solutions
-                </p>
+                <p class="mt-3 text-sm text-indigo-900 font-medium">ENNA-EP</p>
             </article>
 
             <article class="text-center">
                 <div
-                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[120px] flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="SITTI"
-                        class="max-h-16 w-auto object-contain">
+                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[160px] flex items-center justify-center">
+                    <img src="{{ asset('assets/parceiros/taag.jpg') }}" alt="TAAG-SA"
+                        class="h-full max-h-[100px] w-auto object-contain">
                 </div>
-                <p class="mt-3 text-sm text-indigo-900 font-medium">
-                    SITTI
-                </p>
+                <p class="mt-3 text-sm text-indigo-900 font-medium">TAAG-SA</p>
             </article>
 
             <article class="text-center">
                 <div
-                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[120px] flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="Jotron"
-                        class="max-h-16 w-auto object-contain">
+                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[160px] flex items-center justify-center">
                 </div>
-                <p class="mt-3 text-sm text-indigo-900 font-medium">
-                    Jotron
-                </p>
+                <p class="mt-3 text-sm text-indigo-900 font-medium">RNA</p>
             </article>
 
             <article class="text-center">
                 <div
-                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[120px] flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png"
-                        alt="Uganda Civil Aviation Authority" class="max-h-16 w-auto object-contain">
+                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[160px] flex items-center justify-center">
+                    <img src="{{ asset('assets/parceiros/ACAMS_Logo.jpg') }}" alt="ACAMS"
+                        class="h-full max-h-[100px] w-auto object-contain">
                 </div>
-                <p class="mt-3 text-sm text-indigo-900 font-medium">
-                    Uganda Civil Aviation Authority
-                </p>
+                <p class="mt-3 text-sm text-indigo-900 font-medium">ACAMS</p>
             </article>
 
             <article class="text-center">
                 <div
-                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[120px] flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png"
-                        alt="Uganda Institution of Professional Engineers" class="max-h-16 w-auto object-contain">
+                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[160px] flex items-center justify-center">
+                    <img src="{{ asset('assets/parceiros/jotron.png') }}" alt="JOTRON"
+                        class="h-full max-h-[100px] w-auto object-contain">
                 </div>
-                <p class="mt-3 text-sm text-indigo-900 font-medium">
-                    Uganda Institution of Professional Engineers
-                </p>
+                <p class="mt-3 text-sm text-indigo-900 font-medium">JOTRON</p>
             </article>
 
             <article class="text-center">
                 <div
-                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[120px] flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png"
-                        alt="Uganda Aviation Information Services Officers Association"
-                        class="max-h-16 w-auto object-contain">
+                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[160px] flex items-center justify-center">
                 </div>
-                <p class="mt-3 text-sm text-indigo-900 font-medium">
-                    Uganda Aviation Information Services Officers Association
-                </p>
+                <p class="mt-3 text-sm text-indigo-900 font-medium">CAIEC</p>
             </article>
 
             <article class="text-center">
                 <div
-                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[120px] flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png"
-                        alt="Uganda Air Traffic Controllers Association" class="max-h-16 w-auto object-contain">
+                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[160px] flex items-center justify-center">
                 </div>
-                <p class="mt-3 text-sm text-indigo-900 font-medium">
-                    Uganda Air Traffic Controllers Association
-                </p>
+                <p class="mt-3 text-sm text-indigo-900 font-medium">Marave</p>
             </article>
 
             <article class="text-center">
                 <div
-                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[120px] flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png"
-                        alt="Uganda Air Transport Safety Engineering Association"
-                        class="max-h-16 w-auto object-contain">
+                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[160px] flex items-center justify-center">
                 </div>
-                <p class="mt-3 text-sm text-indigo-900 font-medium">
-                    Uganda Air Transport Safety Engineering Association
-                </p>
+                <p class="mt-3 text-sm text-indigo-900 font-medium">KLIBITY</p>
+            </article>
+
+            <article class="text-center">
+                <div
+                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[160px] flex items-center justify-center">
+                    <img src="{{ asset('assets/parceiros/lantech.webp') }}" alt="LANTECH"
+                        class="h-full max-h-[100px] w-auto object-contain">
+                </div>
+                <p class="mt-3 text-sm text-indigo-900 font-medium">LANTECH</p>
+            </article>
+
+            <article class="text-center">
+                <div
+                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[160px] flex items-center justify-center">
+                    <img src="{{ asset('assets/parceiros/callwave.png') }}" alt="CALLWAVE"
+                        class="h-full max-h-[100px] w-auto object-contain">
+                </div>
+                <p class="mt-3 text-sm text-indigo-900 font-medium">CALLWAVE</p>
+            </article>
+
+            <article class="text-center">
+                <div
+                    class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[160px] flex items-center justify-center">
+                    <img src="{{ asset('assets/parceiros/thales.png') }}" alt="THALES"
+                        class="h-full max-h-[100px] w-auto object-contain">
+                </div>
+                <p class="mt-3 text-sm text-indigo-900 font-medium">THALES</p>
             </article>
 
         </div>

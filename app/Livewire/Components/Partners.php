@@ -12,26 +12,68 @@ class Partners extends Component
     public function mount(): void
     {
         $this->partners = [
+
             [
-                'name' => 'ACAMS Airport Tower Solutions',
+                'name' => 'MinTrans',
+                'logo' => 'assets/parceiros/angola-gov.jpg',
+                'url'  => '#',
+            ],
+            [
+                'name' => 'ENNA-EP',
+                'logo' => 'assets/parceiros/enna.jfif',
+                'url'  => '#',
+            ],
+            [
+                'name' => 'TAAG-SA',
+                'logo' => 'assets/parceiros/taag.jpg',
+                'url'  => '#',
+            ],
+            [
+                'name' => 'RNA',
                 'logo' => 'https://dummyimage.com/520x220/ffffff/0f172a&text=ACAMS',
-                'url'  => 'https://example.com',
+                'url'  => '#',
             ],
             [
-                'name' => 'SITTI',
-                'logo' => 'https://dummyimage.com/520x220/ffffff/0f172a&text=SITTI',
-                'url'  => 'https://example.com',
+                'name' => 'ACAMS',
+                'logo' => 'assets/parceiros/ACAMS_Logo.jpg',
+                'url'  => '#',
             ],
             [
-                'name' => 'Jotron',
-                'logo' => 'https://dummyimage.com/520x220/ffffff/0f172a&text=Jotron',
-                'url'  => 'https://example.com',
+                'name' => 'JOTRON',
+                'logo' => 'assets/parceiros/jotron.png',
+                'url'  => '#',
             ],
             [
-                'name' => 'Partner 4',
-                'logo' => 'https://dummyimage.com/520x220/ffffff/0f172a&text=Partner+4',
-                'url'  => 'https://example.com',
+                'name' => 'CAIEC',
+                'logo' => 'https://dummyimage.com/520x220/ffffff/0f172a&text=ACAMS',
+                'url'  => '#',
             ],
+            [
+                'name' => 'Marave',
+                'logo' => 'https://dummyimage.com/520x220/ffffff/0f172a&text=ACAMS',
+                'url'  => '#',
+            ],
+            [
+                'name' => 'KLIBITY',
+                'logo' => 'https://dummyimage.com/520x220/ffffff/0f172a&text=ACAMS',
+                'url'  => '#',
+            ],
+            [
+                'name' => 'LANTECH',
+                'logo' => 'assets/parceiros/lantech.webp',
+                'url'  => '#',
+            ],
+            [
+                'name' => 'CALLWAVE',
+                'logo' => 'assets/parceiros/callwave.png',
+                'url'  => '#',
+            ],
+            [
+                'name' => 'THALES',
+                'logo' => 'assets/parceiros/thales.png',
+                'url'  => '#',
+            ],
+
         ];
     }
 

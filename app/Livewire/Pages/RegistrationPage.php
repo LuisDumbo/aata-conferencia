@@ -46,7 +46,6 @@ class RegistrationPage extends Component
 
     // Pagamento
     public string $modalidade_pagamento = '';
-    public bool $comprovativo_anexado = false;
 
     // Adicionais + Declaração
     public string $informacoes_adicionais = '';
@@ -164,7 +163,8 @@ class RegistrationPage extends Component
             'apoio_visto'            => $this->apoio_visto,
             'restricoes_alimentares' => $this->restricoes_alimentares ?: null,
             'modalidade_pagamento'   => $this->modalidade_pagamento ?: null,
-            'comprovativo_anexado'   => $this->comprovativo_anexado,
+            'comprovativo_anexado'   => false,
+
             'informacoes_adicionais' => $this->informacoes_adicionais ?: null,
             'aceita_termos'          => $this->aceita_termos,
         ]);
@@ -176,7 +176,7 @@ class RegistrationPage extends Component
             'validade_documento', 'organizacao', 'funcao', 'area_atuacao', 'anos_experiencia',
             'email', 'telefone', 'pais_residencia', 'tipo_participacao', 'apresenta_tema',
             'tema', 'data_chegada', 'data_partida', 'apoio_alojamento', 'apoio_transporte',
-            'apoio_visto', 'restricoes_alimentares', 'modalidade_pagamento', 'comprovativo_anexado',
+            'apoio_visto', 'restricoes_alimentares', 'modalidade_pagamento',
             'informacoes_adicionais', 'aceita_termos',
         ]);
 

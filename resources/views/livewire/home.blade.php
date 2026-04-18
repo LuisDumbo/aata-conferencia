@@ -36,7 +36,7 @@
                         </p>
 
                         <div class="mt-8 flex flex-wrap gap-3">
-                            <a href="#register"
+                            <a href="{{ route('registration') }}"
                                 class="bg-white text-indigo-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100">
                                 INSCREVER AGORA
                             </a>

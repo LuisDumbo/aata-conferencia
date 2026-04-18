@@ -47,7 +47,7 @@
                 </nav>
 
                 <!-- CTA desktop -->
-                <a href="#register"
+                <a href="{{ route('registration') }}"
                     class="bg-indigo-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-indigo-800">
                     INSCRIÇÃO
                 </a>
@@ -98,7 +98,7 @@
                 </a>
 
                 <!-- CTA no mobile dentro do dropdown -->
-                <a @click="open=false" href="#register"
+                <a @click="open=false" href="{{ route('registration') }}"
                     class="mt-2 bg-indigo-700 text-white px-5 py-2.5 rounded-lg text-center font-semibold hover:bg-indigo-800">
                     INSCRIÇÃO
                 </a>

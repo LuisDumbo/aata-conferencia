@@ -20,6 +20,20 @@
                 Preencha o formulário abaixo para formalizar a sua inscrição no evento internacional da IFATSEA.
             </p>
 
+            <div class="mt-5 inline-flex max-w-2xl items-start gap-3 rounded-2xl border border-indigo-100 bg-indigo-50 px-5 py-4 text-left">
+                <div class="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-700">
+                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V7m0 10v-1m-6-4h12" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-sm font-semibold text-indigo-900">Taxa de inscrição</p>
+                    <p class="mt-1 text-sm leading-7 text-indigo-800">
+                        150 USD por delegado e 50 USD para cônjuges.
+                    </p>
+                </div>
+            </div>
+
             <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
                 <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 px-4 py-2 rounded-xl">
                     <svg class="w-4 h-4 text-indigo-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">

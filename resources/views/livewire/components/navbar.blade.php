@@ -29,6 +29,11 @@
                         SOBRE
                     </a>
 
+                    <a href="{{ route('schedule') }}"
+                        class="{{ request()->routeIs('schedule') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
+                        PROGRAMA
+                    </a>
+
                     <a href="{{ route('speakers') }}"
                         class="{{ request()->routeIs('speakers') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
                         PALESTRANTES
@@ -80,6 +85,11 @@
                 <a @click="open=false" href="{{ route('about') }}"
                     class="{{ request()->routeIs('about') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
                     SOBRE
+                </a>
+
+                <a @click="open=false" href="{{ route('schedule') }}"
+                    class="{{ request()->routeIs('schedule') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
+                    PROGRAMA
                 </a>
 
                 <a @click="open=false" href="{{ route('speakers') }}"

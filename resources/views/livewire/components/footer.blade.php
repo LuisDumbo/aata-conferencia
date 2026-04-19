@@ -8,7 +8,8 @@
 
         <div class="flex gap-4 font-semibold">
             <a href="{{ route('home') }}" class="hover:text-slate-900">Início</a>
-            <a href="#register" class="hover:text-slate-900">Inscrição</a>
+            <a href="{{ route('schedule') }}" class="hover:text-slate-900">Programa</a>
+            <a href="{{ route('registration') }}" class="hover:text-slate-900">Inscrição</a>
             <a href="{{ route('contact') }}" class="hover:text-slate-900">Contacto</a>
         </div>
 

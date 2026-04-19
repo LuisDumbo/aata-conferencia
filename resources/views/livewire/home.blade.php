@@ -40,7 +40,7 @@
                                 class="bg-white text-indigo-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100">
                                 INSCREVER AGORA
                             </a>
-                            <a href="#schedule"
+                            <a href="{{ route('schedule') }}"
                                 class="border border-white/60 px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-900">
                                 VER PROGRAMA
                             </a>

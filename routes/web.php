@@ -6,6 +6,7 @@ use App\Livewire\Pages\ContactPage;
 use App\Livewire\Pages\PartnersPage;
 use App\Livewire\Pages\RegistrationPage;
 use App\Livewire\Pages\SchedulePage;
+use App\Livewire\Pages\StayPage;
 use App\Livewire\Pages\Speakers\Show;
 use App\Livewire\Pages\SpeakersPage;
 use Illuminate\Support\Facades\Route;
@@ -14,6 +15,7 @@ Route::get('/', Home::class)->name('home');
 
 Route::get('/sobre', AboutPage::class)->name('about');
 Route::get('/programa', SchedulePage::class)->name('schedule');
+Route::get('/hoteis-e-alojamentos', StayPage::class)->name('hotels');
 Route::get('/palestrantes', SpeakersPage::class)->name('speakers');
 Route::get('/palestrantes/{slug}', Show::class)->name('speakers.show');
 Route::get('/contacto', ContactPage::class)->name('contact');

@@ -35,7 +35,7 @@
                     <div class="relative">
 
                         <button type="button" @click="dropdownOpen = !dropdownOpen"
-                            class="flex items-center gap-1 py-2 {{ request()->routeIs('schedule') || request()->routeIs('speakers') || request()->routeIs('partners') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
+                            class="flex items-center gap-1 py-2 {{ request()->routeIs('schedule') || request()->routeIs('speakers') || request()->routeIs('partners') || request()->routeIs('hotels') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
                             EVENTO
                             <svg class="w-4 h-4 transition" :class="dropdownOpen ? 'rotate-180' : ''" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -127,7 +127,7 @@
                             class="{{ request()->routeIs('partners') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">Parceiros</a>
                         <a @click="open=false; mobileDropdownOpen=false" href="{{ route('hotels') }}"
                             class="{{ request()->routeIs('hotels') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">Hoteis
-                            & Alojamentos
+                            & Alojamentos</a>
                     </div>
                 </div>
 

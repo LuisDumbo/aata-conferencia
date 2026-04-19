@@ -2,11 +2,16 @@
 
 namespace App\Livewire;
 
+use App\Traits\DownloadFile;
 use Livewire\Component;
 use Carbon\Carbon;
 
 class Home extends Component
 {
+
+   use DownloadFile;
+
+   
     public array $event = [];
 
     public function mount(): void
@@ -45,6 +50,8 @@ Manutenção de sistemas CNS/ATM modernos.',
             return 'Data inválida (verifique start_iso)';
         }
     }
+
+
 
     public function render()
     {

@@ -23,13 +23,19 @@
                 Aceda à agenda oficial da 16ª Reunião Regional Africana da IFATSEA.
                 Faça o download agora para se manter informado e planear a sua participação.
             </p>
-
             <div class="mt-8">
-                <a href="#download"
-                    class="inline-flex items-center gap-2 rounded-md bg-indigo-700 px-6 py-3 text-sm font-semibold text-white hover:bg-indigo-800">
-                    <i class="fa-solid fa-download"></i>
-                    <span>TRANSFERIR</span>
-                </a>
+                <button type="button" wire:click="download" wire:loading.attr="disabled" wire:target="download"
+                    class="inline-flex cursor-pointer items-center gap-2 rounded-md bg-indigo-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-indigo-800 disabled:cursor-not-allowed disabled:opacity-70">
+                    <span wire:loading.remove wire:target="download" class="inline-flex items-center gap-2">
+                        <i class="fa-solid fa-download"></i>
+                        <span>TRANSFERIR</span>
+                    </span>
+
+                    <span wire:loading wire:target="download" class="inline-flex items-center gap-2">
+                        <i class="fa-solid fa-spinner animate-spin"></i>
+                        <span>A transferir...</span>
+                    </span>
+                </button>
             </div>
 
         </div>
@@ -72,9 +78,9 @@
                     </p>
 
                     <div class="mt-8">
-                        <a href="#register"
+                        <a href="{{ route('registration') }}"
                             class="inline-flex items-center gap-2 rounded-md bg-amber-600 px-6 py-3 text-sm font-semibold text-white hover:bg-amber-700">
-                        
+
                             <span>INSCREVER-SE AGORA</span>
                         </a>
                     </div>

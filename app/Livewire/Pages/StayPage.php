@@ -5,12 +5,12 @@ namespace App\Livewire\Pages;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-#[Title('Aonde Se Hospedar | 16.a Reuniao da Regiao Africa da IFATSEA')]
+#[Title('Onde se Hospedar | 16.ª Reunião da Região África da IFATSEA')]
 class StayPage extends Component
 {
-    public string $title = 'Aonde Se Hospedar';
+    public string $title = 'Onde se Hospedar';
 
-    public string $subtitle = 'Sugestoes de hoteis em Luanda para delegados, palestrantes e participantes que procuram opcoes alinhadas ao evento.';
+    public string $subtitle = 'Sugestões de hotéis em Luanda para delegados, palestrantes e participantes que procuram opções alinhadas ao evento.';
 
     public array $hotels = [];
 
@@ -19,21 +19,21 @@ class StayPage extends Component
         $this->hotels = [
             [
                 'name' => 'Hotel Diamante',
-                'category' => 'Referencia principal',
+                'category' => 'Referência principal',
                 'location' => 'Luanda',
-                'description' => 'O Hotel Diamante e uma unidade hoteleira de 4 estrelas, situada na Marginal de Luanda (Rua das Kipakas), no centro financeiro e administrativo, inaugurado em 2015 pelo grupo Endiama.',
+                'description' => 'O Hotel Diamante é uma unidade hoteleira de 4 estrelas, situada na Marginal de Luanda (Rua das Kipakas), no centro financeiro e administrativo, inaugurado em 2015 pelo grupo Endiama.',
                 'expanded_description' => [
-                    'Oferece 174 quartos, restaurante, piscina, spa, ginasio e salas de reunioes, sendo conhecido pela relacao qualidade-preco, conforto e localizacao privilegiada.',
-                    'Detalhes principais do Hotel Diamante Luanda: localizacao na Rua das Kipakas, Marginal, proximo ao Porto de Luanda.',
-                    'Acomodacoes: 174 quartos, incluindo opcoes Standard, Executivos e Suites com design moderno.',
-                    'Servicos e comodidades: piscina, ginasio, spa, restaurante, bar, salas de reunioes, anfiteatro, internet gratuita nas areas publicas e transfer do aeroporto.',
-                    'Experiencia: oferece brunch de domingo e pacotes festivos.',
-                    'O hotel e focado no conforto de viajantes de negocios e lazer, com o lema "Aqui o nosso hospede e quem brilha".',
+                    'Oferece 174 quartos, restaurante, piscina, spa, ginásio e salas de reuniões, sendo conhecido pela relação qualidade-preço, conforto e localização privilegiada.',
+                    'Detalhes principais do Hotel Diamante Luanda: localização na Rua das Kipakas, Marginal, próximo ao Porto de Luanda.',
+                    'Acomodações: 174 quartos, incluindo opções Standard, Executivos e Suites com design moderno.',
+                    'Serviços e comodidades: piscina, ginásio, spa, restaurante, bar, salas de reuniões, anfiteatro, internet gratuita nas áreas públicas e transfer do aeroporto.',
+                    'Experiência: oferece brunch de domingo e pacotes festivos.',
+                    'O hotel é focado no conforto de viajantes de negócios e lazer, com o lema "Aqui o nosso hóspede é quem brilha".',
                     'Reservas e contactos: +244 949 902 927 / +244 928 195 360 / +244 923 763 260 | reservas@hoteldiamante.co.ao | hoteldiamante.co.ao',
                 ],
                 'links' => [
                     [
-                        'label' => 'Ver localizacao',
+                        'label' => 'Ver localização',
                         'url' => 'https://www.google.com/maps/search/?api=1&query=Hotel+Diamante+Luanda',
                     ],
                     [
@@ -46,7 +46,7 @@ class StayPage extends Component
                 'name' => 'Hotel Continental Horizonte',
                 'category' => 'Reserva online',
                 'location' => 'Luanda',
-                'description' => 'Opcao adicionada a partir do link enviado para consulta e reserva.',
+                'description' => 'Opção adicionada a partir do link enviado para consulta e reserva.',
                 'links' => [
                     [
                         'label' => 'Abrir Booking',
@@ -58,7 +58,7 @@ class StayPage extends Component
                 'name' => 'Hotel Presidente Luanda',
                 'category' => 'Site oficial',
                 'location' => 'Luanda',
-                'description' => 'Ligacao directa para o site oficial do hotel.',
+                'description' => 'Ligação direta para o site oficial do hotel.',
                 'links' => [
                     [
                         'label' => 'Abrir site oficial',
@@ -94,7 +94,7 @@ class StayPage extends Component
                 'name' => 'EPIC SANA Luanda Hotel',
                 'category' => 'Reserva online',
                 'location' => 'Luanda',
-                'description' => 'Opcao incluida na lista enviada para consulta directa em Booking.com.',
+                'description' => 'Opção incluída na lista enviada para consulta direta em Booking.com.',
                 'links' => [
                     [
                         'label' => 'Abrir Booking',
@@ -106,7 +106,7 @@ class StayPage extends Component
                 'name' => 'Hotel Costa',
                 'category' => 'Links de consulta',
                 'location' => 'Luanda',
-                'description' => 'Este hotel foi enviado com mais de uma referencia para facilitar a comparacao de informacoes.',
+                'description' => 'Este hotel foi enviado com mais de uma referência para facilitar a comparação de informações.',
                 'links' => [
                     [
                         'label' => 'Abrir TripAdvisor',
@@ -122,7 +122,7 @@ class StayPage extends Component
                 'name' => 'Aparthotel Tropicana',
                 'category' => 'Comparador de tarifas',
                 'location' => 'Luanda',
-                'description' => 'Ligacao adicionada para consulta no Trivago.',
+                'description' => 'Ligação adicionada para consulta no Trivago.',
                 'links' => [
                     [
                         'label' => 'Abrir Trivago',

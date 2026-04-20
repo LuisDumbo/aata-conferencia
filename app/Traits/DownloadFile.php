@@ -6,7 +6,7 @@ trait DownloadFile
 {
     public function download()
     {
-        $path = public_path('store/IFATSEA Africa Region Meeting.pdf');
+        $path = public_path('store/Programme - 16th IFATSEA ARM - Luanda.pdf');
 
         if (! file_exists($path)) {
             abort(404);

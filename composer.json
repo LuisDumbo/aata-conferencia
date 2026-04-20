@@ -39,7 +39,7 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@/usr/local/bin/php artisan package:discover --ansi",
+            "@php artisan package:discover --ansi",
             "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [

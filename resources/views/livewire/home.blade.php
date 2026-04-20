@@ -17,12 +17,12 @@
                         <div class="flex flex-col gap-2 text-white/90">
                             <div class="inline-flex items-center gap-2 text-sm font-semibold">
                                 <span
-                                    class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/10">📅</span>
+                                    class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/10"><i class="fa-solid fa-calendar"></i></span>
                                 <span class="uppercase tracking-wide">{{ t('event.dates') }}</span>
                             </div>
                             <div class="inline-flex items-center gap-2 text-sm font-semibold">
                                 <span
-                                    class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/10">📍</span>
+                                    class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/10"><i class="fa-solid fa-location-dot"></i></span>
                                 <span class="uppercase tracking-wide">{{ t('event.venue') }}</span>
                             </div>
                         </div>
@@ -46,9 +46,7 @@
                             </a>
                         </div>
 
-                        <p class="mt-6 text-sm text-white/65">
-                            {{ t('hero.start_label') }}: <span class="font-semibold text-white/90">{{ $this->startLabel }}</span>
-                        </p>
+                  
                     </div>
 
                     <!-- right panel (visual formal) -->

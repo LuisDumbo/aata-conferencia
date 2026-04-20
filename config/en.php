@@ -84,7 +84,7 @@ return [
 
     'event' => [
         'title'   => '16th IFATSEA Africa Regional Meeting',
-        'tagline' => 'Promoting safety and operational excellence in Africa through the implementation and maintenance of modern CNS/ATM systems.',
+        'tagline' => 'Promoting security and operational excellence in África though the implementation and maintenance of modern CNS/ATM Systems',
         'dates'   => 'June 23–26, 2026',
         'venue'   => 'Hotel Diamante',
     ],

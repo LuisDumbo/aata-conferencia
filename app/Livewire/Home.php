@@ -9,9 +9,9 @@ use Carbon\Carbon;
 class Home extends Component
 {
 
-   use DownloadFile;
+    use DownloadFile;
 
-   
+
     public array $event = [];
 
     public function mount(): void
@@ -21,8 +21,7 @@ class Home extends Component
             'start_iso' => '2026-06-15T09:00:00+01:00',
 
             'title' => '16ª Reunião da Região África da IFATSEA',
-            'tagline' => 'Promover a segurança e a excelência operacional em África através da implementação e
-Manutenção de sistemas CNS/ATM modernos.',
+            'tagline' => 'Promover a segurança e a excelência operacional em África através da implementação e manutenção de sistemas CNS/ATM modernos.',
             'dates' => '23–26 de Junho de 2026',
             'venue' => ' Hotel Diamante',
 

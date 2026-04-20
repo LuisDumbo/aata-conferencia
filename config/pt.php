@@ -12,7 +12,7 @@ return [
         'contact'      => 'CONTACTO',
         'registration'  => 'INSCRIÇÃO',
         'brand_title'   => 'CONFERÊNCIA INTERNACIONAL',
-        'brand_subtitle'=> 'Website Oficial do Evento',
+        'brand_subtitle' => 'Website Oficial do Evento',
     ],
 
     'hero' => [
@@ -84,7 +84,7 @@ return [
 
     'event' => [
         'title'   => '16ª Reunião da Região África da IFATSEA',
-        'tagline' => 'Promover a segurança e a excelência operacional em África através da implementação e Manutenção de sistemas CNS/ATM modernos.',
+        'tagline' => 'Promover a segurança e a excelência operacional em África através da implementação e manutenção de sistemas CNS/ATM modernos.',
         'dates'   => '23–26 de Junho de 2026',
         'venue'   => 'Hotel Diamante',
     ],
@@ -108,7 +108,9 @@ return [
 
         'hotels' => [
             [
-                'name' => 'Hotel Diamante', 'category' => 'Referência principal', 'location' => 'Luanda',
+                'name' => 'Hotel Diamante',
+                'category' => 'Referência principal',
+                'location' => 'Luanda',
                 'description' => 'O Hotel Diamante é uma unidade hoteleira de 4 estrelas, situada na Marginal de Luanda (Rua das Kipakas), no centro financeiro e administrativo, inaugurado em 2015 pelo grupo Endiama.',
                 'expanded_description' => [
                     'Oferece 174 quartos, restaurante, piscina, spa, ginásio e salas de reuniões, sendo conhecido pela relação qualidade-preço, conforto e localização privilegiada.',
@@ -124,32 +126,44 @@ return [
                 ],
             ],
             [
-                'name' => 'Hotel Continental Horizonte', 'category' => 'Reserva online', 'location' => 'Luanda',
+                'name' => 'Hotel Continental Horizonte',
+                'category' => 'Reserva online',
+                'location' => 'Luanda',
                 'description' => 'Opção adicionada a partir do link enviado para consulta e reserva.',
                 'links' => [['label' => 'Abrir Booking', 'url' => 'https://www.booking.com/Share-tXPwox']],
             ],
             [
-                'name' => 'Hotel Presidente Luanda', 'category' => 'Site oficial', 'location' => 'Luanda',
+                'name' => 'Hotel Presidente Luanda',
+                'category' => 'Site oficial',
+                'location' => 'Luanda',
                 'description' => 'Ligação direta para o site oficial do hotel.',
                 'links' => [['label' => 'Abrir site oficial', 'url' => 'https://www.hotelpresidenteluanda.com/']],
             ],
             [
-                'name' => 'Skyna Hotel Luanda', 'category' => 'Reserva online', 'location' => 'Luanda',
+                'name' => 'Skyna Hotel Luanda',
+                'category' => 'Reserva online',
+                'location' => 'Luanda',
                 'description' => null,
                 'links' => [['label' => 'Abrir Booking', 'url' => 'https://www.booking.com/Share-X70TWz']],
             ],
             [
-                'name' => 'RK Suite Hotel', 'category' => 'Reserva online', 'location' => 'Luanda',
+                'name' => 'RK Suite Hotel',
+                'category' => 'Reserva online',
+                'location' => 'Luanda',
                 'description' => null,
                 'links' => [['label' => 'Abrir Booking', 'url' => 'https://www.booking.com/Share-iUsZzFW']],
             ],
             [
-                'name' => 'EPIC SANA Luanda Hotel', 'category' => 'Reserva online', 'location' => 'Luanda',
+                'name' => 'EPIC SANA Luanda Hotel',
+                'category' => 'Reserva online',
+                'location' => 'Luanda',
                 'description' => 'Opção incluída na lista enviada para consulta direta em Booking.com.',
                 'links' => [['label' => 'Abrir Booking', 'url' => 'https://www.booking.com/Share-f3oFyjc']],
             ],
             [
-                'name' => 'Hotel Costa', 'category' => 'Links de consulta', 'location' => 'Luanda',
+                'name' => 'Hotel Costa',
+                'category' => 'Links de consulta',
+                'location' => 'Luanda',
                 'description' => 'Este hotel foi enviado com mais de uma referência para facilitar a comparação de informações.',
                 'links' => [
                     ['label' => 'Abrir TripAdvisor', 'url' => 'https://www.tripadvisor.com.br/Hotel_Review-g293763-d6739969-Reviews-Hotel_Costa-Luanda_Luanda_Province.html'],
@@ -157,7 +171,9 @@ return [
                 ],
             ],
             [
-                'name' => 'Aparthotel Tropicana', 'category' => 'Comparador de tarifas', 'location' => 'Luanda',
+                'name' => 'Aparthotel Tropicana',
+                'category' => 'Comparador de tarifas',
+                'location' => 'Luanda',
                 'description' => 'Ligação adicionada para consulta no Trivago.',
                 'links' => [['label' => 'Abrir Trivago', 'url' => 'https://www.trivago.pt/pt/oar/aparthotel-tropicana-luanda?search=100-2239506']],
             ],
@@ -259,55 +275,59 @@ return [
         'cards' => [
             ['label' => 'Plenárias',    'title' => 'Direcção política e institucional',      'text' => 'Sessões reservadas para abertura, deliberações, conclusões e comunicação oficial da reunião regional.'],
             ['label' => 'Técnicas',     'title' => 'Conteúdo especializado e aplicável',     'text' => 'Painéis, workshops e demonstrações centradas em manutenção, segurança, automação e evolução de sistemas CNS/ATM.'],
-            ['label' => 'Relacionamento','title' => 'Espaços de conexão qualificada',       'text' => 'Momentos desenhados para encontros entre delegados, parceiros, patrocinadores e representantes do sector.'],
+            ['label' => 'Relacionamento', 'title' => 'Espaços de conexão qualificada',       'text' => 'Momentos desenhados para encontros entre delegados, parceiros, patrocinadores e representantes do sector.'],
         ],
 
         // Programme data
         'days' => [
             '2026-06-23' => [
-                'label' => '23 de Junho', 'day' => 'Terça-feira',
+                'label' => '23 de Junho',
+                'day' => 'Terça-feira',
                 'theme' => 'Abertura institucional e alinhamento regional',
                 'focus' => 'Sessões protocolares, visão estratégica da região e prioridades para a modernização dos sistemas CNS/ATM.',
                 'sessions' => [
-                    ['time'=>'08:00 - 09:00','track'=>'Credenciação','title'=>'Recepção e acreditação dos delegados','speaker'=>'Secretariado AATA','location'=>'Foyer Principal','type'=>'Recepção','summary'=>'Entrega de materiais oficiais, confirmação de presenças e acolhimento das delegações internacionais.'],
-                    ['time'=>'09:00 - 10:30','track'=>'Plenária','title'=>'Sessão solene de abertura','speaker'=>'Comissão Organizadora e Autoridades Convidadas','location'=>'Sala Diamante','type'=>'Plenária','summary'=>'Boas-vindas institucionais, apresentação do tema central e enquadramento oficial da reunião regional.'],
-                    ['time'=>'11:00 - 12:30','track'=>'Governança','title'=>'Estado actual da Região África da IFATSEA','speaker'=>'Conselho Regional IFATSEA','location'=>'Sala Diamante','type'=>'Painel','summary'=>'Revisão dos principais indicadores, desafios operacionais e linhas de coordenação entre associações-membro.'],
-                    ['time'=>'14:00 - 15:30','track'=>'Estratégia','title'=>'Mesa-redonda sobre segurança operacional e resiliência técnica','speaker'=>'Moderação: Especialistas CNS/ATM','location'=>'Sala Imbondeiro','type'=>'Mesa-redonda','summary'=>'Debate sobre continuidade de serviço, gestão de risco técnico e maturidade organizacional nos ANSPs africanos.'],
-                    ['time'=>'16:00 - 17:30','track'=>'Networking','title'=>'Sessão de integração entre delegações e parceiros','speaker'=>'Delegados e Patrocinadores','location'=>'Terraço Executivo','type'=>'Networking','summary'=>'Espaço para encontros institucionais, articulação de iniciativas e aproximação entre participantes.'],
+                    ['time' => '08:00 - 09:00', 'track' => 'Credenciação', 'title' => 'Recepção e acreditação dos delegados', 'speaker' => 'Secretariado AATA', 'location' => 'Foyer Principal', 'type' => 'Recepção', 'summary' => 'Entrega de materiais oficiais, confirmação de presenças e acolhimento das delegações internacionais.'],
+                    ['time' => '09:00 - 10:30', 'track' => 'Plenária', 'title' => 'Sessão solene de abertura', 'speaker' => 'Comissão Organizadora e Autoridades Convidadas', 'location' => 'Sala Diamante', 'type' => 'Plenária', 'summary' => 'Boas-vindas institucionais, apresentação do tema central e enquadramento oficial da reunião regional.'],
+                    ['time' => '11:00 - 12:30', 'track' => 'Governança', 'title' => 'Estado actual da Região África da IFATSEA', 'speaker' => 'Conselho Regional IFATSEA', 'location' => 'Sala Diamante', 'type' => 'Painel', 'summary' => 'Revisão dos principais indicadores, desafios operacionais e linhas de coordenação entre associações-membro.'],
+                    ['time' => '14:00 - 15:30', 'track' => 'Estratégia', 'title' => 'Mesa-redonda sobre segurança operacional e resiliência técnica', 'speaker' => 'Moderação: Especialistas CNS/ATM', 'location' => 'Sala Imbondeiro', 'type' => 'Mesa-redonda', 'summary' => 'Debate sobre continuidade de serviço, gestão de risco técnico e maturidade organizacional nos ANSPs africanos.'],
+                    ['time' => '16:00 - 17:30', 'track' => 'Networking', 'title' => 'Sessão de integração entre delegações e parceiros', 'speaker' => 'Delegados e Patrocinadores', 'location' => 'Terraço Executivo', 'type' => 'Networking', 'summary' => 'Espaço para encontros institucionais, articulação de iniciativas e aproximação entre participantes.'],
                 ],
             ],
             '2026-06-24' => [
-                'label' => '24 de Junho', 'day' => 'Quarta-feira',
+                'label' => '24 de Junho',
+                'day' => 'Quarta-feira',
                 'theme' => 'Transformação tecnológica e excelência técnica',
                 'focus' => 'Blocos técnicos dedicados a infraestruturas, interoperabilidade, cibersegurança e manutenção de sistemas críticos.',
                 'sessions' => [
-                    ['time'=>'08:30 - 09:15','track'=>'Keynote','title'=>'Panorama africano da modernização CNS/ATM','speaker'=>'Orador Principal Internacional','location'=>'Sala Diamante','type'=>'Conferência','summary'=>'Visão regional sobre investimento, interoperabilidade e preparo técnico para a próxima década.'],
-                    ['time'=>'09:30 - 11:00','track'=>'Técnico','title'=>'Arquitecturas de manutenção para sistemas mission critical','speaker'=>'Painel de Engenheiros ATSEP','location'=>'Sala Imbondeiro','type'=>'Painel técnico','summary'=>'Boas práticas para disponibilidade, redundância, suporte ao ciclo de vida e resposta a incidentes.'],
-                    ['time'=>'11:30 - 12:30','track'=>'Cibersegurança','title'=>'Protecção de infraestruturas ATM e superfícies de ataque','speaker'=>'Especialistas em segurança de sistemas','location'=>'Sala Baia','type'=>'Workshop','summary'=>'Abordagem prática para governança de acessos, monitorização e defesa de ambientes operacionais.'],
-                    ['time'=>'14:00 - 15:30','track'=>'Inovação','title'=>'Automação, observabilidade e suporte à decisão técnica','speaker'=>'Fabricantes e provedores tecnológicos','location'=>'Sala Diamante','type'=>'Demo session','summary'=>'Casos de uso sobre telemetria, diagnóstico proactivo e plataformas de supervisão técnica.'],
-                    ['time'=>'16:00 - 17:15','track'=>'Formação','title'=>'Competências críticas para ATSEPs na nova geração de sistemas','speaker'=>'Academias e centros de treino','location'=>'Sala Imbondeiro','type'=>'Fórum','summary'=>'Discussão sobre trilhas de certificação, requalificação e desenvolvimento contínuo de equipas técnicas.'],
+                    ['time' => '08:30 - 09:15', 'track' => 'Keynote', 'title' => 'Panorama africano da modernização CNS/ATM', 'speaker' => 'Orador Principal Internacional', 'location' => 'Sala Diamante', 'type' => 'Conferência', 'summary' => 'Visão regional sobre investimento, interoperabilidade e preparo técnico para a próxima década.'],
+                    ['time' => '09:30 - 11:00', 'track' => 'Técnico', 'title' => 'Arquitecturas de manutenção para sistemas mission critical', 'speaker' => 'Painel de Engenheiros ATSEP', 'location' => 'Sala Imbondeiro', 'type' => 'Painel técnico', 'summary' => 'Boas práticas para disponibilidade, redundância, suporte ao ciclo de vida e resposta a incidentes.'],
+                    ['time' => '11:30 - 12:30', 'track' => 'Cibersegurança', 'title' => 'Protecção de infraestruturas ATM e superfícies de ataque', 'speaker' => 'Especialistas em segurança de sistemas', 'location' => 'Sala Baia', 'type' => 'Workshop', 'summary' => 'Abordagem prática para governança de acessos, monitorização e defesa de ambientes operacionais.'],
+                    ['time' => '14:00 - 15:30', 'track' => 'Inovação', 'title' => 'Automação, observabilidade e suporte à decisão técnica', 'speaker' => 'Fabricantes e provedores tecnológicos', 'location' => 'Sala Diamante', 'type' => 'Demo session', 'summary' => 'Casos de uso sobre telemetria, diagnóstico proactivo e plataformas de supervisão técnica.'],
+                    ['time' => '16:00 - 17:15', 'track' => 'Formação', 'title' => 'Competências críticas para ATSEPs na nova geração de sistemas', 'speaker' => 'Academias e centros de treino', 'location' => 'Sala Imbondeiro', 'type' => 'Fórum', 'summary' => 'Discussão sobre trilhas de certificação, requalificação e desenvolvimento contínuo de equipas técnicas.'],
                 ],
             ],
             '2026-06-25' => [
-                'label' => '25 de Junho', 'day' => 'Quinta-feira',
+                'label' => '25 de Junho',
+                'day' => 'Quinta-feira',
                 'theme' => 'Cooperação regional, talento e sustentabilidade',
                 'focus' => 'Agenda voltada à colaboração entre estados, gestão de talento, sustentabilidade operacional e programas comuns.',
                 'sessions' => [
-                    ['time'=>'08:30 - 09:30','track'=>'Cooperação','title'=>'Modelos de colaboração entre ANSPs e reguladores','speaker'=>'Representantes institucionais regionais','location'=>'Sala Diamante','type'=>'Painel executivo','summary'=>'Estruturas de articulação para partilha de capacidades, interoperabilidade e respostas coordenadas.'],
-                    ['time'=>'10:00 - 11:15','track'=>'Capital humano','title'=>'Atracção e retenção de talento técnico','speaker'=>'Líderes de RH e engenharia','location'=>'Sala Imbondeiro','type'=>'Fórum','summary'=>'Estratégias para sucessão técnica, equilíbrio geracional e fortalecimento de equipas de alta especialização.'],
-                    ['time'=>'11:30 - 12:30','track'=>'Sustentabilidade','title'=>'Operações mais eficientes e infraestruturas sustentáveis','speaker'=>'Especialistas em energia e infraestruturas','location'=>'Sala Baia','type'=>'Sessão temática','summary'=>'Boas práticas para eficiência energética, resiliência de instalações e continuidade operacional.'],
-                    ['time'=>'14:00 - 15:00','track'=>'Associativismo','title'=>'Reuniões técnicas das associações-membro','speaker'=>'Delegações nacionais','location'=>'Salas de Comissão','type'=>'Sessão paralela','summary'=>'Espaços reservados para alinhamento interno, definição de posições e preparação de propostas regionais.'],
-                    ['time'=>'19:00 - 21:30','track'=>'Protocolo','title'=>'Jantar oficial da reunião regional','speaker'=>'Convidados oficiais','location'=>'Sala Baia de Luanda','type'=>'Evento social','summary'=>'Momento institucional de convívio, homenagem aos participantes e reforço das relações entre delegações.'],
+                    ['time' => '08:30 - 09:30', 'track' => 'Cooperação', 'title' => 'Modelos de colaboração entre ANSPs e reguladores', 'speaker' => 'Representantes institucionais regionais', 'location' => 'Sala Diamante', 'type' => 'Painel executivo', 'summary' => 'Estruturas de articulação para partilha de capacidades, interoperabilidade e respostas coordenadas.'],
+                    ['time' => '10:00 - 11:15', 'track' => 'Capital humano', 'title' => 'Atracção e retenção de talento técnico', 'speaker' => 'Líderes de RH e engenharia', 'location' => 'Sala Imbondeiro', 'type' => 'Fórum', 'summary' => 'Estratégias para sucessão técnica, equilíbrio geracional e fortalecimento de equipas de alta especialização.'],
+                    ['time' => '11:30 - 12:30', 'track' => 'Sustentabilidade', 'title' => 'Operações mais eficientes e infraestruturas sustentáveis', 'speaker' => 'Especialistas em energia e infraestruturas', 'location' => 'Sala Baia', 'type' => 'Sessão temática', 'summary' => 'Boas práticas para eficiência energética, resiliência de instalações e continuidade operacional.'],
+                    ['time' => '14:00 - 15:00', 'track' => 'Associativismo', 'title' => 'Reuniões técnicas das associações-membro', 'speaker' => 'Delegações nacionais', 'location' => 'Salas de Comissão', 'type' => 'Sessão paralela', 'summary' => 'Espaços reservados para alinhamento interno, definição de posições e preparação de propostas regionais.'],
+                    ['time' => '19:00 - 21:30', 'track' => 'Protocolo', 'title' => 'Jantar oficial da reunião regional', 'speaker' => 'Convidados oficiais', 'location' => 'Sala Baia de Luanda', 'type' => 'Evento social', 'summary' => 'Momento institucional de convívio, homenagem aos participantes e reforço das relações entre delegações.'],
                 ],
             ],
             '2026-06-26' => [
-                'label' => '26 de Junho', 'day' => 'Sexta-feira',
+                'label' => '26 de Junho',
+                'day' => 'Sexta-feira',
                 'theme' => 'Decisões, encaminhamentos e encerramento',
                 'focus' => 'Consolidação das recomendações, leitura do comunicado final e preparação do ciclo seguinte.',
                 'sessions' => [
-                    ['time'=>'08:30 - 10:00','track'=>'Relatoria','title'=>'Apresentação das conclusões dos grupos técnicos','speaker'=>'Relatores das comissões','location'=>'Sala Diamante','type'=>'Plenária','summary'=>'Síntese das recomendações produzidas ao longo da semana e enquadramento para deliberação final.'],
-                    ['time'=>'10:30 - 12:00','track'=>'Governança','title'=>'Aprovação das resoluções e plano de seguimento','speaker'=>'Mesa da reunião regional','location'=>'Sala Diamante','type'=>'Sessão deliberativa','summary'=>'Validação de prioridades, responsabilidades e mecanismos de acompanhamento intersessional.'],
-                    ['time'=>'12:15 - 13:00','track'=>'Encerramento','title'=>'Leitura do comunicado final e cerimónia de encerramento','speaker'=>'Comissão Organizadora','location'=>'Sala Diamante','type'=>'Cerimónia','summary'=>'Mensagem final aos participantes, agradecimentos institucionais e indicações para o próximo encontro.'],
+                    ['time' => '08:30 - 10:00', 'track' => 'Relatoria', 'title' => 'Apresentação das conclusões dos grupos técnicos', 'speaker' => 'Relatores das comissões', 'location' => 'Sala Diamante', 'type' => 'Plenária', 'summary' => 'Síntese das recomendações produzidas ao longo da semana e enquadramento para deliberação final.'],
+                    ['time' => '10:30 - 12:00', 'track' => 'Governança', 'title' => 'Aprovação das resoluções e plano de seguimento', 'speaker' => 'Mesa da reunião regional', 'location' => 'Sala Diamante', 'type' => 'Sessão deliberativa', 'summary' => 'Validação de prioridades, responsabilidades e mecanismos de acompanhamento intersessional.'],
+                    ['time' => '12:15 - 13:00', 'track' => 'Encerramento', 'title' => 'Leitura do comunicado final e cerimónia de encerramento', 'speaker' => 'Comissão Organizadora', 'location' => 'Sala Diamante', 'type' => 'Cerimónia', 'summary' => 'Mensagem final aos participantes, agradecimentos institucionais e indicações para o próximo encontro.'],
                 ],
             ],
         ],

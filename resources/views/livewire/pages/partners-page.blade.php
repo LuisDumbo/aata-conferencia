@@ -1,8 +1,5 @@
 <div>
-    {{-- The whole world belongs to you. --}}
-
-    <livewire:components.page-nav-bar :title="$title" :subtitle="$subtitle" />
-
+    <livewire:components.page-nav-bar :title="t('parceiros.page_title')" :subtitle="t('parceiros.page_subtitle')" />
 
     <livewire:components.partners-grid />
 </div>

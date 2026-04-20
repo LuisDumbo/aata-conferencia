@@ -18,36 +18,36 @@
                             <div class="inline-flex items-center gap-2 text-sm font-semibold">
                                 <span
                                     class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/10">📅</span>
-                                <span class="uppercase tracking-wide">{{ $event['dates'] }}</span>
+                                <span class="uppercase tracking-wide">{{ t('event.dates') }}</span>
                             </div>
                             <div class="inline-flex items-center gap-2 text-sm font-semibold">
                                 <span
                                     class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/10">📍</span>
-                                <span class="uppercase tracking-wide">{{ $event['venue'] }}</span>
+                                <span class="uppercase tracking-wide">{{ t('event.venue') }}</span>
                             </div>
                         </div>
 
                         <h1 class="mt-8 text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-                            {{ $event['title'] }}
+                            {{ t('event.title') }}
                         </h1>
 
                         <p class="mt-5 text-base sm:text-lg text-white/80 max-w-xl">
-                            {{ $event['tagline'] }}
+                            {{ t('event.tagline') }}
                         </p>
 
                         <div class="mt-8 flex flex-wrap gap-3">
                             <a href="{{ route('registration') }}"
                                 class="bg-white text-indigo-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100">
-                                INSCREVER AGORA
+                                {{ t('hero.register_now') }}
                             </a>
                             <a href="{{ route('schedule') }}"
                                 class="border border-white/60 px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-900">
-                                VER PROGRAMA
+                                {{ t('hero.see_schedule') }}
                             </a>
                         </div>
 
                         <p class="mt-6 text-sm text-white/65">
-                            Início: <span class="font-semibold text-white/90">{{ $this->startLabel }}</span>
+                            {{ t('hero.start_label') }}: <span class="font-semibold text-white/90">{{ $this->startLabel }}</span>
                         </p>
                     </div>
 
@@ -56,44 +56,43 @@
                         <div
                             class="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm shadow-2xl overflow-hidden">
                             <div class="p-6">
-                                <p class="text-white font-bold text-lg">Destaques do Evento</p>
+                                <p class="text-white font-bold text-lg">{{ t('hero.highlights') }}</p>
                                 <p class="mt-2 text-white/70 text-sm leading-relaxed">
-                                    Palestras principais, painéis, sessões técnicas, networking e reuniões oficiais.
+                                    {{ t('hero.highlights_desc') }}
                                 </p>
 
                                 <div class="mt-6 grid grid-cols-2 gap-4">
                                     <div class="rounded-2xl bg-white/10 p-4">
-                                        <p class="text-white/80 text-xs font-bold uppercase tracking-widest">Trilhas</p>
+                                        <p class="text-white/80 text-xs font-bold uppercase tracking-widest">{{ t('hero.tracks') }}</p>
                                         <p class="mt-2 text-white text-2xl font-extrabold">
                                             {{ $event['highlights']['trilhas'] }}</p>
                                     </div>
 
                                     <div class="rounded-2xl bg-white/10 p-4">
-                                        <p class="text-white/80 text-xs font-bold uppercase tracking-widest">Sessões</p>
+                                        <p class="text-white/80 text-xs font-bold uppercase tracking-widest">{{ t('hero.sessions') }}</p>
                                         <p class="mt-2 text-white text-2xl font-extrabold">
                                             {{ $event['highlights']['sessoes'] }}</p>
                                     </div>
 
                                     <div class="rounded-2xl bg-white/10 p-4">
                                         <p class="text-white/80 text-xs font-bold uppercase tracking-widest">
-                                            Palestrantes</p>
+                                            {{ t('hero.speakers_label') }}</p>
                                         <p class="mt-2 text-white text-2xl font-extrabold">
                                             {{ $event['highlights']['palestrantes'] }}</p>
                                     </div>
 
                                     <div class="rounded-2xl bg-white/10 p-4">
                                         <p class="text-white/80 text-xs font-bold uppercase tracking-widest">
-                                            Participantes</p>
+                                            {{ t('hero.participants') }}</p>
                                         <p class="mt-2 text-white text-2xl font-extrabold">
                                             {{ $event['highlights']['participantes'] }}</p>
                                     </div>
                                 </div>
 
                                 <div class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4">
-                                    <p class="text-white/85 text-sm font-semibold">Aviso Oficial</p>
+                                    <p class="text-white/85 text-sm font-semibold">{{ t('hero.notice') }}</p>
                                     <p class="mt-1 text-white/65 text-sm">
-                                        Confirme se os seus dados de inscrição estão correctos para credenciação e
-                                        emissão de crachás.
+                                        {{ t('hero.notice_desc') }}
                                     </p>
                                 </div>
                             </div>

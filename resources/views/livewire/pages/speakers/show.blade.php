@@ -1,11 +1,10 @@
 <div>
-    {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
-    <livewire:components.page-nav-bar :title="$title" :subtitle="$subtitle" />
+    <livewire:components.page-nav-bar :title="t('palestrantes.profile_title')" :subtitle="t('palestrantes.profile_subtitle')" />
 
     <div class="max-w-5xl mx-auto px-4 py-10">
         <a href="{{ route('speakers') }}"
             class="relative z-50 inline-flex items-center text-sm font-semibold text-slate-600 hover:text-indigo-700">
-            ← Voltar aos oradores
+            {{ t('palestrantes.back') }}
         </a>
 
         <div class="mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
@@ -27,18 +26,14 @@
                         </p>
 
                         @if (!empty($speaker['bio']))
-                            <p class="mt-4 text-slate-700 leading-relaxed">
-                                {{ $speaker['bio'] }}
-                            </p>
+                            <p class="mt-4 text-slate-700 leading-relaxed">{{ $speaker['bio'] }}</p>
                         @endif
                     </div>
                 </div>
 
                 <div class="mt-8 rounded-2xl bg-slate-50 p-6 border border-slate-200">
-                    <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Tema</p>
-                    <p class="mt-2 text-base text-slate-800 leading-relaxed">
-                        {{ $speaker['topic'] }}
-                    </p>
+                    <p class="text-xs font-bold uppercase tracking-widest text-slate-500">{{ t('palestrantes.topic_label') }}</p>
+                    <p class="mt-2 text-base text-slate-800 leading-relaxed">{{ $speaker['topic'] }}</p>
                 </div>
             </div>
         </div>

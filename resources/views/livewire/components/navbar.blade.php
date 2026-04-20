@@ -12,23 +12,23 @@
                 </div>
 
                 <div class="leading-tight">
-                    <p class="text-base font-extrabold text-slate-900">CONFERÊNCIA INTERNACIONAL</p>
-                    <p class="text-sm text-slate-500">Website Oficial do Evento</p>
+                    <p class="text-base font-extrabold text-slate-900">{{ t('nav.brand_title') }}</p>
+                    <p class="text-sm text-slate-500">{{ t('nav.brand_subtitle') }}</p>
                 </div>
             </a>
 
             <!-- DESKTOP -->
-            <div class="hidden md:flex items-center gap-6">
+            <div class="hidden md:flex items-center gap-4">
                 <nav class="flex items-center gap-7 text-sm font-semibold">
 
                     <a href="{{ route('home') }}"
                         class="{{ request()->routeIs('home') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
-                        INÍCIO
+                        {{ t('nav.home') }}
                     </a>
 
                     <a href="{{ route('about') }}"
                         class="{{ request()->routeIs('about') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
-                        SOBRE
+                        {{ t('nav.about') }}
                     </a>
 
                     <!-- DROPDOWN -->
@@ -36,7 +36,7 @@
 
                         <button type="button" @click="dropdownOpen = !dropdownOpen"
                             class="flex items-center gap-1 py-2 {{ request()->routeIs('schedule') || request()->routeIs('speakers') || request()->routeIs('partners') || request()->routeIs('hotels') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
-                            EVENTO
+                            {{ t('nav.event') }}
                             <svg class="w-4 h-4 transition" :class="dropdownOpen ? 'rotate-180' : ''" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -49,26 +49,24 @@
 
                             <div class="bg-white rounded-xl shadow-lg border border-slate-100 py-2">
 
-
                                 <a href="{{ route('schedule') }}" @click="dropdownOpen = false"
                                     class="block px-4 py-2 text-sm {{ request()->routeIs('schedule') ? 'bg-indigo-50 text-indigo-700' : 'text-slate-700 hover:bg-slate-50 hover:text-indigo-700' }}">
-                                    Programa
+                                    {{ t('nav.schedule') }}
                                 </a>
 
                                 <a href="{{ route('speakers') }}" @click="dropdownOpen = false"
                                     class="block px-4 py-2 text-sm {{ request()->routeIs('speakers') ? 'bg-indigo-50 text-indigo-700' : 'text-slate-700 hover:bg-slate-50 hover:text-indigo-700' }}">
-                                    Palestrantes
+                                    {{ t('nav.speakers') }}
                                 </a>
 
                                 <a href="{{ route('partners') }}" @click="dropdownOpen = false"
                                     class="block px-4 py-2 text-sm {{ request()->routeIs('partners') ? 'bg-indigo-50 text-indigo-700' : 'text-slate-700 hover:bg-slate-50 hover:text-indigo-700' }}">
-                                    Parceiros
+                                    {{ t('nav.partners') }}
                                 </a>
-
 
                                 <a href="{{ route('hotels') }}" @click="dropdownOpen = false"
                                     class="block px-4 py-2 text-sm {{ request()->routeIs('hotels') ? 'bg-indigo-50 text-indigo-700' : 'text-slate-700 hover:bg-slate-50 hover:text-indigo-700' }}">
-                                    Hoteis & Alojamentos
+                                    {{ t('nav.hotels') }}
                                 </a>
 
                             </div>
@@ -77,14 +75,26 @@
 
                     <a href="{{ route('contact') }}"
                         class="{{ request()->routeIs('contact') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
-                        CONTACTO
+                        {{ t('nav.contact') }}
                     </a>
                 </nav>
+
+                <!-- LANGUAGE TOGGLE -->
+                <div class="flex items-center rounded-lg border border-slate-200 overflow-hidden text-xs font-bold">
+                    <a href="{{ route('lang.switch', 'pt') }}"
+                        class="px-3 py-1.5 transition {{ current_lang() === 'pt' ? 'bg-indigo-700 text-white' : 'text-slate-500 hover:bg-slate-50' }}">
+                        PT
+                    </a>
+                    <a href="{{ route('lang.switch', 'en') }}"
+                        class="px-3 py-1.5 transition {{ current_lang() === 'en' ? 'bg-indigo-700 text-white' : 'text-slate-500 hover:bg-slate-50' }}">
+                        EN
+                    </a>
+                </div>
 
                 <!-- CTA -->
                 <a href="{{ route('registration') }}"
                     class="bg-indigo-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-indigo-800">
-                    INSCRIÇÃO
+                    {{ t('nav.registration') }}
                 </a>
             </div>
 
@@ -107,35 +117,49 @@
         <div class="md:hidden mt-3" x-show="open" x-cloak>
             <div class="bg-white rounded-2xl shadow-lg p-4 flex flex-col gap-3 text-sm font-semibold">
 
-                <a @click="open=false" href="{{ route('home') }}">INÍCIO</a>
-                <a @click="open=false" href="{{ route('about') }}">SOBRE</a>
+                <a @click="open=false" href="{{ route('home') }}">{{ t('nav.home') }}</a>
+                <a @click="open=false" href="{{ route('about') }}">{{ t('nav.about') }}</a>
 
                 <!-- MOBILE DROPDOWN -->
                 <div>
                     <button @click="mobileDropdownOpen = !mobileDropdownOpen" class="flex justify-between w-full">
-                        EVENTO
+                        {{ t('nav.event') }}
                         <span x-text="mobileDropdownOpen ? '−' : '+'"></span>
                     </button>
 
                     <div x-show="mobileDropdownOpen" x-cloak class="mt-2 ml-4 flex flex-col gap-2 text-sm">
 
                         <a @click="open=false; mobileDropdownOpen=false" href="{{ route('schedule') }}"
-                            class="{{ request()->routeIs('schedule') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">Programa</a>
+                            class="{{ request()->routeIs('schedule') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.schedule') }}</a>
                         <a @click="open=false; mobileDropdownOpen=false" href="{{ route('speakers') }}"
-                            class="{{ request()->routeIs('speakers') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">Palestrantes</a>
+                            class="{{ request()->routeIs('speakers') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.speakers') }}</a>
                         <a @click="open=false; mobileDropdownOpen=false" href="{{ route('partners') }}"
-                            class="{{ request()->routeIs('partners') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">Parceiros</a>
+                            class="{{ request()->routeIs('partners') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.partners') }}</a>
                         <a @click="open=false; mobileDropdownOpen=false" href="{{ route('hotels') }}"
-                            class="{{ request()->routeIs('hotels') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">Hoteis
-                            & Alojamentos</a>
+                            class="{{ request()->routeIs('hotels') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.hotels') }}</a>
                     </div>
                 </div>
 
-                <a @click="open=false" href="{{ route('contact') }}">CONTACTO</a>
+                <a @click="open=false" href="{{ route('contact') }}">{{ t('nav.contact') }}</a>
+
+                <!-- MOBILE LANGUAGE TOGGLE -->
+                <div class="flex items-center gap-2 pt-1">
+                    <span class="text-slate-500 text-xs font-normal">Idioma:</span>
+                    <div class="flex items-center rounded-lg border border-slate-200 overflow-hidden text-xs font-bold">
+                        <a href="{{ route('lang.switch', 'pt') }}"
+                            class="px-3 py-1.5 transition {{ current_lang() === 'pt' ? 'bg-indigo-700 text-white' : 'text-slate-500 hover:bg-slate-50' }}">
+                            PT
+                        </a>
+                        <a href="{{ route('lang.switch', 'en') }}"
+                            class="px-3 py-1.5 transition {{ current_lang() === 'en' ? 'bg-indigo-700 text-white' : 'text-slate-500 hover:bg-slate-50' }}">
+                            EN
+                        </a>
+                    </div>
+                </div>
 
                 <a @click="open=false" href="{{ route('registration') }}"
                     class="mt-2 bg-indigo-700 text-white px-5 py-2.5 rounded-lg text-center font-semibold">
-                    INSCRIÇÃO
+                    {{ t('nav.registration') }}
                 </a>
             </div>
         </div>

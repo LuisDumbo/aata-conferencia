@@ -11,6 +11,13 @@ use App\Livewire\Pages\Speakers\Show;
 use App\Livewire\Pages\SpeakersPage;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/lang/{lang}', function (string $lang) {
+    if (in_array($lang, ['pt', 'en'])) {
+        session(['lang' => $lang]);
+    }
+    return redirect()->back();
+})->name('lang.switch');
+
 Route::get('/', Home::class)->name('home');
 
 Route::get('/sobre', AboutPage::class)->name('about');

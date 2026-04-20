@@ -6,15 +6,9 @@ use Livewire\Component;
 
 class ContactPage extends Component
 {
-
-    public $title = 'Contacto';
-
-    public $subtitle = 'Entre em contacto connosco para obter mais informações sobre inscrições, parcerias ou participação no evento.';
-
-
-
     public function render()
     {
-        return view('livewire.pages.contact-page');
+        return view('livewire.pages.contact-page')
+            ->title(t('contacto.page_title') . ' – IFATSEA África 2026');
     }
 }

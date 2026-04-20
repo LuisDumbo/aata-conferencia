@@ -2,35 +2,35 @@
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-[1.35fr_2fr] items-center gap-8">
         <div>
             <h2 class="text-3xl font-extrabold tracking-tight text-slate-900">
-                {{ $titulo }}
+                {{ t('countdown.title') }}
             </h2>
             <h3 class="text-3xl font-extrabold tracking-tight text-slate-900">
-                {{ $subtitulo }}
+                {{ t('countdown.subtitle') }}
             </h3>
             <p class="mt-3 text-slate-600 max-w-md">
-                {{ $descricao }}
+                {{ t('countdown.description') }}
             </p>
         </div>
 
         <div class="flex flex-wrap gap-4 md:justify-end">
             <div class="bg-indigo-950 text-white w-[120px] rounded-xl py-6 text-center shadow-sm">
                 <p id="days" class="text-4xl font-extrabold">00</p>
-                <p class="text-xs uppercase tracking-widest mt-2 font-bold text-white/70">Dias</p>
+                <p class="text-xs uppercase tracking-widest mt-2 font-bold text-white/70">{{ t('countdown.days') }}</p>
             </div>
 
             <div class="bg-indigo-950 text-white w-[120px] rounded-xl py-6 text-center shadow-sm">
                 <p id="hours" class="text-4xl font-extrabold">00</p>
-                <p class="text-xs uppercase tracking-widest mt-2 font-bold text-white/70">Horas</p>
+                <p class="text-xs uppercase tracking-widest mt-2 font-bold text-white/70">{{ t('countdown.hours') }}</p>
             </div>
 
             <div class="bg-indigo-950 text-white w-[120px] rounded-xl py-6 text-center shadow-sm">
                 <p id="minutes" class="text-4xl font-extrabold">00</p>
-                <p class="text-xs uppercase tracking-widest mt-2 font-bold text-white/70">Minutos</p>
+                <p class="text-xs uppercase tracking-widest mt-2 font-bold text-white/70">{{ t('countdown.minutes') }}</p>
             </div>
 
             <div class="bg-indigo-950 text-white w-[120px] rounded-xl py-6 text-center shadow-sm">
                 <p id="seconds" class="text-4xl font-extrabold">00</p>
-                <p class="text-xs uppercase tracking-widest mt-2 font-bold text-white/70">Segundos</p>
+                <p class="text-xs uppercase tracking-widest mt-2 font-bold text-white/70">{{ t('countdown.seconds') }}</p>
             </div>
         </div>
     </div>
@@ -41,14 +41,8 @@
         </div>
     </div>
 
-    <script src="">
-        console.log("Countdown component script loaded");
-    </script>
-
     @script
         <script>
-            console.log("Countdown component script loaded");
-
             const EVENT_START = @json($eventStart);
 
             function pad2(n) {
@@ -59,10 +53,7 @@
                 const target = new Date(String(EVENT_START).replace(' ', 'T')).getTime();
                 const now = Date.now();
 
-                if (Number.isNaN(target)) {
-                    console.warn("EVENT_START inválido:", EVENT_START);
-                    return;
-                }
+                if (Number.isNaN(target)) return;
 
                 const diff = target - now;
 
@@ -74,10 +65,7 @@
                 if (!elDays || !elHours || !elMinutes || !elSeconds) return;
 
                 if (diff <= 0) {
-                    elDays.textContent = "00";
-                    elHours.textContent = "00";
-                    elMinutes.textContent = "00";
-                    elSeconds.textContent = "00";
+                    elDays.textContent = elHours.textContent = elMinutes.textContent = elSeconds.textContent = "00";
                     return;
                 }
 

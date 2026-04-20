@@ -30,22 +30,17 @@
             <div>
                 <span
                     class="inline-flex items-center rounded-md bg-indigo-50 px-3 py-1 text-[11px] font-extrabold tracking-widest text-indigo-700 uppercase">
-                    Sobre o Encontro
+                    {{ t('about.badge') }}
                 </span>
 
                 <h2 class="mt-5 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.05]">
-                    Bem-vindo ao Encontro<br class="hidden sm:block">
-                    Regional África da IFATSEA.<br class="hidden sm:block">
-                    Elevando a Segurança da Aviação
+                    {{ t('about.title_line1') }}<br class="hidden sm:block">
+                    {{ t('about.title_line2') }}<br class="hidden sm:block">
+                    {{ t('about.title_line3') }}
                 </h2>
 
                 <p class="mt-6 text-slate-600 leading-relaxed max-w-xl">
-                    O Encontro Regional África da IFATSEA reúne profissionais de engenharia para a segurança da aviação,
-                    com foco em avanços do setor, desafios atuais e cooperação entre instituições. Junte-se a
-                    especialistas,
-                    partes interessadas e líderes que estão a contribuir para um transporte aéreo mais seguro e moderno
-                    em África.
-                    Não perca esta oportunidade de networking e partilha de conhecimento.
+                    {{ t('about.description') }}
                 </p>
 
                 <div class="mt-8">
@@ -53,7 +48,7 @@
                         class="inline-flex items-center justify-center rounded-lg bg-indigo-700 px-6 py-3
                               text-sm font-extrabold text-white shadow-sm
                               hover:bg-indigo-800 transition-colors">
-                        MAIS SOBRE O ENCONTRO
+                        {{ t('about.cta') }}
                     </a>
                 </div>
             </div>

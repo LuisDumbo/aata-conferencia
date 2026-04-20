@@ -9,10 +9,9 @@
     </div>
 
     <div class="relative max-w-6xl mx-auto px-4">
-        <!-- menos gap -->
         <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
 
-            <!-- LEFT: Carousel (limita largura no desktop) -->
+            <!-- LEFT: Carousel -->
             <div class="relative w-full lg:flex-1 lg:max-w-[820px]" wire:ignore>
                 <!-- setas -->
                 <button type="button"
@@ -36,20 +35,16 @@
                         @foreach ($partners as $p)
                             <div class="swiper-slide h-auto">
                                 <a href="{{ $p['url'] ?? '#' }}" target="_blank" rel="noopener" class="group block">
-                                    <!-- card menor -->
                                     <div
                                         class="rounded-2xl bg-white/95 p-3 shadow-lg border border-white/30
                                            transition-all duration-300
                                            group-hover:-translate-y-1 group-hover:shadow-2xl">
-
-                                        <!-- altura menor -->
                                         <div class="h-[80px] flex items-center justify-center">
                                             <img src="{{ $p['logo'] }}" alt="{{ $p['name'] }}"
                                                 class="max-h-[58px] max-w-full object-contain">
                                         </div>
                                     </div>
 
-                                    <!-- texto um pouco menor -->
                                     <p class="mt-2 text-center text-xs font-semibold text-white/90">
                                         {{ $p['name'] }}
                                     </p>
@@ -60,16 +55,14 @@
                 </div>
             </div>
 
-            <!-- RIGHT: Text (ligeiramente mais estreito) -->
+            <!-- RIGHT: Text -->
             <div class="w-full lg:w-[380px] text-white lg:pt-1">
                 <h2 class="text-4xl font-extrabold tracking-tight">
-                    Parceiros &<br>Patrocinadores
+                    {!! t('partners.title') !!}
                 </h2>
 
                 <p class="mt-4 text-white/80 leading-relaxed">
-                    Conheça os nossos parceiros e patrocinadores que apoiam este encontro.
-                    O compromisso de cada organização contribui para a segurança da aviação e
-                    para a colaboração no setor.
+                    {{ t('partners.description') }}
                 </p>
             </div>
 

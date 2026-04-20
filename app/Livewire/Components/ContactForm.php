@@ -8,23 +8,19 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
-use Filament\Schemas\Components\Form;
 use Livewire\Component;
 use Filament\Schemas\Schema;
-
-
 
 class ContactForm extends Component implements HasForms
 {
     use InteractsWithForms;
 
-    /** Estado do formulário */
     public ?array $data = [];
 
     public function mount(): void
     {
         $this->form->fill([
-            'assunto' => 'Informações gerais',
+            'assunto' => array_key_first(config(current_lang() . '.contacto.subject_options', [])),
         ]);
     }
 
@@ -34,7 +30,7 @@ class ContactForm extends Component implements HasForms
             ->statePath('data')
             ->schema([
                 TextInput::make('nome')
-                    ->label('Nome completo')
+                    ->label(t('contacto.field_name'))
                     ->required()
                     ->columnSpanFull()
                     ->extraInputAttributes([
@@ -42,7 +38,7 @@ class ContactForm extends Component implements HasForms
                     ]),
 
                 TextInput::make('email')
-                    ->label('E-mail')
+                    ->label(t('contacto.field_email'))
                     ->email()
                     ->required()
                     ->columnSpanFull()
@@ -51,7 +47,7 @@ class ContactForm extends Component implements HasForms
                     ]),
 
                 TextInput::make('telefone')
-                    ->label('Telefone (opcional)')
+                    ->label(t('contacto.field_phone'))
                     ->tel()
                     ->columnSpanFull()
                     ->extraInputAttributes([
@@ -59,15 +55,8 @@ class ContactForm extends Component implements HasForms
                     ]),
 
                 Select::make('assunto')
-                    ->label('Assunto')
-                    ->options([
-                        'Informações gerais' => 'Informações gerais',
-                        'Inscrição'          => 'Inscrição',
-                        'Parcerias'          => 'Parcerias',
-                        'Palestrantes'       => 'Palestrantes',
-                        'Outro'              => 'Outro',
-                    ])
-
+                    ->label(t('contacto.field_subject'))
+                    ->options(config(current_lang() . '.contacto.subject_options', config('pt.contacto.subject_options')))
                     ->required()
                     ->columnSpanFull()
                     ->extraInputAttributes([
@@ -75,7 +64,7 @@ class ContactForm extends Component implements HasForms
                     ]),
 
                 Textarea::make('mensagem')
-                    ->label('Mensagem')
+                    ->label(t('contacto.field_message'))
                     ->required()
                     ->rows(6)
                     ->columnSpanFull()
@@ -84,7 +73,7 @@ class ContactForm extends Component implements HasForms
                     ]),
 
                 Checkbox::make('aceito')
-                    ->label('Concordo em ser contactado(a) por e-mail/telefone sobre este assunto.')
+                    ->label(t('contacto.field_consent'))
                     ->required()
                     ->columnSpanFull(),
             ]);
@@ -92,14 +81,7 @@ class ContactForm extends Component implements HasForms
 
     public function submit(): void
     {
-        $data = $this->form->getState();
-
-        // ✅ Aqui você decide o que fazer com os dados:
-        // 1) Enviar e-mail (Mail::to(...)->send(...))
-        // 2) Salvar no banco (ContactMessage::create($data))
-        // 3) Enviar para um endpoint/API
-
-        // Exemplo simples: só “limpar” e mandar mensagem de sucesso
+        $this->form->getState();
         $this->form->fill();
         $this->dispatch('contact-sent');
     }

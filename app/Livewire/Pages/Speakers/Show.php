@@ -6,26 +6,22 @@ use Livewire\Component;
 
 class Show extends Component
 {
-
     public array $speaker = [];
-
-    public $title = 'Perfil do Orador';
-
-    public $subtitle = 'Descubra o percurso profissional, área de especialização e o contributo do orador para a Reunião Regional Africana da IFATSEA.';
 
     public function mount(string $slug): void
     {
-        $speakers = config('speakers', []);
+        $base = collect(config('speakers', []))->firstWhere('slug', $slug);
+        abort_if(!$base, 404);
 
-        $found = collect($speakers)->firstWhere('slug', $slug);
+        $translations = config(current_lang() . '.palestrantes.speakers.' . $slug,
+                        config('pt.palestrantes.speakers.' . $slug, []));
 
-        abort_if(!$found, 404);
-
-        $this->speaker = $found;
+        $this->speaker = array_merge($base, $translations);
     }
 
     public function render()
     {
-        return view('livewire.pages.speakers.show');
+        return view('livewire.pages.speakers.show')
+            ->title(t('palestrantes.profile_title') . ' – ' . ($this->speaker['name'] ?? ''));
     }
 }

@@ -1,4 +1,4 @@
-{{-- HERO (igual ao exemplo) --}}
+{{-- HERO BANNER --}}
 <section class="relative overflow-hidden mb-5">
 
     {{-- SECÇÃO AGENDA --}}
@@ -12,28 +12,27 @@
 
             <span
                 class="inline-flex items-center rounded bg-indigo-950 px-3 py-1 text-xs font-bold tracking-wide text-white">
-                PROGRAMA DO EVENTO
+                {{ t('hero_banner.schedule_badge') }}
             </span>
 
             <h2 class="mt-5 text-4xl font-extrabold text-slate-900">
-                Agenda da Conferência
+                {{ t('hero_banner.schedule_title') }}
             </h2>
 
             <p class="mt-3 text-slate-600 max-w-2xl mx-auto">
-                Aceda à agenda oficial da 16ª Reunião Regional Africana da IFATSEA.
-                Faça o download agora para se manter informado e planear a sua participação.
+                {{ t('hero_banner.schedule_desc') }}
             </p>
             <div class="mt-8">
                 <button type="button" wire:click="download" wire:loading.attr="disabled" wire:target="download"
                     class="inline-flex cursor-pointer items-center gap-2 rounded-md bg-indigo-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-indigo-800 disabled:cursor-not-allowed disabled:opacity-70">
                     <span wire:loading.remove wire:target="download" class="inline-flex items-center gap-2">
                         <i class="fa-solid fa-download"></i>
-                        <span>TRANSFERIR</span>
+                        <span>{{ t('hero_banner.download') }}</span>
                     </span>
 
                     <span wire:loading wire:target="download" class="inline-flex items-center gap-2">
                         <i class="fa-solid fa-spinner animate-spin"></i>
-                        <span>A transferir...</span>
+                        <span>{{ t('hero_banner.downloading') }}</span>
                     </span>
                 </button>
             </div>
@@ -69,19 +68,17 @@
                 <div class="w-full md:w-[56%] md:ml-auto text-white">
 
                     <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
-                        Faça Parte da 16ª Reunião Regional Africana da IFATSEA
+                        {{ t('hero_banner.hero_title') }}
                     </h1>
 
                     <p class="mt-4 text-sm md:text-base text-indigo-100/90 max-w-xl">
-                        Garanta já a sua vaga na 16ª Reunião Regional Africana da IFATSEA.
-                        Registe-se agora para conectar-se, aprender e contribuir para a segurança da aviação.
+                        {{ t('hero_banner.hero_desc') }}
                     </p>
 
                     <div class="mt-8">
                         <a href="{{ route('registration') }}"
                             class="inline-flex items-center gap-2 rounded-md bg-amber-600 px-6 py-3 text-sm font-semibold text-white hover:bg-amber-700">
-
-                            <span>INSCREVER-SE AGORA</span>
+                            <span>{{ t('hero_banner.register_now') }}</span>
                         </a>
                     </div>
 

@@ -369,7 +369,7 @@ return [
         'page_title'    => 'Reunião Regional Africana da IFATSEA',
         'page_subtitle' => 'A Conferência Internacional reúne especialistas, académicos e profissionais para partilhar conhecimento e experiências.',
 
-        'intro' => 'O <strong>16.º Encontro Regional África da IFATSEA (ARM)</strong> será realizado em <strong>Angola, Luanda</strong>, de <strong>23 a 26 de junho de 2026</strong>. Este importante evento, organizado pela <strong class="text-pink-600">Associação dos Profissionais de Engenharia para a Segurança dos Sistemas de Apoio ao Serviço de Tráfego Aéreo – ATSEP\'s</strong> (AATA), reunirá Profissionais de Eletrónica para a Segurança do Tráfego Aéreo (ATSEPs) de toda a África para discutir avanços em <strong>Comunicação, Navegação e Vigilância/Gestão do Tráfego Aéreo (CNS/ATM)</strong>.',
+        'intro' => 'O <strong>16.º Encontro Regional África da IFATSEA (ARM)</strong> será realizado em <strong>Luanda-Angola</strong>, de <strong>23 a 26 de junho</strong>. Este importante evento reunirá profissionais de engenharia de Electrónica para a Segurança do Tráfego Aéreo (ATSEP\'s) de toda África para discutir avanços em <strong>Comunicação, Navegação e Vigilância / Gestão do Tráfego Aéreo (CNS/ATM)</strong>.',
 
         'theme_label' => 'Tema:',
         'theme_text'  => '"Promover a segurança e a excelência operacional em África através da implementação e Manutenção de sistemas CNS/ATM modernos."',
@@ -396,8 +396,8 @@ return [
         'contact_label' => 'Inscrição &amp; Informações de Contacto',
         'contact_intro' => 'Para informações sobre <strong>inscrição</strong>, <strong>participação na agenda</strong> ou <strong>oportunidades de patrocínio</strong>, por favor contacte:',
         'contacts' => [
-            ['name' => 'Jorge Dylon Paz Neto (Presidente da Associação dos ATSEPs de Angola)', 'email' => 'jorge.dylon@aata.ao'],
-            ['name' => 'Domingos Lima de Carvalho (Secretário-Geral, Administração e Finanças)', 'email' => 'domingos.carvalho@aata.ao'],
+            ['name' => 'Jorge Dylon Paz Neto (Presidente da Associação dos ATSEPs de Angola)', 'email' => 'paz.neto.1@hotmail.com'],
+            ['name' => 'Domingos Lima de Carvalho (Secretário-Geral, Administração e Finanças)', 'email' => 'Lima.carvalho25@gmail.com'],
         ],
     ],
 ];

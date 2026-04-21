@@ -349,7 +349,7 @@ return [
         'page_title'    => 'IFATSEA Africa Regional Meeting',
         'page_subtitle' => 'The International Conference brings together experts, academics and professionals to share knowledge and experience.',
 
-        'intro' => 'The <strong>16th IFATSEA Africa Regional Meeting (ARM)</strong> will be held in <strong>Angola, Luanda</strong>, from <strong>23 to 26 June 2026</strong>. This important event, organised by the <strong class="text-pink-600">Association of Air Traffic Safety Electronics Personnel – ATSEP\'s</strong> (AATA), will bring together Air Traffic Safety Electronics Personnel (ATSEPs) from across Africa to discuss advances in <strong>Communication, Navigation and Surveillance/Air Traffic Management (CNS/ATM)</strong>.',
+        'intro' => 'The <strong>16th IFATSEA Africa Regional Meeting (ARM)</strong> will be held in <strong>Luanda-Angola</strong>, from <strong>23 to 26 June</strong>. This important event will bring together Air Traffic Safety Electronics Engineering Professionals (ATSEP\'s) from across Africa to discuss advances in <strong>Communication, Navigation and Surveillance / Air Traffic Management (CNS/ATM)</strong>.',
 
         'theme_label' => 'Theme:',
         'theme_text'  => '"Promoting safety and operational excellence in Africa through the implementation and maintenance of modern CNS/ATM systems."',
@@ -376,8 +376,8 @@ return [
         'contact_label' => 'Registration &amp; Contact Information',
         'contact_intro' => 'For information on <strong>registration</strong>, <strong>agenda participation</strong> or <strong>sponsorship opportunities</strong>, please contact:',
         'contacts' => [
-            ['name' => 'Jorge Dylon Paz Neto (President of the Angola ATSEPs Association)', 'email' => 'jorge.dylon@aata.ao'],
-            ['name' => 'Domingos Lima de Carvalho (Secretary-General, Administration and Finance)', 'email' => 'domingos.carvalho@aata.ao'],
+            ['name' => 'Jorge Dylon Paz Neto (President of the Angola ATSEPs Association)', 'email' => 'paz.neto.1@hotmail.com'],
+            ['name' => 'Domingos Lima de Carvalho (Secretary-General, Administration and Finance)', 'email' => 'Lima.carvalho25@gmail.com'],
         ],
     ],
 ];

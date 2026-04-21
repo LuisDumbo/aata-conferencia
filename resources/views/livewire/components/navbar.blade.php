@@ -117,12 +117,15 @@
         <div class="md:hidden mt-3" x-show="open" x-cloak>
             <div class="bg-white rounded-2xl shadow-lg p-4 flex flex-col gap-3 text-sm font-semibold">
 
-                <a @click="open=false" href="{{ route('home') }}">{{ t('nav.home') }}</a>
-                <a @click="open=false" href="{{ route('about') }}">{{ t('nav.about') }}</a>
+                <a @click="open=false" href="{{ route('home') }}"
+                    class="{{ request()->routeIs('home') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.home') }}</a>
+                <a @click="open=false" href="{{ route('about') }}"
+                    class="{{ request()->routeIs('about') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.about') }}</a>
 
                 <!-- MOBILE DROPDOWN -->
                 <div>
-                    <button @click="mobileDropdownOpen = !mobileDropdownOpen" class="flex justify-between w-full">
+                    <button @click="mobileDropdownOpen = !mobileDropdownOpen"
+                        class="flex justify-between w-full {{ request()->routeIs('schedule') || request()->routeIs('speakers') || request()->routeIs('partners') || request()->routeIs('hotels') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">
                         {{ t('nav.event') }}
                         <span x-text="mobileDropdownOpen ? '−' : '+'"></span>
                     </button>
@@ -140,7 +143,8 @@
                     </div>
                 </div>
 
-                <a @click="open=false" href="{{ route('contact') }}">{{ t('nav.contact') }}</a>
+                <a @click="open=false" href="{{ route('contact') }}"
+                    class="{{ request()->routeIs('contact') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.contact') }}</a>
 
                 <!-- MOBILE LANGUAGE TOGGLE -->
                 <div class="flex items-center gap-2 pt-1">

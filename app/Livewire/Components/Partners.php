@@ -29,11 +29,6 @@ class Partners extends Component
                 'url'  => '#',
             ],
             [
-                'name' => 'ACAMS',
-                'logo' => 'assets/parceiros/ACAMS.png',
-                'url'  => '#',
-            ],
-            [
                 'name' => 'ROHDE & SCHWARZ',
                 'logo' => 'assets/parceiros/rohde_schwarz.png',
                 'url'  => '#',

@@ -17,11 +17,8 @@ class PartnersGrid extends Component
             ['name' => 'RNA',       'logo' => ''],
             ['name' => 'ACAMS',     'logo' => 'assets/parceiros/ACAMS_Logo.jpg'],
             ['name' => 'JOTRON',    'logo' => 'assets/parceiros/jotron.png'],
-            ['name' => 'CAIEC',     'logo' => ''],
-            ['name' => 'Marave',    'logo' => ''],
             ['name' => 'KLIBITY',   'logo' => ''],
             ['name' => 'LANTECH',   'logo' => 'assets/parceiros/lantech.webp'],
-            ['name' => 'CALLWAVE',  'logo' => 'assets/parceiros/callwave.png'],
             ['name' => 'THALES',    'logo' => 'assets/parceiros/thales.png'],
         ];
 

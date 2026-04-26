@@ -53,16 +53,8 @@ class Partners extends Component
                 'logo' => 'assets/parceiros/jotron.png',
                 'url'  => '#',
             ],
-            [
-                'name' => 'CAIEC',
-                'logo' => 'https://dummyimage.com/520x220/ffffff/0f172a&text=ACAMS',
-                'url'  => '#',
-            ],
-            [
-                'name' => 'Marave',
-                'logo' => 'https://dummyimage.com/520x220/ffffff/0f172a&text=ACAMS',
-                'url'  => '#',
-            ],
+
+
             [
                 'name' => 'KLIBITY',
                 'logo' => 'https://dummyimage.com/520x220/ffffff/0f172a&text=ACAMS',
@@ -71,11 +63,6 @@ class Partners extends Component
             [
                 'name' => 'LANTECH',
                 'logo' => 'assets/parceiros/lantech.webp',
-                'url'  => '#',
-            ],
-            [
-                'name' => 'CALLWAVE',
-                'logo' => 'assets/parceiros/callwave.png',
                 'url'  => '#',
             ],
             [

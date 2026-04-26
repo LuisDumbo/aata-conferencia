@@ -29,6 +29,21 @@ class Partners extends Component
                 'url'  => '#',
             ],
             [
+                'name' => 'ACAMS',
+                'logo' => 'assets/parceiros/ACAMS.png',
+                'url'  => '#',
+            ],
+            [
+                'name' => 'ROHDE & SCHWARZ',
+                'logo' => 'assets/parceiros/rohde_schwarz.png',
+                'url'  => '#',
+            ],
+            [
+                'name' => 'Teltech',
+                'logo' => 'assets/parceiros/teltech.png',
+                'url'  => '#',
+            ],
+            [
                 'name' => 'RNA',
                 'logo' => 'https://dummyimage.com/520x220/ffffff/0f172a&text=ACAMS',
                 'url'  => '#',

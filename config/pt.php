@@ -342,8 +342,8 @@ return [
         'email_label'  => 'E-mail',
         'phone_label'  => 'Telefone',
         'address_label' => 'Endereço',
-        'email_value'  => 'contacto@aata.ao',
-        'phone_value'  => '(+244) 9xx xxx xxx',
+        'email_value'   => 'paz.neto.1@hotmail.com / Lima.carvalho25@gmail.com ',
+        'phone_value'   => '(+244) 924608224 Paz Neto / 923 265 554 Domingos de Carvalho',
         'address_value' => 'Luanda, Angola',
 
         'form_title'    => 'Envie uma mensagem',

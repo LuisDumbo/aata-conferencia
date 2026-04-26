@@ -40,7 +40,7 @@ class Partners extends Component
             ],
             [
                 'name' => 'RNA',
-                'logo' => 'https://dummyimage.com/520x220/ffffff/0f172a&text=ACAMS',
+                'logo' => 'assets/parceiros/rna.jpeg',
                 'url'  => '#',
             ],
             [

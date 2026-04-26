@@ -3,6 +3,7 @@
 use App\Livewire\Home;
 use App\Livewire\Pages\AboutPage;
 use App\Livewire\Pages\ContactPage;
+use App\Livewire\Pages\CountriesPage;
 use App\Livewire\Pages\PartnersPage;
 use App\Livewire\Pages\RegistrationPage;
 use App\Livewire\Pages\SchedulePage;
@@ -27,4 +28,5 @@ Route::get('/palestrantes', SpeakersPage::class)->name('speakers');
 Route::get('/palestrantes/{slug}', Show::class)->name('speakers.show');
 Route::get('/contacto', ContactPage::class)->name('contact');
 Route::get('/parceiros', PartnersPage::class)->name('partners');
+Route::get('/paises-isentos', CountriesPage::class)->name('countries');
 Route::get('/inscricao', RegistrationPage::class)->name('registration');

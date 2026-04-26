@@ -9,6 +9,7 @@ return [
         'speakers'     => 'Speakers',
         'partners'     => 'Partners',
         'hotels'       => 'Hotels & Accommodation',
+        'countries'    => 'Visa-Free Countries',
         'contact'      => 'CONTACT',
         'registration'  => 'REGISTER',
         'brand_title'   => 'INTERNATIONAL CONFERENCE',
@@ -342,7 +343,8 @@ return [
         ],
         'submit_btn'    => 'Send message',
         'disclaimer'    => 'By submitting, you confirm that the information provided is accurate.',
-        'success_msg'   => 'Message sent successfully. Thank you!',
+        'success_title' => 'Message received!',
+        'success_msg'   => 'We have received your message. We will get back to you shortly.',
     ],
 
     'sobre' => [
@@ -378,6 +380,40 @@ return [
         'contacts' => [
             ['name' => 'Jorge Dylon Paz Neto (President of the Angola ATSEPs Association)', 'email' => 'paz.neto.1@hotmail.com'],
             ['name' => 'Domingos Lima de Carvalho (Secretary-General, Administration and Finance)', 'email' => 'Lima.carvalho25@gmail.com'],
+        ],
+    ],
+
+    'paises' => [
+        'page_title'    => 'Visa-Free Countries',
+        'page_subtitle' => 'Visa requirement information for participants from the Africa Region.',
+        'intro'         => 'The table below details the visa and no-visa-required countries for Angola, which should aid with your travel itinerary.',
+        'note'          => 'Note: This information is indicative. We recommend confirming visa requirements with the Angolan embassy or consulate in your country of residence.',
+        'visa_required_title' => 'Visa Required Countries',
+        'no_visa_title'       => 'No Visa Required',
+        'visa_required' => [
+            'Burkina Faso',
+            'Cameroon',
+            'DR Congo',
+            'Egypt',
+            'Ethiopia',
+            'Gambia',
+            'Ghana',
+            'Kenya',
+            'Niger',
+            'Nigeria',
+            'Republic of Congo',
+            'Senegal',
+            'Sudan',
+            'Tunisia',
+            'Uganda',
+        ],
+        'no_visa' => [
+            'Algeria',
+            'Morocco',
+            'Seychelles',
+            'South Africa',
+            'Tanzania',
+            'Zambia',
         ],
     ],
 ];

@@ -43,10 +43,29 @@
                 </form>
 
                 {{-- feedback --}}
-                <div x-data="{ open: false }" x-on:contact-sent.window="open=true; setTimeout(()=>open=false, 3500)"
-                    x-show="open" x-transition
-                    class="mt-6 rounded-lg bg-emerald-50 border border-emerald-200 px-4 py-3 text-emerald-800 text-sm">
-                    {{ t('contacto.success_msg') }}
+                <div x-data="{ open: false }" x-on:contact-sent.window="open=true; setTimeout(()=>open=false, 5000)"
+                    x-show="open"
+                    x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 translate-y-2"
+                    x-transition:enter-end="opacity-100 translate-y-0"
+                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 translate-y-0"
+                    x-transition:leave-end="opacity-0 translate-y-2"
+                    class="fixed bottom-6 right-6 z-50 max-w-sm w-full shadow-xl rounded-xl bg-white border border-emerald-200 px-5 py-4 flex items-start gap-3">
+                    <div class="flex-shrink-0 mt-0.5 w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
+                        <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold text-slate-900">{{ t('contacto.success_title') }}</p>
+                        <p class="text-sm text-slate-600 mt-0.5">{{ t('contacto.success_msg') }}</p>
+                    </div>
+                    <button @click="open=false" class="ml-auto -mt-0.5 text-slate-400 hover:text-slate-600">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>

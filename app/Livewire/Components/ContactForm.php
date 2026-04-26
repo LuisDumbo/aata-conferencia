@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Components;
 
+use App\Models\ContactMessage;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
@@ -81,8 +82,21 @@ class ContactForm extends Component implements HasForms
 
     public function submit(): void
     {
-        $this->form->getState();
-        $this->form->fill();
+        $data = $this->form->getState();
+
+        ContactMessage::create([
+            'nome'     => $data['nome'],
+            'email'    => $data['email'],
+            'telefone' => $data['telefone'] ?? null,
+            'assunto'  => $data['assunto'],
+            'mensagem' => $data['mensagem'],
+            'aceito'   => $data['aceito'] ?? false,
+        ]);
+
+        $this->form->fill([
+            'assunto' => array_key_first(config(current_lang() . '.contacto.subject_options', [])),
+        ]);
+
         $this->dispatch('contact-sent');
     }
 

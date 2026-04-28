@@ -14,8 +14,8 @@ class Partners extends Component
         $this->partners = [
 
             [
-                'name' => 'MinTrans',
-                'logo' => 'assets/parceiros/angola-gov.jpg',
+                'name' => 'Sam Mahlangu',
+                'logo' => 'assets/moderadores/Sam Mahlangu.png',
                 'url'  => '#',
             ],
             [

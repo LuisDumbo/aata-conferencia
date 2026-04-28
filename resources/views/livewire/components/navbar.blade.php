@@ -35,7 +35,7 @@
                     <div class="relative">
 
                         <button type="button" @click="dropdownOpen = !dropdownOpen"
-                            class="flex items-center gap-1 py-2 {{ request()->routeIs('schedule') || request()->routeIs('speakers') || request()->routeIs('partners') || request()->routeIs('hotels') || request()->routeIs('countries') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
+                            class="flex items-center gap-1 py-2 {{ request()->routeIs('schedule') || request()->routeIs('speakers') || request()->routeIs('speakers.show') || request()->routeIs('partners') || request()->routeIs('hotels') || request()->routeIs('countries') || request()->routeIs('moderadores') || request()->routeIs('moderadores.show') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
                             {{ t('nav.event') }}
                             <svg class="w-4 h-4 transition" :class="dropdownOpen ? 'rotate-180' : ''" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -55,8 +55,13 @@
                                 </a>
 
                                 <a href="{{ route('speakers') }}" @click="dropdownOpen = false"
-                                    class="block px-4 py-2 text-sm {{ request()->routeIs('speakers') ? 'bg-indigo-50 text-indigo-700' : 'text-slate-700 hover:bg-slate-50 hover:text-indigo-700' }}">
+                                    class="block px-4 py-2 text-sm {{ request()->routeIs('speakers') || request()->routeIs('speakers.show') ? 'bg-indigo-50 text-indigo-700' : 'text-slate-700 hover:bg-slate-50 hover:text-indigo-700' }}">
                                     {{ t('nav.speakers') }}
+                                </a>
+
+                                <a href="{{ route('moderadores') }}" @click="dropdownOpen = false"
+                                    class="block px-4 py-2 text-sm {{ request()->routeIs('moderadores') || request()->routeIs('moderadores.show') ? 'bg-indigo-50 text-indigo-700' : 'text-slate-700 hover:bg-slate-50 hover:text-indigo-700' }}">
+                                    {{ t('nav.moderadores') }}
                                 </a>
 
                                 <a href="{{ route('partners') }}" @click="dropdownOpen = false"
@@ -130,7 +135,7 @@
                 <!-- MOBILE DROPDOWN -->
                 <div>
                     <button @click="mobileDropdownOpen = !mobileDropdownOpen"
-                        class="flex justify-between w-full {{ request()->routeIs('schedule') || request()->routeIs('speakers') || request()->routeIs('partners') || request()->routeIs('hotels') || request()->routeIs('countries') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">
+                        class="flex justify-between w-full {{ request()->routeIs('schedule') || request()->routeIs('speakers') || request()->routeIs('speakers.show') || request()->routeIs('partners') || request()->routeIs('hotels') || request()->routeIs('countries') || request()->routeIs('moderadores') || request()->routeIs('moderadores.show') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">
                         {{ t('nav.event') }}
                         <span x-text="mobileDropdownOpen ? '−' : '+'"></span>
                     </button>
@@ -140,7 +145,9 @@
                         <a @click="open=false; mobileDropdownOpen=false" href="{{ route('schedule') }}"
                             class="{{ request()->routeIs('schedule') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.schedule') }}</a>
                         <a @click="open=false; mobileDropdownOpen=false" href="{{ route('speakers') }}"
-                            class="{{ request()->routeIs('speakers') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.speakers') }}</a>
+                            class="{{ request()->routeIs('speakers') || request()->routeIs('speakers.show') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.speakers') }}</a>
+                        <a @click="open=false; mobileDropdownOpen=false" href="{{ route('moderadores') }}"
+                            class="{{ request()->routeIs('moderadores') || request()->routeIs('moderadores.show') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.moderadores') }}</a>
                         <a @click="open=false; mobileDropdownOpen=false" href="{{ route('partners') }}"
                             class="{{ request()->routeIs('partners') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.partners') }}</a>
                         <a @click="open=false; mobileDropdownOpen=false" href="{{ route('hotels') }}"

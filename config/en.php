@@ -7,6 +7,7 @@ return [
         'event'        => 'EVENT',
         'schedule'     => 'Schedule',
         'speakers'     => 'Speakers',
+        'moderadores'  => 'Moderators',
         'partners'     => 'Partners',
         'hotels'       => 'Hotels & Accommodation',
         'countries'    => 'Visa-Free Countries',
@@ -55,6 +56,15 @@ return [
         'topic_label'   => 'Topic',
         'see_all_title' => 'See all speakers',
         'see_all_desc'  => 'View the full list of invited experts.',
+        'see_all_cta'   => 'View full list',
+    ],
+
+    'moderadores_home' => [
+        'title'         => 'Moderators',
+        'subtitle'      => 'Professionals responsible for leading the technical sessions of the event.',
+        'topic_label'   => 'Topic',
+        'see_all_title' => 'See all moderators',
+        'see_all_desc'  => 'View the full list of event moderators.',
         'see_all_cta'   => 'View full list',
     ],
 
@@ -203,6 +213,38 @@ return [
                 'role'  => 'Programme Manager',
                 'topic' => 'Governance, standards and sustainable transformation in critical infrastructure.',
                 'bio'   => 'Carla Nunes manages transformation and governance programmes in critical infrastructure.',
+            ],
+        ],
+    ],
+
+    'moderadores' => [
+        'page_title'       => 'Moderators',
+        'page_subtitle'    => 'Meet the professionals responsible for leading the technical sessions of the event.',
+        'gallery_title'    => 'Moderators',
+        'gallery_subtitle' => 'The moderators of the 16th IFATSEA Africa Regional Meeting.',
+        'load_more'        => 'Load more',
+        'loading'          => 'Loading...',
+        'back'             => '← Back to moderators',
+        'topic_label'      => 'Topic',
+        'profile_title'    => 'Moderator Profile',
+        'profile_subtitle' => 'Discover the professional background, area of expertise and contribution of the moderator to the IFATSEA Africa Regional Meeting.',
+        'scroll_top'       => 'Back to top',
+
+        'perfis' => [
+            'pedro-costa' => [
+                'role'  => 'Senior Moderator',
+                'topic' => 'CNS/ATM Systems Management and Operational Supervision.',
+                'bio'   => 'Pedro Costa has extensive experience moderating international aviation conferences.',
+            ],
+            'fatima-neto' => [
+                'role'  => 'Technical Coordinator',
+                'topic' => 'Technological innovation and training in air traffic safety.',
+                'bio'   => 'Fátima Neto coordinates technical and training programmes in aviation safety.',
+            ],
+            'manuel-lima' => [
+                'role'  => 'ATM Specialist',
+                'topic' => 'Implementation and modernisation of air navigation infrastructure.',
+                'bio'   => 'Manuel Lima is a specialist in air traffic management systems in the African context.',
             ],
         ],
     ],

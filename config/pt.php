@@ -7,6 +7,7 @@ return [
         'event'        => 'EVENTO',
         'schedule'     => 'Programa',
         'speakers'     => 'Palestrantes',
+        'moderadores'  => 'Moderadores',
         'partners'     => 'Parceiros',
         'hotels'       => 'Hotéis & Alojamentos',
         'countries'    => 'Países Isentos de Visto',
@@ -56,6 +57,15 @@ return [
         'see_all_title' => 'Ver todos os palestrantes',
         'see_all_desc' => 'Consulte a lista completa de especialistas convidados.',
         'see_all_cta'  => 'Ver lista completa',
+    ],
+
+    'moderadores_home' => [
+        'title'         => 'Moderadores',
+        'subtitle'      => 'Profissionais responsáveis pela condução das sessões técnicas do evento.',
+        'topic_label'   => 'Tema',
+        'see_all_title' => 'Ver todos os moderadores',
+        'see_all_desc'  => 'Consulte a lista completa dos moderadores do evento.',
+        'see_all_cta'   => 'Ver lista completa',
     ],
 
     'partners' => [
@@ -219,6 +229,38 @@ return [
                 'role'  => 'Gestora de Programas',
                 'topic' => 'Governação, normas e transformação sustentável em infraestruturas críticas.',
                 'bio'   => 'Carla Nunes gere programas de transformação e governação em infraestruturas críticas.',
+            ],
+        ],
+    ],
+
+    'moderadores' => [
+        'page_title'       => 'Moderadores',
+        'page_subtitle'    => 'Conheça os profissionais responsáveis pela condução das sessões técnicas do evento.',
+        'gallery_title'    => 'Moderadores',
+        'gallery_subtitle' => 'Os moderadores do 16.º Encontro Regional África da IFATSEA.',
+        'load_more'        => 'Ver mais',
+        'loading'          => 'A carregar...',
+        'back'             => '← Voltar aos moderadores',
+        'topic_label'      => 'Tema',
+        'profile_title'    => 'Perfil do Moderador',
+        'profile_subtitle' => 'Descubra o percurso profissional, área de especialização e o contributo do moderador para a Reunião Regional Africana da IFATSEA.',
+        'scroll_top'       => 'Voltar ao topo',
+
+        'perfis' => [
+            'pedro-costa' => [
+                'role'  => 'Moderador Sénior',
+                'topic' => 'Gestão de Sistemas CNS/ATM e Supervisão Operacional.',
+                'bio'   => 'Pedro Costa tem vasta experiência na moderação de conferências internacionais de aviação.',
+            ],
+            'fatima-neto' => [
+                'role'  => 'Coordenadora Técnica',
+                'topic' => 'Inovação tecnológica e formação em segurança do tráfego aéreo.',
+                'bio'   => 'Fátima Neto coordena programas técnicos e de formação em segurança da aviação.',
+            ],
+            'manuel-lima' => [
+                'role'  => 'Especialista ATM',
+                'topic' => 'Implementação e modernização de infraestruturas de navegação aérea.',
+                'bio'   => 'Manuel Lima é especialista em sistemas de gestão do tráfego aéreo em contexto africano.',
             ],
         ],
     ],

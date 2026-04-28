@@ -214,6 +214,16 @@ return [
                 'topic' => 'Governance, standards and sustainable transformation in critical infrastructure.',
                 'bio'   => 'Carla Nunes manages transformation and governance programmes in critical infrastructure.',
             ],
+            'sam-mahlangu' => [
+                'role'  => 'Speaker',
+                'topic' => 'Speaker at ARM/26.',
+                'bio'   => 'The IFATSEA Regional Director for Africa, Mr Sam Mahlangu, will participate as a speaker at ARM/26.',
+            ],
+            'carregando' => [
+                'role'  => '',
+                'topic' => '',
+                'bio'   => '',
+            ],
         ],
     ],
 
@@ -245,6 +255,16 @@ return [
                 'role'  => 'ATM Specialist',
                 'topic' => 'Implementation and modernisation of air navigation infrastructure.',
                 'bio'   => 'Manuel Lima is a specialist in air traffic management systems in the African context.',
+            ],
+            'thomas-chauque' => [
+                'role'  => 'Moderator',
+                'topic' => 'Moderator of the topic "Human Factors in the Management of CNS Systems (Communications, Navigation and Surveillance)".',
+                'bio'   => 'Executive President of SAATSEPA.',
+            ],
+            'carregando' => [
+                'role'  => '',
+                'topic' => '',
+                'bio'   => '',
             ],
         ],
     ],

@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Home;
+use App\Exports\InscricoesExport;
 use App\Livewire\Pages\AboutPage;
 use App\Livewire\Pages\ContactPage;
 use App\Livewire\Pages\CountriesPage;
@@ -13,6 +14,7 @@ use App\Livewire\Pages\StayPage;
 use App\Livewire\Pages\Speakers\Show;
 use App\Livewire\Pages\SpeakersPage;
 use Illuminate\Support\Facades\Route;
+use Maatwebsite\Excel\Facades\Excel;
 
 Route::get('/lang/{lang}', function (string $lang) {
     if (in_array($lang, ['pt', 'en'])) {
@@ -34,3 +36,7 @@ Route::get('/contacto', ContactPage::class)->name('contact');
 Route::get('/parceiros', PartnersPage::class)->name('partners');
 Route::get('/paises-isentos', CountriesPage::class)->name('countries');
 Route::get('/inscricao', RegistrationPage::class)->name('registration');
+
+Route::get('/admin/inscricoes/export', function () {
+    return Excel::download(new InscricoesExport, 'inscricoes-' . now()->format('Y-m-d') . '.xlsx');
+})->middleware(['auth'])->name('admin.inscricoes.export');

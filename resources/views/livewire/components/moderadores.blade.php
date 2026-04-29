@@ -37,12 +37,12 @@
                    transition-all duration-300 ease-out
                    hover:-translate-y-2 hover:shadow-xl hover:border-indigo-200">
 
-                                    <div class="flex items-center gap-4">
+                                    <div class="flex flex-col items-center text-center gap-3">
 
                                         <!-- FOTO / INICIAIS -->
                                         <div
-                                            class="h-14 w-14 rounded-xl overflow-hidden flex items-center justify-center
-                            bg-indigo-700/10 text-indigo-800 font-extrabold text-sm
+                                            class="h-24 w-24 rounded-2xl overflow-hidden flex items-center justify-center
+                            bg-indigo-700/10 text-indigo-800 font-extrabold text-lg
                             transition-all duration-300
                             group-hover:bg-indigo-700 group-hover:text-white">
 

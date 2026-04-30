@@ -108,6 +108,7 @@ class InscricaoForm
                             'Delegado'     => 'Delegado',
                             'Orador'       => 'Orador',
                             'Observador'   => 'Observador',
+                            'Patrocinadores e Esposas' => 'Patrocinadores e Esposas',
                         ]),
 
                     Toggle::make('apresenta_tema')

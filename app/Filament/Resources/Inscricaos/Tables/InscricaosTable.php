@@ -51,6 +51,7 @@ class InscricaosTable
                         'success' => 'Orador',
                         'warning' => 'Delegado',
                         'gray'    => 'Observador',
+                        'info'    => 'Patrocinadores e Esposas',
                     ]),
 
                 BooleanColumn::make('apresenta_tema')
@@ -80,6 +81,7 @@ class InscricaosTable
                         'Delegado'     => 'Delegado',
                         'Orador'       => 'Orador',
                         'Observador'   => 'Observador',
+                        'Patrocinadores e Esposas' => 'Patrocinadores e Esposas',
                     ]),
 
                 TernaryFilter::make('comprovativo_anexado')

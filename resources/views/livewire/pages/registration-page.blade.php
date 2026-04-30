@@ -298,7 +298,7 @@
                             <div>
                                 <label class="block text-sm font-medium text-slate-700 mb-3">Tipo de Participação <span class="text-red-500">*</span></label>
                                 <div class="grid grid-cols-2 gap-3">
-                                    @foreach(['Participante', 'Delegado', 'Orador', 'Observador'] as $tipo)
+                                    @foreach(['Participante', 'Delegado', 'Orador', 'Observador', 'Patrocinadores e Esposas'] as $tipo)
                                     <label class="flex items-center gap-3 p-4 border-2 rounded-xl cursor-pointer transition-all
                                         {{ $tipo_participacao === $tipo ? 'border-indigo-500 bg-indigo-50' : 'border-slate-200 hover:border-slate-300 hover:bg-slate-50' }}">
                                         <input type="radio" wire:model="tipo_participacao" value="{{ $tipo }}"

@@ -71,7 +71,7 @@ class RegistrationPage extends Component
                 'pais_residencia'  => 'required|string|max:100',
             ],
             3 => [
-                'tipo_participacao' => 'required|in:Participante,Delegado,Orador,Observador',
+                'tipo_participacao' => 'required|in:Participante,Delegado,Orador,Observador,Patrocinadores e Esposas',
                 'tema'              => 'nullable|required_if:apresenta_tema,true|string|max:255',
             ],
             4 => [

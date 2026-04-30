@@ -14,7 +14,7 @@ return [
         'contact'      => 'CONTACT',
         'registration'  => 'REGISTER',
         'brand_title'   => 'INTERNATIONAL CONFERENCE',
-        'brand_subtitle'=> 'Official Event Website',
+        'brand_subtitle' => 'Official Event Website',
     ],
 
     'hero' => [
@@ -95,7 +95,7 @@ return [
 
     'event' => [
         'title'   => '16th IFATSEA Africa Regional Meeting',
-        'tagline' => 'Promoting security and operational excellence in África though the implementation and maintenance of modern CNS/ATM Systems',
+        'tagline' => 'Advancing safety and operational excellence: Implementing and maintaining modern CNS/ATM systems in Africa',
         'dates'   => 'June 23–26, 2026',
         'venue'   => 'Hotel Diamante',
     ],
@@ -119,7 +119,9 @@ return [
 
         'hotels' => [
             [
-                'name' => 'Hotel Diamante', 'category' => 'Main reference', 'location' => 'Luanda',
+                'name' => 'Hotel Diamante',
+                'category' => 'Main reference',
+                'location' => 'Luanda',
                 'description' => 'Hotel Diamante is a 4-star hotel located on the Luanda Seafront (Rua das Kipakas), in the financial and administrative centre, opened in 2015 by the Endiama group.',
                 'expanded_description' => [
                     'It offers 174 rooms, a restaurant, pool, spa, gym and meeting rooms, known for its value for money, comfort and prime location.',
@@ -135,32 +137,44 @@ return [
                 ],
             ],
             [
-                'name' => 'Hotel Continental Horizonte', 'category' => 'Online booking', 'location' => 'Luanda',
+                'name' => 'Hotel Continental Horizonte',
+                'category' => 'Online booking',
+                'location' => 'Luanda',
                 'description' => 'Option added from the link provided for consultation and booking.',
                 'links' => [['label' => 'Open Booking', 'url' => 'https://www.booking.com/Share-tXPwox']],
             ],
             [
-                'name' => 'Hotel Presidente Luanda', 'category' => 'Official website', 'location' => 'Luanda',
+                'name' => 'Hotel Presidente Luanda',
+                'category' => 'Official website',
+                'location' => 'Luanda',
                 'description' => 'Direct link to the official hotel website.',
                 'links' => [['label' => 'Open official website', 'url' => 'https://www.hotelpresidenteluanda.com/']],
             ],
             [
-                'name' => 'Skyna Hotel Luanda', 'category' => 'Online booking', 'location' => 'Luanda',
+                'name' => 'Skyna Hotel Luanda',
+                'category' => 'Online booking',
+                'location' => 'Luanda',
                 'description' => null,
                 'links' => [['label' => 'Open Booking', 'url' => 'https://www.booking.com/Share-X70TWz']],
             ],
             [
-                'name' => 'RK Suite Hotel', 'category' => 'Online booking', 'location' => 'Luanda',
+                'name' => 'RK Suite Hotel',
+                'category' => 'Online booking',
+                'location' => 'Luanda',
                 'description' => null,
                 'links' => [['label' => 'Open Booking', 'url' => 'https://www.booking.com/Share-iUsZzFW']],
             ],
             [
-                'name' => 'EPIC SANA Luanda Hotel', 'category' => 'Online booking', 'location' => 'Luanda',
+                'name' => 'EPIC SANA Luanda Hotel',
+                'category' => 'Online booking',
+                'location' => 'Luanda',
                 'description' => 'Option included in the list for direct consultation on Booking.com.',
                 'links' => [['label' => 'Open Booking', 'url' => 'https://www.booking.com/Share-f3oFyjc']],
             ],
             [
-                'name' => 'Hotel Costa', 'category' => 'Reference links', 'location' => 'Luanda',
+                'name' => 'Hotel Costa',
+                'category' => 'Reference links',
+                'location' => 'Luanda',
                 'description' => 'This hotel was shared with more than one reference to facilitate information comparison.',
                 'links' => [
                     ['label' => 'Open TripAdvisor',  'url' => 'https://www.tripadvisor.com.br/Hotel_Review-g293763-d6739969-Reviews-Hotel_Costa-Luanda_Luanda_Province.html'],
@@ -168,7 +182,9 @@ return [
                 ],
             ],
             [
-                'name' => 'Aparthotel Tropicana', 'category' => 'Rate comparator', 'location' => 'Luanda',
+                'name' => 'Aparthotel Tropicana',
+                'category' => 'Rate comparator',
+                'location' => 'Luanda',
                 'description' => 'Link added for consultation on Trivago.',
                 'links' => [['label' => 'Open Trivago', 'url' => 'https://www.trivago.pt/pt/oar/aparthotel-tropicana-luanda?search=100-2239506']],
             ],
@@ -431,7 +447,7 @@ return [
         'intro' => 'The <strong>16th IFATSEA Africa Regional Meeting (ARM)</strong> will be held in <strong>Luanda-Angola</strong>, from <strong>23 to 26 June</strong>. This important event will bring together Air Traffic Safety Electronics Engineering Professionals (ATSEP\'s) from across Africa to discuss advances in <strong>Communication, Navigation and Surveillance / Air Traffic Management (CNS/ATM)</strong>.',
 
         'theme_label' => 'Theme:',
-        'theme_text'  => '"Promoting safety and operational excellence in Africa through the implementation and maintenance of modern CNS/ATM systems."',
+        'theme_text'  => '"Advancing safety and operational excellence: Implementing and maintaining modern CNS/ATM systems in Africa."',
         'theme_focus' => 'This year\'s meeting will focus on the <strong>integration of emerging technologies</strong>, skills development and best practices to strengthen air traffic safety.',
 
         'highlights_label' => 'Key Highlights:',

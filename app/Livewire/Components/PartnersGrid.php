@@ -17,9 +17,11 @@ class PartnersGrid extends Component
             ['name' => 'RNA',       'logo' => 'assets/parceiros/rna.jpeg'],
             ['name' => 'ACAMS',     'logo' => 'assets/parceiros/ACAMS_Logo.jpg'],
             ['name' => 'JOTRON',    'logo' => 'assets/parceiros/jotron.png'],
-            ['name' => 'KLIBITY',   'logo' => ''],
+
+            /*  ['name' => 'KLIBITY',   'logo' => ''],
             ['name' => 'LANTECH',   'logo' => 'assets/parceiros/lantech.webp'],
             ['name' => 'THALES',    'logo' => 'assets/parceiros/thales.png'],
+       */
         ];
 
         return view('livewire.components.partners-grid', compact('partners'));

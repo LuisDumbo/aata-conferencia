@@ -55,7 +55,7 @@ class Partners extends Component
             ],
 
 
-            [
+            /*  [
                 'name' => 'KLIBITY',
                 'logo' => 'https://dummyimage.com/520x220/ffffff/0f172a&text=ACAMS',
                 'url'  => '#',
@@ -69,7 +69,7 @@ class Partners extends Component
                 'name' => 'THALES',
                 'logo' => 'assets/parceiros/thales.png',
                 'url'  => '#',
-            ],
+            ], */
 
         ];
     }

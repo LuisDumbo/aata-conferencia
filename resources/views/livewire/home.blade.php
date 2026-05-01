@@ -108,6 +108,33 @@
     <livewire:components.countdown eventStart="2026-06-23T09:00:00" />
 
 
+    {{-- Secção: ATSEP Jorge Paz Neto --}}
+    <section class="relative w-full overflow-hidden bg-[#0a1628]">
+        <div class="max-w-5xl mx-auto px-4 py-12 flex flex-col md:flex-row items-center gap-10">
+
+            {{-- Imagem --}}
+            <div class="w-full md:w-1/2 flex-shrink-0">
+                <img src="{{ asset('assets/ATSEP Jorge Paz Neto .jpeg') }}"
+                     alt="ATSEP Jorge Paz Neto"
+                     class="w-full rounded-2xl shadow-2xl object-cover">
+            </div>
+
+            {{-- Texto --}}
+            <div class="w-full md:w-1/2 flex flex-col justify-center">
+                <p class="text-sm font-bold uppercase tracking-widest text-orange-400 mb-3">{{ t('jorge_paz.badge') }}</p>
+                <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+                    <span class="text-white">ATSEP </span><span class="text-orange-400">Jorge Paz Neto</span>
+                </h2>
+                <div class="mt-4 border-l-4 border-orange-400 pl-4">
+                    <p class="text-white text-lg font-semibold leading-snug">
+                        {{ t('jorge_paz.role') }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <livewire:components.about />
     <livewire:components.speakers />
     <livewire:components.moderadores />

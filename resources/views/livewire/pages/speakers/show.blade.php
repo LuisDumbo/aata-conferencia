@@ -10,7 +10,7 @@
         <div class="mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
             <div class="p-8 md:p-10">
                 <div class="flex flex-col md:flex-row md:items-center gap-6">
-                    <div class="h-24 w-24 rounded-2xl overflow-hidden bg-slate-100 flex items-center justify-center">
+                    <div class="h-56 w-56 rounded-2xl overflow-hidden bg-slate-100 flex items-center justify-center flex-shrink-0">
                         @if (!empty($speaker['photo']))
                             <img src="{{ asset($speaker['photo']) }}" alt="{{ $speaker['name'] }}"
                                 class="h-full w-full object-cover">

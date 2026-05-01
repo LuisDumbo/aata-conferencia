@@ -201,6 +201,11 @@ return [
         'become_cta'    => 'Contactar',
     ],
 
+    'jorge_paz' => [
+        'badge'    => 'Presidente dos ATSEP de Angola',
+        'role'     => 'Presidente da Associação de Profissionais de Engenharia para a Segurança do Tráfego Aéreo',
+    ],
+
     'palestrantes' => [
         'page_title'    => 'Palestrantes',
         'page_subtitle' => 'Conheça os especialistas convidados que irão partilhar conhecimento e experiência durante o evento.',
@@ -234,6 +239,16 @@ return [
                 'role'  => 'Orador',
                 'topic' => 'Orador da ARM/26.',
                 'bio'   => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
+            ],
+            'miguel-queta' => [
+                'role'  => 'Orador - de Angola',
+                'topic' => 'Fatores Humanos na Gestão do Sistema Nervoso Central (CNS)',
+                'bio'   => 'O Eng.º Miguel Queta participará como orador da ARM/26, representando Angola.',
+            ],
+            'jacques-tshimpanga' => [
+                'role'  => 'Orador - da República Democrática do Congo',
+                'topic' => 'Fatores Humanos na Gestão do Sistema Nervoso Central (CNS)',
+                'bio'   => 'O Eng.º Jacques Tshimpanga participará como orador da ARM/26, representando a República Democrática do Congo.',
             ],
             'carregando' => [
                 'role'  => '',

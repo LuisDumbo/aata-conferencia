@@ -14,16 +14,30 @@ return [
     ],
 
     [
-        'slug'     => 'miguel-jacques-e-Tshimpanga',
-        'initials' => 'MQ & JT',
-        'name'     => 'Eng.º Miguel Queta & Eng.º Jacques Tshimpanga',
-        'role'     => 'Orador - Abordagem dos fatores humans que influenciam a segurança, desenpenho e tomada de decisão na gestão do Sitema Nervoso Cebtral (CNS), promovendo práticas mais seguras e eficazes',
+        'slug'     => 'miguel-queta',
+        'initials' => 'MQ',
+        'name'     => 'Eng.º Miguel Queta',
+        'role'     => 'Orador - de Angola',
         'org'      => '',
         'topic'    => 'Fatores Humanos na Gestão do Sitema Nervoso Central (CNS)',
-        'photo'    => 'assets/palestrantes/Eng Miguel Eng Jacques Tshimpanga.png',
+        'photo'    => 'assets/palestrantes/Eng Miguel Eng Jacques.jpeg',
 
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
     ],
+
+
+    [
+        'slug'     => 'jacques-tshimpanga',
+        'initials' => 'JT',
+        'name'     => 'Eng.º Jacques Tshimpanga',
+        'role'     => 'Orador - da Republica Democratica do Congo',
+        'org'      => '',
+        'topic'    => 'Fatores Humanos na Gestão do Sitema Nervoso Central (CNS)',
+        'photo'    => 'assets/palestrantes/Eng Jacques Tshimpanga .jpeg',
+
+        //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
+    ],
+
 
 
 

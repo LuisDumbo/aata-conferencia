@@ -206,6 +206,11 @@ return [
         'role'     => 'President of the Association of Engineering Professionals for Air Traffic Safety',
     ],
 
+    'domingos_carvalho' => [
+        'badge'    => 'Secretary General of ATSEP Angola',
+        'role'     => 'Secretary General of the Association of Aviation Safety Engineering Professionals',
+    ],
+
     'palestrantes' => [
         'page_title'    => 'Speakers',
         'page_subtitle' => 'Meet the invited experts who will share knowledge and experience throughout the event.',

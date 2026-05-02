@@ -206,6 +206,11 @@ return [
         'role'     => 'Presidente da Associação de Profissionais de Engenharia para a Segurança do Tráfego Aéreo',
     ],
 
+    'domingos_carvalho' => [
+        'badge'    => 'Secretário-Geral dos ATSEP de Angola',
+        'role'     => 'Secretário-Geral da Associação de Profissionais de Engenharia de Segurança da Aviação',
+    ],
+
     'palestrantes' => [
         'page_title'    => 'Palestrantes',
         'page_subtitle' => 'Conheça os especialistas convidados que irão partilhar conhecimento e experiência durante o evento.',

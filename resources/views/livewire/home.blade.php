@@ -16,13 +16,13 @@
                     <div class="text-white">
                         <div class="flex flex-col gap-2 text-white/90">
                             <div class="inline-flex items-center gap-2 text-sm font-semibold">
-                                <span
-                                    class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/10"><i class="fa-solid fa-calendar"></i></span>
+                                <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/10"><i
+                                        class="fa-solid fa-calendar"></i></span>
                                 <span class="uppercase tracking-wide">{{ t('event.dates') }}</span>
                             </div>
                             <div class="inline-flex items-center gap-2 text-sm font-semibold">
-                                <span
-                                    class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/10"><i class="fa-solid fa-location-dot"></i></span>
+                                <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/10"><i
+                                        class="fa-solid fa-location-dot"></i></span>
                                 <span class="uppercase tracking-wide">{{ t('event.venue') }}</span>
                             </div>
                         </div>
@@ -46,7 +46,7 @@
                             </a>
                         </div>
 
-                  
+
                     </div>
 
                     <!-- right panel (visual formal) -->
@@ -61,13 +61,15 @@
 
                                 <div class="mt-6 grid grid-cols-2 gap-4">
                                     <div class="rounded-2xl bg-white/10 p-4">
-                                        <p class="text-white/80 text-xs font-bold uppercase tracking-widest">{{ t('hero.tracks') }}</p>
+                                        <p class="text-white/80 text-xs font-bold uppercase tracking-widest">
+                                            {{ t('hero.tracks') }}</p>
                                         <p class="mt-2 text-white text-2xl font-extrabold">
                                             {{ $event['highlights']['trilhas'] }}</p>
                                     </div>
 
                                     <div class="rounded-2xl bg-white/10 p-4">
-                                        <p class="text-white/80 text-xs font-bold uppercase tracking-widest">{{ t('hero.sessions') }}</p>
+                                        <p class="text-white/80 text-xs font-bold uppercase tracking-widest">
+                                            {{ t('hero.sessions') }}</p>
                                         <p class="mt-2 text-white text-2xl font-extrabold">
                                             {{ $event['highlights']['sessoes'] }}</p>
                                     </div>
@@ -107,21 +109,21 @@
 
     <livewire:components.countdown eventStart="2026-06-23T09:00:00" />
 
-
+    <livewire:components.about />
     {{-- Secção: ATSEP Jorge Paz Neto --}}
     <section class="relative w-full overflow-hidden bg-[#0a1628]">
         <div class="max-w-5xl mx-auto px-4 py-12 flex flex-col md:flex-row items-center gap-10">
 
             {{-- Imagem --}}
             <div class="w-full md:w-1/2 flex-shrink-0">
-                <img src="{{ asset('assets/ATSEP Jorge Paz Neto .jpeg') }}"
-                     alt="ATSEP Jorge Paz Neto"
-                     class="w-full rounded-2xl shadow-2xl object-cover">
+                <img src="{{ asset('assets/ATSEP Jorge Paz Neto .jpeg') }}" alt="ATSEP Jorge Paz Neto"
+                    class="w-full rounded-2xl shadow-2xl object-cover">
             </div>
 
             {{-- Texto --}}
             <div class="w-full md:w-1/2 flex flex-col justify-center">
-                <p class="text-sm font-bold uppercase tracking-widest text-orange-400 mb-3">{{ t('jorge_paz.badge') }}</p>
+                <p class="text-sm font-bold uppercase tracking-widest text-orange-400 mb-3">{{ t('jorge_paz.badge') }}
+                </p>
                 <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
                     <span class="text-white">ATSEP </span><span class="text-orange-400">Jorge Paz Neto</span>
                 </h2>
@@ -135,7 +137,34 @@
     </section>
 
 
-    <livewire:components.about />
+    {{-- Secção: ATSEP Eng. Domingos de Carvalho --}}
+    <section class="relative w-full overflow-hidden bg-[#0d1e35]">
+        <div class="max-w-5xl mx-auto px-4 py-12 flex flex-col md:flex-row-reverse items-center gap-10">
+
+            {{-- Imagem --}}
+            <div class="w-full md:w-1/2 flex-shrink-0">
+                <img src="{{ asset('assets/Eng. Domingos de Carvalho .png') }}" alt="ATSEP Eng. Domingos de Carvalho"
+                    class="w-full rounded-2xl shadow-2xl object-cover">
+            </div>
+
+            {{-- Texto --}}
+            <div class="w-full md:w-1/2 flex flex-col justify-center">
+                <p class="text-sm font-bold uppercase tracking-widest text-orange-400 mb-3">
+                    {{ t('domingos_carvalho.badge') }}</p>
+                <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+                    <span class="text-white">ATSEP </span><span class="text-orange-400">Eng. Domingos de Carvalho</span>
+                </h2>
+                <div class="mt-4 border-l-4 border-orange-400 pl-4">
+                    <p class="text-white text-lg font-semibold leading-snug">
+                        {{ t('domingos_carvalho.role') }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     <livewire:components.speakers />
     <livewire:components.moderadores />
     <livewire:components.partners />

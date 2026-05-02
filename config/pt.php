@@ -255,6 +255,16 @@ return [
                 'topic' => 'Fatores Humanos na Gestão do Sistema Nervoso Central (CNS)',
                 'bio'   => 'O Eng.º Jacques Tshimpanga participará como orador da ARM/26, representando a República Democrática do Congo.',
             ],
+            'ivani-valente' => [
+                'role'  => 'Orador - de Angola',
+                'topic' => 'Fortalecendo a resiliência do SNC/ATM na África através da integração da inteligência artificial na manutenção.',
+                'bio'   => 'O Eng.º Ivani Valente participará como orador da ARM/26, representando Angola.',
+            ],
+            'domingos-lima-de-carvalho' => [
+                'role'  => 'Orador - de Angola',
+                'topic' => 'Promover a segurança e manter os requisitos regulamentares por meio de uma filosofia de manutenção responsiva.',
+                'bio'   => 'O Eng.º Domingos Lima de Carvalho participará como orador da ARM/26, representando Angola.',
+            ],
             'carregando' => [
                 'role'  => '',
                 'topic' => '',

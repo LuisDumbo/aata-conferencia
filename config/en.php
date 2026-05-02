@@ -255,6 +255,16 @@ return [
                 'topic' => 'Human Factors in Central Nervous System (CNS) Management',
                 'bio'   => 'Eng. Jacques Tshimpanga will participate as a speaker at ARM/26, representing the Democratic Republic of Congo.',
             ],
+            'ivani-valente' => [
+                'role'  => 'Speaker - from Angola',
+                'topic' => 'Strengthening CNS/ATM resilience in Africa through the integration of artificial intelligence in maintenance.',
+                'bio'   => 'Eng. Ivani Valente will participate as a speaker at ARM/26, representing Angola.',
+            ],
+            'domingos-lima-de-carvalho' => [
+                'role'  => 'Speaker - from Angola',
+                'topic' => 'Promoting safety and maintaining regulatory requirements through a responsive maintenance philosophy.',
+                'bio'   => 'Eng. Domingos Lima de Carvalho will participate as a speaker at ARM/26, representing Angola.',
+            ],
             'carregando' => [
                 'role'  => '',
                 'topic' => '',

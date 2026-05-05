@@ -257,7 +257,7 @@ return [
             ],
             'ivani-valente' => [
                 'role'  => 'Orador - de Angola',
-                'topic' => 'Fortalecendo a resiliência do SNC/ATM na África através da integração da inteligência artificial na manutenção.',
+                'topic' => 'Fortalecendo a resiliência do CNS/ATM na África através da integração da inteligência artificial na manutenção.',
                 'bio'   => 'O Eng.º Ivani Valente participará como orador da ARM/26, representando Angola.',
             ],
             'domingos-lima-de-carvalho' => [

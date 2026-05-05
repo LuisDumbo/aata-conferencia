@@ -44,7 +44,7 @@ return [
         'name'     => 'Eng.º Ivani Valente',
         'role'     => 'Orador - da Angola',
         'org'      => '',
-        'topic'    => 'Fortalecendo a resiliência do SNC/ATM na África através da integração da inteligência artificial na manutenção.',
+        'topic'    => 'Fortalecendo a resiliência do CNS/ATM na África através da integração da inteligência artificial na manutenção.',
         'photo'    => 'assets/palestrantes/Eng. Ivani Valente .png',
 
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',

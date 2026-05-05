@@ -93,13 +93,13 @@ class InscricaosTable
                 TernaryFilter::make('apresenta_tema')
                     ->label('Apresenta Tema'),
             ])
-            ->recordActions([
+            /* ->recordActions([
                 EditAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
                 ]),
-            ]);
+            ])*/;
     }
 }

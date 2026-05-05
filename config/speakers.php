@@ -13,7 +13,7 @@ return [
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
     ],
 
-    [
+    /*   [
         'slug'     => 'miguel-queta',
         'initials' => 'MQ',
         'name'     => 'Eng.º Miguel Queta',
@@ -36,7 +36,7 @@ return [
         'photo'    => 'assets/palestrantes/Eng Jacques Tshimpanga .jpeg',
 
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
-    ],
+    ], */
 
     [
         'slug'     => 'ivani-valente',

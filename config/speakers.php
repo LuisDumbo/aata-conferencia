@@ -36,7 +36,7 @@ return [
         'photo'    => 'assets/palestrantes/Eng Jacques Tshimpanga .jpeg',
 
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
-    ], */
+    ], 
 
     [
         'slug'     => 'ivani-valente',
@@ -49,7 +49,7 @@ return [
 
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
     ],
-
+*/
 
     [
         'slug'     => 'domingos-lima-de-carvalho',

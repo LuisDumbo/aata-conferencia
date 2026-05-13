@@ -13,13 +13,25 @@ return [
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
     ],
 
-    /*   [
+    [
+        'slug'     => 'rishard-sembatya',
+        'initials' => 'RS',
+        'name'     => 'Eng.º Richard Kato Sembatya',
+        'role'     => 'Orador - Presidente da IFATSEA ',
+        'org'      => '',
+        'topic'    => 'Promover a Segurança.',
+        'photo'    => 'assets/palestrantes/Eng. Richard Katos Sembaty .png',
+
+        'bio'      => 'Presidente da IFATSEA Participará no debate em painel sob o tema “Promover a Segurança.”',
+    ],
+
+    [
         'slug'     => 'miguel-queta',
         'initials' => 'MQ',
         'name'     => 'Eng.º Miguel Queta',
         'role'     => 'Orador - de Angola',
         'org'      => '',
-        'topic'    => 'Fatores Humanos na Gestão do Sitema Nervoso Central (CNS)',
+        'topic'    => 'Fatores Humanos na Gestão do Sitema Nervoso Central ',
         'photo'    => 'assets/palestrantes/Eng Miguel Eng Jacques.jpeg',
 
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
@@ -32,12 +44,12 @@ return [
         'name'     => 'Eng.º Jacques Tshimpanga',
         'role'     => 'Orador - da Republica Democratica do Congo',
         'org'      => '',
-        'topic'    => 'Fatores Humanos na Gestão do Sitema Nervoso Central (CNS)',
+        'topic'    => 'Fatores Humanos na Gestão do Sitema Nervoso Central ',
         'photo'    => 'assets/palestrantes/Eng Jacques Tshimpanga .jpeg',
 
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
-    ], 
-
+    ],
+    /*
     [
         'slug'     => 'ivani-valente',
         'initials' => 'IV',

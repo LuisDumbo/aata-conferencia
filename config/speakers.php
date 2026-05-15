@@ -75,6 +75,18 @@ return [
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
     ],
 
+    [
+        'slug'     => 'elijah-mitanga',
+        'initials' => 'EM',
+        'name'     => 'Eng. Elijah Mitanga',
+        'role'     => 'Orador - República do Quênia',
+        'org'      => '',
+        'topic'    => 'Fortalecimento da Resiliência dos Sistemas CNS/ATM em África através da Integração da Inteligência Artificial na Manutenção',
+        'photo'    => 'assets/palestrantes/Eng. Elijah Mitanga.png',
+
+        //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
+    ],
+
 
 
 

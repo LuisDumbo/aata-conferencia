@@ -260,10 +260,20 @@ return [
                 'topic' => 'Strengthening CNS/ATM resilience in Africa through the integration of artificial intelligence in maintenance.',
                 'bio'   => 'Eng. Ivani Valente will participate as a speaker at ARM/26, representing Angola.',
             ],
+            'rishard-sembatya' => [
+                'role'  => 'Speaker - President of IFATSEA',
+                'topic' => 'Promoting Safety.',
+                'bio'   => 'President of IFATSEA. Will participate in the panel discussion on the theme "Promoting Safety."',
+            ],
             'domingos-lima-de-carvalho' => [
                 'role'  => 'Speaker - from Angola',
                 'topic' => 'Promoting safety and maintaining regulatory requirements through a responsive maintenance philosophy.',
                 'bio'   => 'Eng. Domingos Lima de Carvalho will participate as a speaker at ARM/26, representing Angola.',
+            ],
+            'elijah-mitanga' => [
+                'role'  => 'Speaker - Republic of Kenya',
+                'topic' => 'Strengthening the Resilience of CNS/ATM Systems in Africa through the Integration of Artificial Intelligence in Maintenance.',
+                'bio'   => 'Eng. Elijah Mitanga will participate as a speaker at ARM/26, representing the Republic of Kenya.',
             ],
             'carregando' => [
                 'role'  => '',

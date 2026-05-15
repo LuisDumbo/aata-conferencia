@@ -260,10 +260,20 @@ return [
                 'topic' => 'Fortalecendo a resiliência do CNS/ATM na África através da integração da inteligência artificial na manutenção.',
                 'bio'   => 'O Eng.º Ivani Valente participará como orador da ARM/26, representando Angola.',
             ],
+            'rishard-sembatya' => [
+                'role'  => 'Orador - Presidente da IFATSEA',
+                'topic' => 'Promover a Segurança.',
+                'bio'   => 'Presidente da IFATSEA. Participará no debate em painel sob o tema "Promover a Segurança."',
+            ],
             'domingos-lima-de-carvalho' => [
                 'role'  => 'Orador - de Angola',
                 'topic' => 'Promover a segurança e manter os requisitos regulamentares por meio de uma filosofia de manutenção responsiva.',
                 'bio'   => 'O Eng.º Domingos Lima de Carvalho participará como orador da ARM/26, representando Angola.',
+            ],
+            'elijah-mitanga' => [
+                'role'  => 'Orador - República do Quénia',
+                'topic' => 'Fortalecimento da Resiliência dos Sistemas CNS/ATM em África através da Integração da Inteligência Artificial na Manutenção.',
+                'bio'   => 'O Eng. Elijah Mitanga participará como orador da ARM/26, representando a República do Quénia.',
             ],
             'carregando' => [
                 'role'  => '',

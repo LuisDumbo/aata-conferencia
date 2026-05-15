@@ -18,8 +18,9 @@ class PartnersGrid extends Component
             ['name' => 'ACAMS',     'logo' => 'assets/parceiros/ACAMS_Logo.jpg'],
             ['name' => 'JOTRON',    'logo' => 'assets/parceiros/jotron.png'],
 
-            /*  ['name' => 'KLIBITY',   'logo' => ''],
-            ['name' => 'LANTECH',   'logo' => 'assets/parceiros/lantech.webp'],
+            ['name' => 'KLIBITY',   'logo' => 'assets/parceiros/kbility.png'],
+            ['name' => 'MARAVE',   'logo' => 'assets/parceiros/marave.png'],
+            /*       ['name' => 'LANTECH',   'logo' => 'assets/parceiros/lantech.webp'],
             ['name' => 'THALES',    'logo' => 'assets/parceiros/thales.png'],
        */
         ];

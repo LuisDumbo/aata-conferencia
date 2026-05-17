@@ -275,6 +275,11 @@ return [
                 'topic' => 'Strengthening the Resilience of CNS/ATM Systems in Africa through the Integration of Artificial Intelligence in Maintenance.',
                 'bio'   => 'Eng. Elijah Mitanga will participate as a speaker at ARM/26, representing the Republic of Kenya.',
             ],
+            'leivan-de-carvalho' => [
+                'role'  => 'Speaker - from Angola',
+                'topic' => 'Ensuring a Cybersecure CNS/ATM Environment: Emerging Threats and Mitigation Strategies in the African Context',
+                'bio'   => 'Eng. Leivan de Carvalho will participate as a speaker at ARM/26, representing Angola.',
+            ],
             'carregando' => [
                 'role'  => '',
                 'topic' => '',

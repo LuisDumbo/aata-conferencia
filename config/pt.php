@@ -275,6 +275,11 @@ return [
                 'topic' => 'Fortalecimento da Resiliência dos Sistemas CNS/ATM em África através da Integração da Inteligência Artificial na Manutenção.',
                 'bio'   => 'O Eng. Elijah Mitanga participará como orador da ARM/26, representando a República do Quénia.',
             ],
+            'leivan-de-carvalho' => [
+                'role'  => 'Orador - de Angola',
+                'topic' => 'Garantindo um Ambiente CNS/ATM Ciberseguro: Ameaças Emergentes e Estratégias de Mitigação no Contexto Africano',
+                'bio'   => 'O Eng. Leivan de Carvalho participará como orador da ARM/26, representando Angola.',
+            ],
             'carregando' => [
                 'role'  => '',
                 'topic' => '',

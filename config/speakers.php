@@ -87,6 +87,18 @@ return [
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
     ],
 
+    [
+        'slug'     => 'leivan_de_carvalho',
+        'initials' => 'LC',
+        'name'     => 'Eng. Leivan de Carvalho',
+        'role'     => 'Orador - de Angola',
+        'org'      => '',
+        'topic'    => 'Garantindo um Ambiente CNS/ATM Ciberseguro: Ameaças Emergentes e Estratégias de Mitigação no Contexto Africano',
+        'photo'    => 'assets/palestrantes/Eng. Leivan de Carvalho .png',
+
+        //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
+    ],
+
 
 
 

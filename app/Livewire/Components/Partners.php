@@ -70,11 +70,16 @@ class Partners extends Component
                 'logo' => 'assets/parceiros/lantech.png',
                 'url'  => '#',
             ],
-            /*  [
-                'name' => 'THALES',
-                'logo' => 'assets/parceiros/thales.png',
+            [
+                'name' => 'EASA',
+                'logo' => 'assets/parceiros/easa.png',
                 'url'  => '#',
-            ], */
+            ],
+            [
+                'name' => 'CAA',
+                'logo' => 'assets/parceiros/CAA.png',
+                'url'  => '#',
+            ],
 
         ];
     }

@@ -21,7 +21,8 @@ class PartnersGrid extends Component
             ['name' => 'KLIBITY',   'logo' => 'assets/parceiros/kbility.png'],
             ['name' => 'MARAVE',   'logo' => 'assets/parceiros/marave.png'],
             ['name' => 'LANTECH',   'logo' => 'assets/parceiros/lantech.png'],
-            //    ['name' => 'THALES',    'logo' => 'assets/parceiros/thales.png'],
+            ['name' => 'EASA',    'logo' => 'assets/parceiros/easa.png'],
+            ['name' => 'CAA',    'logo' => 'assets/parceiros/CAA.png'],
 
         ];
 

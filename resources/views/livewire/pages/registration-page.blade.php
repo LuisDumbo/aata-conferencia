@@ -1,5 +1,5 @@
 <div>
-    <livewire:components.page-nav-bar :title="$title" :subtitle="$subtitle" />
+    <livewire:components.page-nav-bar :title="t('inscricao.page_title')" :subtitle="t('inscricao.page_subtitle')" />
 
     {{-- Secção informativa (fundo claro) --}}
     <section class="bg-white border-b border-slate-100 py-12">
@@ -8,16 +8,16 @@
                 <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                 </svg>
-                Ficha de Inscrição
+                {{ t('inscricao.badge') }}
             </div>
 
             <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
-                Reunião da IFATSEA
-                <span class="block text-indigo-600 mt-1">Luanda</span>
+                {{ t('inscricao.title') }}
+                <span class="block text-indigo-600 mt-1">{{ t('inscricao.title_city') }}</span>
             </h1>
 
             <p class="mt-4 text-slate-500 text-sm max-w-xl mx-auto">
-                Preencha o formulário abaixo para formalizar a sua inscrição no evento internacional da IFATSEA.
+                {{ t('inscricao.description') }}
             </p>
 
             <div class="mt-5 inline-flex max-w-2xl items-start gap-3 rounded-2xl border border-indigo-100 bg-indigo-50 px-5 py-4 text-left">
@@ -27,9 +27,9 @@
                     </svg>
                 </div>
                 <div>
-                    <p class="text-sm font-semibold text-indigo-900">Taxa de inscrição</p>
+                    <p class="text-sm font-semibold text-indigo-900">{{ t('inscricao.fee_label') }}</p>
                     <p class="mt-1 text-sm leading-7 text-indigo-800">
-                        150 USD por delegado e 50 USD para cônjuges.
+                        {{ t('inscricao.fee_text') }}
                     </p>
                 </div>
             </div>
@@ -39,14 +39,14 @@
                     <svg class="w-4 h-4 text-indigo-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                     </svg>
-                    <span class="text-sm font-medium text-slate-700">23 a 26 de Junho de 2025</span>
+                    <span class="text-sm font-medium text-slate-700">{{ t('inscricao.date') }}</span>
                 </div>
                 <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 px-4 py-2 rounded-xl">
                     <svg class="w-4 h-4 text-indigo-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                     </svg>
-                    <span class="text-sm font-medium text-slate-700">Luanda, Angola</span>
+                    <span class="text-sm font-medium text-slate-700">{{ t('inscricao.location') }}</span>
                 </div>
             </div>
         </div>
@@ -61,9 +61,7 @@
 
         <div class="relative z-10 max-w-3xl mx-auto px-4 py-14">
 
-            {{-- ══════════════════════════════════════════════════ --}}
-            {{-- Notificação de sucesso                            --}}
-            {{-- ══════════════════════════════════════════════════ --}}
+            {{-- Notificação de sucesso --}}
             <div
                 x-data="{ show: false }"
                 x-on:inscricao-sucesso.window="show = true; setTimeout(() => show = false, 7000)"
@@ -83,8 +81,8 @@
                     </svg>
                 </div>
                 <div>
-                    <p class="font-semibold text-emerald-800">Inscrição submetida com sucesso!</p>
-                    <p class="text-sm text-emerald-600 mt-0.5">A sua inscrição foi registada. Entraremos em contacto brevemente.</p>
+                    <p class="font-semibold text-emerald-800">{{ t('inscricao.success.title') }}</p>
+                    <p class="text-sm text-emerald-600 mt-0.5">{{ t('inscricao.success.message') }}</p>
                 </div>
                 <button @click="show = false" class="ml-auto text-emerald-400 hover:text-emerald-600">
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -93,18 +91,10 @@
                 </button>
             </div>
 
-            {{-- ══════════════════════════════════════════════════ --}}
-            {{-- Indicador de progresso                            --}}
-            {{-- ══════════════════════════════════════════════════ --}}
+            {{-- Indicador de progresso --}}
             <div class="mb-6">
                 @php
-                    $steps = [
-                        1 => 'Dados Pessoais',
-                        2 => 'Profissional',
-                        3 => 'Participação',
-                        4 => 'Logística',
-                        5 => 'Declaração',
-                    ];
+                    $steps = config(current_lang() . '.inscricao.step_names', config('pt.inscricao.step_names'));
                 @endphp
                 <div class="flex items-start">
                     @foreach($steps as $step => $label)
@@ -138,60 +128,58 @@
                 </div>
             </div>
 
-            {{-- ══════════════════════════════════════════════════ --}}
-            {{-- Card do formulário                                --}}
-            {{-- ══════════════════════════════════════════════════ --}}
+            {{-- Card do formulário --}}
             <div class="bg-white rounded-2xl shadow-2xl border border-white/10 overflow-hidden">
                 <form wire:submit.prevent="submit" novalidate>
 
-                    {{-- PASSO 1 — Dados Pessoais --}}
+                    {{-- PASSO 1 --}}
                     @if($currentStep === 1)
                     <div class="p-8">
                         <div class="mb-7">
-                            <span class="inline-block text-xs font-semibold text-indigo-600 uppercase tracking-widest bg-indigo-50 px-3 py-1 rounded-full">Passo 1 de 5</span>
-                            <h2 class="mt-3 text-2xl font-bold text-slate-900">Dados Pessoais</h2>
-                            <p class="mt-1 text-sm text-slate-500">Informações de identificação pessoal.</p>
+                            <span class="inline-block text-xs font-semibold text-indigo-600 uppercase tracking-widest bg-indigo-50 px-3 py-1 rounded-full">{{ t('inscricao.step1.badge') }}</span>
+                            <h2 class="mt-3 text-2xl font-bold text-slate-900">{{ t('inscricao.step1.title') }}</h2>
+                            <p class="mt-1 text-sm text-slate-500">{{ t('inscricao.step1.subtitle') }}</p>
                         </div>
 
                         <div class="space-y-5">
                             <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-1.5">Nome Completo <span class="text-red-500">*</span></label>
+                                <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step1.full_name') }} <span class="text-red-500">*</span></label>
                                 <input type="text" wire:model="nome_completo"
                                     class="w-full px-4 py-2.5 border rounded-xl text-sm outline-none transition-all
                                         {{ $errors->has('nome_completo') ? 'border-red-400 bg-red-50/50 focus:ring-2 focus:ring-red-200' : 'border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100' }}"
-                                    placeholder="Nome e Apelido completos">
+                                    placeholder="{{ t('inscricao.step1.placeholder_name') }}">
                                 @error('nome_completo') <x-form-error :message="$message" /> @enderror
                             </div>
 
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">Data de Nascimento <span class="text-red-500">*</span></label>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step1.date_of_birth') }} <span class="text-red-500">*</span></label>
                                     <input type="date" wire:model="data_nascimento"
                                         class="w-full px-4 py-2.5 border rounded-xl text-sm outline-none transition-all
                                             {{ $errors->has('data_nascimento') ? 'border-red-400 bg-red-50/50 focus:ring-2 focus:ring-red-200' : 'border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100' }}">
                                     @error('data_nascimento') <x-form-error :message="$message" /> @enderror
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">Nacionalidade <span class="text-red-500">*</span></label>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step1.nationality') }} <span class="text-red-500">*</span></label>
                                     <input type="text" wire:model="nacionalidade"
                                         class="w-full px-4 py-2.5 border rounded-xl text-sm outline-none transition-all
                                             {{ $errors->has('nacionalidade') ? 'border-red-400 bg-red-50/50 focus:ring-2 focus:ring-red-200' : 'border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100' }}"
-                                        placeholder="ex: Angolana">
+                                        placeholder="{{ t('inscricao.step1.placeholder_nationality') }}">
                                     @error('nacionalidade') <x-form-error :message="$message" /> @enderror
                                 </div>
                             </div>
 
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">Nº Documento (BI / Passaporte) <span class="text-red-500">*</span></label>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step1.document_number') }} <span class="text-red-500">*</span></label>
                                     <input type="text" wire:model="numero_documento"
                                         class="w-full px-4 py-2.5 border rounded-xl text-sm outline-none transition-all
                                             {{ $errors->has('numero_documento') ? 'border-red-400 bg-red-50/50 focus:ring-2 focus:ring-red-200' : 'border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100' }}"
-                                        placeholder="Número do documento">
+                                        placeholder="{{ t('inscricao.step1.placeholder_document') }}">
                                     @error('numero_documento') <x-form-error :message="$message" /> @enderror
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">Data de Validade <span class="text-red-500">*</span></label>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step1.document_expiry') }} <span class="text-red-500">*</span></label>
                                     <input type="date" wire:model="validade_documento"
                                         class="w-full px-4 py-2.5 border rounded-xl text-sm outline-none transition-all
                                             {{ $errors->has('validade_documento') ? 'border-red-400 bg-red-50/50 focus:ring-2 focus:ring-red-200' : 'border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100' }}">
@@ -202,59 +190,59 @@
                     </div>
                     @endif
 
-                    {{-- PASSO 2 — Dados Profissionais & Contactos --}}
+                    {{-- PASSO 2 --}}
                     @if($currentStep === 2)
                     <div class="p-8">
                         <div class="mb-7">
-                            <span class="inline-block text-xs font-semibold text-indigo-600 uppercase tracking-widest bg-indigo-50 px-3 py-1 rounded-full">Passo 2 de 5</span>
-                            <h2 class="mt-3 text-2xl font-bold text-slate-900">Dados Profissionais & Contactos</h2>
-                            <p class="mt-1 text-sm text-slate-500">Informações sobre a sua atividade profissional e contactos.</p>
+                            <span class="inline-block text-xs font-semibold text-indigo-600 uppercase tracking-widest bg-indigo-50 px-3 py-1 rounded-full">{{ t('inscricao.step2.badge') }}</span>
+                            <h2 class="mt-3 text-2xl font-bold text-slate-900">{{ t('inscricao.step2.title') }}</h2>
+                            <p class="mt-1 text-sm text-slate-500">{{ t('inscricao.step2.subtitle') }}</p>
                         </div>
 
                         <div class="space-y-5">
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">Organização / Empresa <span class="text-red-500">*</span></label>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step2.organisation') }} <span class="text-red-500">*</span></label>
                                     <input type="text" wire:model="organizacao"
                                         class="w-full px-4 py-2.5 border rounded-xl text-sm outline-none transition-all
                                             {{ $errors->has('organizacao') ? 'border-red-400 bg-red-50/50 focus:ring-2 focus:ring-red-200' : 'border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100' }}"
-                                        placeholder="Nome da organização">
+                                        placeholder="{{ t('inscricao.step2.placeholder_org') }}">
                                     @error('organizacao') <x-form-error :message="$message" /> @enderror
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">Função / Cargo <span class="text-red-500">*</span></label>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step2.role') }} <span class="text-red-500">*</span></label>
                                     <input type="text" wire:model="funcao"
                                         class="w-full px-4 py-2.5 border rounded-xl text-sm outline-none transition-all
                                             {{ $errors->has('funcao') ? 'border-red-400 bg-red-50/50 focus:ring-2 focus:ring-red-200' : 'border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100' }}"
-                                        placeholder="O seu cargo">
+                                        placeholder="{{ t('inscricao.step2.placeholder_role') }}">
                                     @error('funcao') <x-form-error :message="$message" /> @enderror
                                 </div>
                             </div>
 
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">Área de Atuação <span class="text-red-500">*</span></label>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step2.area') }} <span class="text-red-500">*</span></label>
                                     <input type="text" wire:model="area_atuacao"
                                         class="w-full px-4 py-2.5 border rounded-xl text-sm outline-none transition-all
                                             {{ $errors->has('area_atuacao') ? 'border-red-400 bg-red-50/50 focus:ring-2 focus:ring-red-200' : 'border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100' }}"
-                                        placeholder="ex: CNS/ATM, ATSEP, Engenharia">
+                                        placeholder="{{ t('inscricao.step2.placeholder_area') }}">
                                     @error('area_atuacao') <x-form-error :message="$message" /> @enderror
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">Anos de Experiência <span class="text-red-500">*</span></label>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step2.experience') }} <span class="text-red-500">*</span></label>
                                     <input type="text" wire:model="anos_experiencia"
                                         class="w-full px-4 py-2.5 border rounded-xl text-sm outline-none transition-all
                                             {{ $errors->has('anos_experiencia') ? 'border-red-400 bg-red-50/50 focus:ring-2 focus:ring-red-200' : 'border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100' }}"
-                                        placeholder="ex: 5 anos">
+                                        placeholder="{{ t('inscricao.step2.placeholder_exp') }}">
                                     @error('anos_experiencia') <x-form-error :message="$message" /> @enderror
                                 </div>
                             </div>
 
                             <div class="border-t border-slate-100 pt-5">
-                                <p class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">Contactos</p>
+                                <p class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">{{ t('inscricao.step2.contacts_label') }}</p>
                                 <div class="space-y-4">
                                     <div>
-                                        <label class="block text-sm font-medium text-slate-700 mb-1.5">Email <span class="text-red-500">*</span></label>
+                                        <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step2.email') }} <span class="text-red-500">*</span></label>
                                         <input type="email" wire:model="email"
                                             class="w-full px-4 py-2.5 border rounded-xl text-sm outline-none transition-all
                                                 {{ $errors->has('email') ? 'border-red-400 bg-red-50/50 focus:ring-2 focus:ring-red-200' : 'border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100' }}"
@@ -263,19 +251,19 @@
                                     </div>
                                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <div>
-                                            <label class="block text-sm font-medium text-slate-700 mb-1.5">Telefone (com indicativo) <span class="text-red-500">*</span></label>
+                                            <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step2.phone') }} <span class="text-red-500">*</span></label>
                                             <input type="text" wire:model="telefone"
                                                 class="w-full px-4 py-2.5 border rounded-xl text-sm outline-none transition-all
                                                     {{ $errors->has('telefone') ? 'border-red-400 bg-red-50/50 focus:ring-2 focus:ring-red-200' : 'border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100' }}"
-                                                placeholder="+244 900 000 000">
+                                                placeholder="{{ t('inscricao.step2.placeholder_phone') }}">
                                             @error('telefone') <x-form-error :message="$message" /> @enderror
                                         </div>
                                         <div>
-                                            <label class="block text-sm font-medium text-slate-700 mb-1.5">País de Residência <span class="text-red-500">*</span></label>
+                                            <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step2.country') }} <span class="text-red-500">*</span></label>
                                             <input type="text" wire:model="pais_residencia"
                                                 class="w-full px-4 py-2.5 border rounded-xl text-sm outline-none transition-all
                                                     {{ $errors->has('pais_residencia') ? 'border-red-400 bg-red-50/50 focus:ring-2 focus:ring-red-200' : 'border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100' }}"
-                                                placeholder="ex: Angola">
+                                                placeholder="{{ t('inscricao.step2.placeholder_country') }}">
                                             @error('pais_residencia') <x-form-error :message="$message" /> @enderror
                                         </div>
                                     </div>
@@ -285,25 +273,25 @@
                     </div>
                     @endif
 
-                    {{-- PASSO 3 — Participação no Evento --}}
+                    {{-- PASSO 3 --}}
                     @if($currentStep === 3)
                     <div class="p-8">
                         <div class="mb-7">
-                            <span class="inline-block text-xs font-semibold text-indigo-600 uppercase tracking-widest bg-indigo-50 px-3 py-1 rounded-full">Passo 3 de 5</span>
-                            <h2 class="mt-3 text-2xl font-bold text-slate-900">Participação no Evento</h2>
-                            <p class="mt-1 text-sm text-slate-500">Como vai participar na Reunião IFATSEA 2025.</p>
+                            <span class="inline-block text-xs font-semibold text-indigo-600 uppercase tracking-widest bg-indigo-50 px-3 py-1 rounded-full">{{ t('inscricao.step3.badge') }}</span>
+                            <h2 class="mt-3 text-2xl font-bold text-slate-900">{{ t('inscricao.step3.title') }}</h2>
+                            <p class="mt-1 text-sm text-slate-500">{{ t('inscricao.step3.subtitle') }}</p>
                         </div>
 
                         <div class="space-y-7">
                             <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-3">Tipo de Participação <span class="text-red-500">*</span></label>
+                                <label class="block text-sm font-medium text-slate-700 mb-3">{{ t('inscricao.step3.participation_type') }} <span class="text-red-500">*</span></label>
                                 <div class="grid grid-cols-2 gap-3">
-                                    @foreach(['Participante', 'Delegado', 'Orador', 'Observador', 'Patrocinadores e Esposas'] as $tipo)
+                                    @foreach(config(current_lang() . '.inscricao.step3.participation_types', config('pt.inscricao.step3.participation_types')) as $tipo)
                                     <label class="flex items-center gap-3 p-4 border-2 rounded-xl cursor-pointer transition-all
-                                        {{ $tipo_participacao === $tipo ? 'border-indigo-500 bg-indigo-50' : 'border-slate-200 hover:border-slate-300 hover:bg-slate-50' }}">
-                                        <input type="radio" wire:model="tipo_participacao" value="{{ $tipo }}"
+                                        {{ $tipo_participacao === $tipo['value'] ? 'border-indigo-500 bg-indigo-50' : 'border-slate-200 hover:border-slate-300 hover:bg-slate-50' }}">
+                                        <input type="radio" wire:model="tipo_participacao" value="{{ $tipo['value'] }}"
                                             class="text-indigo-600 focus:ring-indigo-500">
-                                        <span class="text-sm font-medium text-slate-700">{{ $tipo }}</span>
+                                        <span class="text-sm font-medium text-slate-700">{{ $tipo['label'] }}</span>
                                     </label>
                                     @endforeach
                                 </div>
@@ -311,22 +299,22 @@
                             </div>
 
                             <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-3">Pretende apresentar tema?</label>
+                                <label class="block text-sm font-medium text-slate-700 mb-3">{{ t('inscricao.step3.present_topic') }}</label>
                                 <label class="flex items-center gap-3 p-4 border-2 rounded-xl cursor-pointer transition-all w-fit
                                     {{ $apresenta_tema ? 'border-indigo-500 bg-indigo-50' : 'border-slate-200 hover:border-slate-300' }}">
                                     <input type="checkbox" wire:model="apresenta_tema"
                                         class="w-4 h-4 text-indigo-600 rounded border-slate-300 focus:ring-indigo-500">
-                                    <span class="text-sm font-medium text-slate-700">Sim, pretendo apresentar um tema</span>
+                                    <span class="text-sm font-medium text-slate-700">{{ t('inscricao.step3.present_topic_yes') }}</span>
                                 </label>
                             </div>
 
                             @if($apresenta_tema)
                             <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-1.5">Tema da Apresentação <span class="text-red-500">*</span></label>
+                                <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step3.topic_label') }} <span class="text-red-500">*</span></label>
                                 <input type="text" wire:model="tema"
                                     class="w-full px-4 py-2.5 border rounded-xl text-sm outline-none transition-all
                                         {{ $errors->has('tema') ? 'border-red-400 bg-red-50/50 focus:ring-2 focus:ring-red-200' : 'border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100' }}"
-                                    placeholder="Título do tema a apresentar">
+                                    placeholder="{{ t('inscricao.step3.topic_placeholder') }}">
                                 @error('tema') <x-form-error :message="$message" /> @enderror
                             </div>
                             @endif
@@ -334,26 +322,26 @@
                     </div>
                     @endif
 
-                    {{-- PASSO 4 — Logística & Pagamento --}}
+                    {{-- PASSO 4 --}}
                     @if($currentStep === 4)
                     <div class="p-8">
                         <div class="mb-7">
-                            <span class="inline-block text-xs font-semibold text-indigo-600 uppercase tracking-widest bg-indigo-50 px-3 py-1 rounded-full">Passo 4 de 5</span>
-                            <h2 class="mt-3 text-2xl font-bold text-slate-900">Logística & Pagamento</h2>
-                            <p class="mt-1 text-sm text-slate-500">Datas de viagem, apoios necessários e pagamento.</p>
+                            <span class="inline-block text-xs font-semibold text-indigo-600 uppercase tracking-widest bg-indigo-50 px-3 py-1 rounded-full">{{ t('inscricao.step4.badge') }}</span>
+                            <h2 class="mt-3 text-2xl font-bold text-slate-900">{{ t('inscricao.step4.title') }}</h2>
+                            <p class="mt-1 text-sm text-slate-500">{{ t('inscricao.step4.subtitle') }}</p>
                         </div>
 
                         <div class="space-y-6">
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">Data prevista de chegada</label>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step4.arrival') }}</label>
                                     <input type="date" wire:model="data_chegada"
                                         class="w-full px-4 py-2.5 border rounded-xl text-sm outline-none transition-all
                                             {{ $errors->has('data_chegada') ? 'border-red-400 bg-red-50/50' : 'border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100' }}">
                                     @error('data_chegada') <x-form-error :message="$message" /> @enderror
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">Data prevista de partida</label>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step4.departure') }}</label>
                                     <input type="date" wire:model="data_partida"
                                         class="w-full px-4 py-2.5 border rounded-xl text-sm outline-none transition-all
                                             {{ $errors->has('data_partida') ? 'border-red-400 bg-red-50/50' : 'border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100' }}">
@@ -362,9 +350,9 @@
                             </div>
 
                             <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-3">Necessita de apoio para:</label>
+                                <label class="block text-sm font-medium text-slate-700 mb-3">{{ t('inscricao.step4.support_label') }}</label>
                                 <div class="flex flex-col gap-3">
-                                    @foreach(['apoio_alojamento' => 'Alojamento', 'apoio_transporte' => 'Transporte', 'apoio_visto' => 'Visto'] as $field => $label)
+                                    @foreach(config(current_lang() . '.inscricao.step4.support_types', config('pt.inscricao.step4.support_types')) as $field => $label)
                                     <label class="flex items-center gap-3 cursor-pointer">
                                         <input type="checkbox" wire:model="{{ $field }}"
                                             class="w-4 h-4 text-indigo-600 rounded border-slate-300 focus:ring-indigo-500">
@@ -375,40 +363,40 @@
                             </div>
 
                             <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-1.5">Restrições Alimentares</label>
+                                <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step4.dietary') }}</label>
                                 <input type="text" wire:model="restricoes_alimentares"
                                     class="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 transition-all"
-                                    placeholder="ex: vegetariano, sem glúten (opcional)">
+                                    placeholder="{{ t('inscricao.step4.dietary_placeholder') }}">
                             </div>
 
                             <div class="border-t border-slate-100 pt-5">
-                                <p class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">Taxa de Inscrição</p>
+                                <p class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">{{ t('inscricao.step4.fee_section_label') }}</p>
                                 <div>
-                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">Modalidade de Pagamento</label>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step4.payment_method') }}</label>
                                     <input type="text" wire:model="modalidade_pagamento"
                                         class="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 transition-all"
-                                        placeholder="ex: Transferência bancária">
+                                        placeholder="{{ t('inscricao.step4.payment_placeholder') }}">
                                 </div>
                             </div>
                         </div>
                     </div>
                     @endif
 
-                    {{-- PASSO 5 — Informações Adicionais & Declaração --}}
+                    {{-- PASSO 5 --}}
                     @if($currentStep === 5)
                     <div class="p-8">
                         <div class="mb-7">
-                            <span class="inline-block text-xs font-semibold text-indigo-600 uppercase tracking-widest bg-indigo-50 px-3 py-1 rounded-full">Passo 5 de 5</span>
-                            <h2 class="mt-3 text-2xl font-bold text-slate-900">Informações & Declaração</h2>
-                            <p class="mt-1 text-sm text-slate-500">Últimas informações e aceitação dos termos.</p>
+                            <span class="inline-block text-xs font-semibold text-indigo-600 uppercase tracking-widest bg-indigo-50 px-3 py-1 rounded-full">{{ t('inscricao.step5.badge') }}</span>
+                            <h2 class="mt-3 text-2xl font-bold text-slate-900">{{ t('inscricao.step5.title') }}</h2>
+                            <p class="mt-1 text-sm text-slate-500">{{ t('inscricao.step5.subtitle') }}</p>
                         </div>
 
                         <div class="space-y-6">
                             <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-1.5">Informações Adicionais</label>
+                                <label class="block text-sm font-medium text-slate-700 mb-1.5">{{ t('inscricao.step5.additional_info') }}</label>
                                 <textarea wire:model="informacoes_adicionais" rows="4"
                                     class="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 transition-all resize-none"
-                                    placeholder="Informações adicionais relevantes (opcional)"></textarea>
+                                    placeholder="{{ t('inscricao.step5.additional_placeholder') }}"></textarea>
                             </div>
 
                             <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
@@ -419,10 +407,10 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <h3 class="text-sm font-semibold text-slate-800">Declaração</h3>
+                                        <h3 class="text-sm font-semibold text-slate-800">{{ t('inscricao.step5.declaration_title') }}</h3>
                                         <p class="text-sm text-slate-500 mt-0.5 leading-relaxed">
-                                            Declaro que as informações fornecidas são verdadeiras e aceito os termos de participação no evento
-                                            <strong class="text-slate-700">Reunião da IFATSEA – Luanda, 23 a 26 de Junho de 2025</strong>.
+                                            {{ t('inscricao.step5.declaration_text') }}
+                                            <strong class="text-slate-700">{{ t('inscricao.step5.event_name') }}</strong>.
                                         </p>
                                     </div>
                                 </div>
@@ -431,7 +419,7 @@
                                     <input type="checkbox" wire:model="aceita_termos"
                                         class="mt-0.5 w-4 h-4 text-indigo-600 rounded border-slate-300 focus:ring-indigo-500">
                                     <span class="text-sm font-medium text-slate-700 group-hover:text-slate-900 transition-colors">
-                                        Li e aceito os termos de participação <span class="text-red-500">*</span>
+                                        {{ t('inscricao.step5.accept_terms') }} <span class="text-red-500">*</span>
                                     </span>
                                 </label>
 
@@ -453,7 +441,7 @@
                                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                                 </svg>
-                                Anterior
+                                {{ t('inscricao.nav.previous') }}
                             </button>
                         @else
                             <div></div>
@@ -463,8 +451,8 @@
                             <button type="button" wire:click="nextStep"
                                 wire:loading.attr="disabled" wire:target="nextStep"
                                 class="flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-indigo-600 rounded-xl hover:bg-indigo-700 active:bg-indigo-800 transition-all disabled:opacity-60">
-                                <span wire:loading.remove wire:target="nextStep">Próximo</span>
-                                <span wire:loading wire:target="nextStep" style="display:none">A validar...</span>
+                                <span wire:loading.remove wire:target="nextStep">{{ t('inscricao.nav.next') }}</span>
+                                <span wire:loading wire:target="nextStep" style="display:none">{{ t('inscricao.nav.validating') }}</span>
                                 <svg wire:loading.remove wire:target="nextStep" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                                 </svg>
@@ -476,13 +464,13 @@
                                 <svg wire:loading.remove wire:target="submit" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                                 </svg>
-                                <span wire:loading.remove wire:target="submit">Submeter Inscrição</span>
+                                <span wire:loading.remove wire:target="submit">{{ t('inscricao.nav.submit') }}</span>
                                 <span wire:loading wire:target="submit" style="display:none" class="flex items-center gap-2">
                                     <svg class="animate-spin w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
                                     </svg>
-                                    A submeter...
+                                    {{ t('inscricao.nav.submitting') }}
                                 </span>
                             </button>
                         @endif
@@ -492,7 +480,7 @@
             </div>
 
             <p class="text-center text-white/30 text-xs mt-6 pb-2">
-                IFATSEA &mdash; Reunião Internacional &bull; Luanda 2025
+                {{ t('inscricao.footer') }}
             </p>
 
         </div>

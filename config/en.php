@@ -554,4 +554,126 @@ return [
             'Zambia',
         ],
     ],
+
+    'inscricao' => [
+        'page_title'    => 'Registration',
+        'page_subtitle' => 'Fill in the form below to register for the IFATSEA Meeting – Luanda, 23 to 26 June 2025.',
+
+        'badge'       => 'Registration Form',
+        'title'       => 'IFATSEA Meeting',
+        'title_city'  => 'Luanda',
+        'description' => 'Fill in the form below to formalise your registration for the IFATSEA international event.',
+
+        'fee_label' => 'Registration fee',
+        'fee_text'  => '150 USD per delegate and 50 USD for spouses.',
+
+        'date'     => '23 to 26 June 2025',
+        'location' => 'Luanda, Angola',
+
+        'step_names' => [
+            1 => 'Personal Details',
+            2 => 'Professional',
+            3 => 'Participation',
+            4 => 'Logistics',
+            5 => 'Declaration',
+        ],
+
+        'step1' => [
+            'badge'    => 'Step 1 of 5',
+            'title'    => 'Personal Details',
+            'subtitle' => 'Personal identification information.',
+            'full_name'               => 'Full Name',
+            'date_of_birth'           => 'Date of Birth',
+            'nationality'             => 'Nationality',
+            'document_number'         => 'Document No. (ID / Passport)',
+            'document_expiry'         => 'Expiry Date',
+            'placeholder_name'        => 'Full first and last name',
+            'placeholder_nationality' => 'e.g.: Angolan',
+            'placeholder_document'    => 'Document number',
+        ],
+
+        'step2' => [
+            'badge'          => 'Step 2 of 5',
+            'title'          => 'Professional Details & Contacts',
+            'subtitle'       => 'Information about your professional activity and contacts.',
+            'organisation'    => 'Organisation / Company',
+            'role'            => 'Role / Position',
+            'area'            => 'Area of Activity',
+            'experience'      => 'Years of Experience',
+            'contacts_label'  => 'Contacts',
+            'email'           => 'Email',
+            'phone'           => 'Phone (with country code)',
+            'country'         => 'Country of Residence',
+            'placeholder_org'     => 'Organisation name',
+            'placeholder_role'    => 'Your position',
+            'placeholder_area'    => 'e.g.: CNS/ATM, ATSEP, Engineering',
+            'placeholder_exp'     => 'e.g.: 5 years',
+            'placeholder_phone'   => '+244 900 000 000',
+            'placeholder_country' => 'e.g.: Angola',
+        ],
+
+        'step3' => [
+            'badge'    => 'Step 3 of 5',
+            'title'    => 'Event Participation',
+            'subtitle' => 'How you will participate in the IFATSEA Meeting 2025.',
+            'participation_type'  => 'Participation Type',
+            'participation_types' => [
+                ['value' => 'Participante',             'label' => 'Participant'],
+                ['value' => 'Delegado',                 'label' => 'Delegate'],
+                ['value' => 'Orador',                   'label' => 'Speaker'],
+                ['value' => 'Observador',               'label' => 'Observer'],
+                ['value' => 'Patrocinadores e Esposas', 'label' => 'Sponsors and Spouses'],
+            ],
+            'present_topic'     => 'Do you intend to present a topic?',
+            'present_topic_yes' => 'Yes, I intend to present a topic',
+            'topic_label'       => 'Presentation Topic',
+            'topic_placeholder' => 'Title of the topic to be presented',
+        ],
+
+        'step4' => [
+            'badge'    => 'Step 4 of 5',
+            'title'    => 'Logistics & Payment',
+            'subtitle' => 'Travel dates, support needed and payment.',
+            'arrival'           => 'Expected arrival date',
+            'departure'         => 'Expected departure date',
+            'support_label'     => 'Do you need support for:',
+            'support_types'     => [
+                'apoio_alojamento' => 'Accommodation',
+                'apoio_transporte' => 'Transport',
+                'apoio_visto'      => 'Visa',
+            ],
+            'dietary'             => 'Dietary Restrictions',
+            'dietary_placeholder' => 'e.g.: vegetarian, gluten-free (optional)',
+            'fee_section_label'   => 'Registration Fee',
+            'payment_method'      => 'Payment Method',
+            'payment_placeholder' => 'e.g.: Bank transfer',
+        ],
+
+        'step5' => [
+            'badge'    => 'Step 5 of 5',
+            'title'    => 'Information & Declaration',
+            'subtitle' => 'Final information and acceptance of terms.',
+            'additional_info'        => 'Additional Information',
+            'additional_placeholder' => 'Additional relevant information (optional)',
+            'declaration_title'      => 'Declaration',
+            'declaration_text'       => 'I declare that the information provided is true and I accept the terms of participation in the event',
+            'event_name'             => 'IFATSEA Meeting – Luanda, 23 to 26 June 2025',
+            'accept_terms'           => 'I have read and accept the terms of participation',
+        ],
+
+        'nav' => [
+            'previous'   => 'Previous',
+            'next'       => 'Next',
+            'validating' => 'Validating...',
+            'submit'     => 'Submit Registration',
+            'submitting' => 'Submitting...',
+        ],
+
+        'success' => [
+            'title'   => 'Registration submitted successfully!',
+            'message' => 'Your registration has been recorded. We will be in touch shortly.',
+        ],
+
+        'footer' => 'IFATSEA — International Meeting • Luanda 2025',
+    ],
 ];

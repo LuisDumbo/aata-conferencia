@@ -543,4 +543,126 @@ return [
             'Zâmbia',
         ],
     ],
+
+    'inscricao' => [
+        'page_title'    => 'Inscrição',
+        'page_subtitle' => 'Preencha o formulário abaixo para se inscrever na Reunião da IFATSEA – Luanda, 23 a 26 de Junho de 2025.',
+
+        'badge'       => 'Ficha de Inscrição',
+        'title'       => 'Reunião da IFATSEA',
+        'title_city'  => 'Luanda',
+        'description' => 'Preencha o formulário abaixo para formalizar a sua inscrição no evento internacional da IFATSEA.',
+
+        'fee_label' => 'Taxa de inscrição',
+        'fee_text'  => '150 USD por delegado e 50 USD para cônjuges.',
+
+        'date'     => '23 a 26 de Junho de 2025',
+        'location' => 'Luanda, Angola',
+
+        'step_names' => [
+            1 => 'Dados Pessoais',
+            2 => 'Profissional',
+            3 => 'Participação',
+            4 => 'Logística',
+            5 => 'Declaração',
+        ],
+
+        'step1' => [
+            'badge'    => 'Passo 1 de 5',
+            'title'    => 'Dados Pessoais',
+            'subtitle' => 'Informações de identificação pessoal.',
+            'full_name'               => 'Nome Completo',
+            'date_of_birth'           => 'Data de Nascimento',
+            'nationality'             => 'Nacionalidade',
+            'document_number'         => 'Nº Documento (BI / Passaporte)',
+            'document_expiry'         => 'Data de Validade',
+            'placeholder_name'        => 'Nome e Apelido completos',
+            'placeholder_nationality' => 'ex: Angolana',
+            'placeholder_document'    => 'Número do documento',
+        ],
+
+        'step2' => [
+            'badge'          => 'Passo 2 de 5',
+            'title'          => 'Dados Profissionais & Contactos',
+            'subtitle'       => 'Informações sobre a sua atividade profissional e contactos.',
+            'organisation'    => 'Organização / Empresa',
+            'role'            => 'Função / Cargo',
+            'area'            => 'Área de Atuação',
+            'experience'      => 'Anos de Experiência',
+            'contacts_label'  => 'Contactos',
+            'email'           => 'Email',
+            'phone'           => 'Telefone (com indicativo)',
+            'country'         => 'País de Residência',
+            'placeholder_org'     => 'Nome da organização',
+            'placeholder_role'    => 'O seu cargo',
+            'placeholder_area'    => 'ex: CNS/ATM, ATSEP, Engenharia',
+            'placeholder_exp'     => 'ex: 5 anos',
+            'placeholder_phone'   => '+244 900 000 000',
+            'placeholder_country' => 'ex: Angola',
+        ],
+
+        'step3' => [
+            'badge'    => 'Passo 3 de 5',
+            'title'    => 'Participação no Evento',
+            'subtitle' => 'Como vai participar na Reunião IFATSEA 2025.',
+            'participation_type'  => 'Tipo de Participação',
+            'participation_types' => [
+                ['value' => 'Participante',             'label' => 'Participante'],
+                ['value' => 'Delegado',                 'label' => 'Delegado'],
+                ['value' => 'Orador',                   'label' => 'Orador'],
+                ['value' => 'Observador',               'label' => 'Observador'],
+                ['value' => 'Patrocinadores e Esposas', 'label' => 'Patrocinadores e Esposas'],
+            ],
+            'present_topic'     => 'Pretende apresentar tema?',
+            'present_topic_yes' => 'Sim, pretendo apresentar um tema',
+            'topic_label'       => 'Tema da Apresentação',
+            'topic_placeholder' => 'Título do tema a apresentar',
+        ],
+
+        'step4' => [
+            'badge'    => 'Passo 4 de 5',
+            'title'    => 'Logística & Pagamento',
+            'subtitle' => 'Datas de viagem, apoios necessários e pagamento.',
+            'arrival'           => 'Data prevista de chegada',
+            'departure'         => 'Data prevista de partida',
+            'support_label'     => 'Necessita de apoio para:',
+            'support_types'     => [
+                'apoio_alojamento' => 'Alojamento',
+                'apoio_transporte' => 'Transporte',
+                'apoio_visto'      => 'Visto',
+            ],
+            'dietary'             => 'Restrições Alimentares',
+            'dietary_placeholder' => 'ex: vegetariano, sem glúten (opcional)',
+            'fee_section_label'   => 'Taxa de Inscrição',
+            'payment_method'      => 'Modalidade de Pagamento',
+            'payment_placeholder' => 'ex: Transferência bancária',
+        ],
+
+        'step5' => [
+            'badge'    => 'Passo 5 de 5',
+            'title'    => 'Informações & Declaração',
+            'subtitle' => 'Últimas informações e aceitação dos termos.',
+            'additional_info'        => 'Informações Adicionais',
+            'additional_placeholder' => 'Informações adicionais relevantes (opcional)',
+            'declaration_title'      => 'Declaração',
+            'declaration_text'       => 'Declaro que as informações fornecidas são verdadeiras e aceito os termos de participação no evento',
+            'event_name'             => 'Reunião da IFATSEA – Luanda, 23 a 26 de Junho de 2025',
+            'accept_terms'           => 'Li e aceito os termos de participação',
+        ],
+
+        'nav' => [
+            'previous'   => 'Anterior',
+            'next'       => 'Próximo',
+            'validating' => 'A validar...',
+            'submit'     => 'Submeter Inscrição',
+            'submitting' => 'A submeter...',
+        ],
+
+        'success' => [
+            'title'   => 'Inscrição submetida com sucesso!',
+            'message' => 'A sua inscrição foi registada. Entraremos em contacto brevemente.',
+        ],
+
+        'footer' => 'IFATSEA — Reunião Internacional • Luanda 2025',
+    ],
 ];

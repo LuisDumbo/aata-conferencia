@@ -64,15 +64,13 @@ class Partners extends Component
                 'name' => 'MARAVE',
                 'logo' =>  'assets/parceiros/marave.png',
                 'url'  => '#',
-            ]
-
-            /*,
-            [
-                'name' => 'LANTECH',
-                'logo' => 'assets/parceiros/lantech.webp',
-                'url'  => '#',
             ],
             [
+                'name' => 'LANTECH',
+                'logo' => 'assets/parceiros/lantech.png',
+                'url'  => '#',
+            ],
+            /*  [
                 'name' => 'THALES',
                 'logo' => 'assets/parceiros/thales.png',
                 'url'  => '#',

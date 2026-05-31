@@ -110,6 +110,32 @@
     <livewire:components.countdown eventStart="2026-06-23T09:00:00" />
 
     <livewire:components.about />
+
+    {{-- Secção: Vídeo de Apresentação --}}
+    <section class="bg-white py-16 sm:py-20">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-indigo-600 mb-3">
+                {{ t('video_apresentacao.badge') }}
+            </p>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight mb-3">
+                {{ t('video_apresentacao.title') }}
+            </h2>
+            <p class="text-slate-500 text-sm sm:text-base max-w-2xl mx-auto mb-10">
+                {{ t('video_apresentacao.subtitle') }}
+            </p>
+
+            <div class="relative rounded-2xl overflow-hidden shadow-xl ring-1 ring-slate-200">
+                <video
+                    controls
+                    preload="metadata"
+                    class="w-full aspect-video bg-black"
+                >
+                    <source src="{{ asset('assets/videos/apresentação .mp4') }}" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
     {{-- Secção: ATSEP Jorge Paz Neto --}}
     <section class="relative w-full overflow-hidden bg-[#0a1628]">
         <div class="max-w-5xl mx-auto px-4 py-12 flex flex-col md:flex-row items-center gap-10">

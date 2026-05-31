@@ -201,6 +201,12 @@ return [
         'become_cta'    => 'Contact Us',
     ],
 
+    'video_apresentacao' => [
+        'badge'    => 'Presentation',
+        'title'    => 'Discover the 16th IFATSEA Africa Regional Meeting',
+        'subtitle' => 'Watch the official presentation video of the event that brings together aviation safety professionals from across Africa.',
+    ],
+
     'jorge_paz' => [
         'badge'    => 'President of ATSEP Angola',
         'role'     => 'President of the Association of Engineering Professionals for Air Traffic Safety',

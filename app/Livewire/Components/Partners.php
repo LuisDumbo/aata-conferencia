@@ -80,6 +80,11 @@ class Partners extends Component
                 'logo' => 'assets/parceiros/CAA.png',
                 'url'  => '#',
             ],
+            [
+                'name' => 'ATNS',
+                'logo' => 'assets/parceiros/ATNS.png',
+                'url'  => '#',
+            ],
 
         ];
     }

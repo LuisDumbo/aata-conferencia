@@ -328,6 +328,11 @@ return [
                 'topic' => 'Moderator of the topic "Human Factors in the Management of CNS Systems (Communications, Navigation and Surveillance)".',
                 'bio'   => 'Executive President of SAATSEPA.',
             ],
+            'chipo-tembo' => [
+                'role'  => 'Moderator',
+                'topic' => 'Moderator of the topic on Artificial Intelligence (AI)',
+                'bio'   => 'ZATSEA Member',
+            ],
             'carregando' => [
                 'role'  => '',
                 'topic' => '',

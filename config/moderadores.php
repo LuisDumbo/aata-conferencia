@@ -13,5 +13,16 @@ return [
         'bio'      => 'Presidente Executivo da SAATSEPA',
     ],
 
+    [
+        'slug'     => 'chipo-tembo',
+        'initials' => 'CT',
+        'name'     => 'Chipo Tembo, Membro ZATSEA',
+        'role'     => 'Moderadora',
+        'org'      => '',
+        'topic'    => 'Moderadora do tema de Inteligência Artificial (IA)',
+        'photo'    => 'assets/moderadores/Chipo Tembo.png',
+        'bio'      => 'Membro ZATSEA',
+    ],
+
 
 ];

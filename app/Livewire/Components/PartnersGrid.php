@@ -23,6 +23,7 @@ class PartnersGrid extends Component
             ['name' => 'LANTECH',   'logo' => 'assets/parceiros/lantech.png'],
             ['name' => 'EASA',    'logo' => 'assets/parceiros/easa.png'],
             ['name' => 'CAA',    'logo' => 'assets/parceiros/CAA.png'],
+            ['name' => 'ATNS',    'logo' => 'assets/parceiros/ATNS.png'],
 
         ];
 

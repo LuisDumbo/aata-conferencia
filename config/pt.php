@@ -328,6 +328,11 @@ return [
                 'topic' => 'Moderador do tema "Fatores Humanos na Gestão dos Sistemas CNS (Comunicações, Navegação e Vigilância)".',
                 'bio'   => 'Presidente Executivo da SAATSEPA.',
             ],
+            'chipo-tembo' => [
+                'role'  => 'Moderadora',
+                'topic' => 'Moderadora do tema de Inteligência Artificial (IA)',
+                'bio'   => 'Membro ZATSEA',
+            ],
             'carregando' => [
                 'role'  => '',
                 'topic' => '',

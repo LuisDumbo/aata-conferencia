@@ -13,17 +13,17 @@ return [
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
     ],
 
-  
-  [
+
+    [
         'slug'     => 'rishard-sembatya',
         'initials' => 'RS',
         'name'     => 'Eng.º Richard Kato Sembatya',
         'role'     => 'Orador - Presidente da IFATSEA ',
         'org'      => '',
-        'topic'    => 'Promover a Segurança.',
+        'topic'    => 'Avanço da Segurança e Cumprimento dos Requisitos Regulatórios: Implementação de Filosofias de Manutenção Responsivas.',
         'photo'    => 'assets/palestrantes/Eng. Richard Katos Sembaty .png',
 
-        'bio'      => 'Avanço da Segurança e Cumprimento dos Requisitos Regulatórios: Implementação de Filosofias de Manutenção Responsivas.',
+        //'bio'      => 'Avanço da Segurança e Cumprimento dos Requisitos Regulatórios: Implementação de Filosofias de Manutenção Responsivas.',
     ],
 
     [

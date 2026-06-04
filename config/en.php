@@ -345,8 +345,8 @@ return [
             ],
             'chipo-tembo' => [
                 'role'  => 'Moderator',
-                'topic' => 'Moderator of the topic on Artificial Intelligence (AI)',
-                'bio'   => 'ZATSEA Member',
+                'topic' => 'Moderator of the session "Strengthening the Resilience of CNS/ATM Systems in Africa through the Integration of Artificial Intelligence in System Maintenance."',
+                'bio'   => '',
             ],
             'Ifeanyi-frank-ogochukwu' => [
                 'role'  => 'Moderator',

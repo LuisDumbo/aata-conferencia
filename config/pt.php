@@ -345,8 +345,8 @@ return [
             ],
             'chipo-tembo' => [
                 'role'  => 'Moderadora',
-                'topic' => 'Moderadora do tema de Inteligência Artificial (IA)',
-                'bio'   => 'Membro ZATSEA',
+                'topic' => 'Moderador da sessão "Fortalecimento da Resiliência dos Sistemas CNS/ATM em África através da Integração da Inteligência Artificial na Manutenção dos Sistemas."',
+                'bio'   => '',
             ],
             'Ifeanyi-frank-ogochukwu' => [
                 'role'  => 'Moderador',

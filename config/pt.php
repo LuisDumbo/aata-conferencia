@@ -301,6 +301,11 @@ return [
                 'topic' => 'Fortalecimento da Resiliência dos Sistemas CNS/ATM em África através da Integração da Inteligência Artificial na Manutenção dos Sistemas.',
                 'bio'   => '',
             ],
+            'ivon_Setswe' => [
+                'role'  => 'Oradora',
+                'topic' => 'Fator Humano na Gestão dos Sistemas CNS (Comunicações, Navegação e Vigilância).',
+                'bio'   => '',
+            ],
             'carregando' => [
                 'role'  => '',
                 'topic' => '',

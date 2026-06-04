@@ -136,6 +136,18 @@ return [
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
     ],
 
+    [
+        'slug'     => 'ivon_Setswe ',
+        'initials' => 'IS',
+        'name'     => 'Ivon Setswe ',
+        'role'     => 'Oradora',
+        'org'      => '',
+        'topic'    => 'Fator Humano na Gestão dos Sistemas CNS (Comunicações, Navegação e Vigilância).',
+        'photo'    => 'assets/palestrantes/Ivon Setswe .png',
+
+        //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
+    ],
+
 
 
 

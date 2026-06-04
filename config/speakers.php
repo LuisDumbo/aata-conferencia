@@ -13,7 +13,9 @@ return [
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
     ],
 
-    [
+  /* 
+  alterar 
+  [
         'slug'     => 'rishard-sembatya',
         'initials' => 'RS',
         'name'     => 'Eng.º Richard Kato Sembatya',
@@ -23,7 +25,7 @@ return [
         'photo'    => 'assets/palestrantes/Eng. Richard Katos Sembaty .png',
 
         'bio'      => 'Presidente da IFATSEA Participará no debate em painel sob o tema “Promover a Segurança.”',
-    ],
+    ],/*
 
     [
         'slug'     => 'miguel-queta',
@@ -95,6 +97,30 @@ return [
         'org'      => '',
         'topic'    => 'Garantindo um Ambiente CNS/ATM Ciberseguro: Ameaças Emergentes e Estratégias de Mitigação no Contexto Africano',
         'photo'    => 'assets/palestrantes/Eng. Leivan de Carvalho .png',
+
+        //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
+    ],
+
+    [
+        'slug'     => 'robert_omusonga',
+        'initials' => 'RO',
+        'name'     => 'Eng. Robert Omusonga',
+        'role'     => 'Orador',
+        'org'      => '',
+        'topic'    => 'Fortalecimento da Resiliência dos Sistemas CNS/ATM em África através da integração da Inteligência Artificial na manutenção dos sistemas.',
+        'photo'    => 'assets/palestrantes/Robert Omusonga.png',
+
+        //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
+    ],
+
+      [
+        'slug'     => 'enia-kakombu',
+        'initials' => 'EK',
+        'name'     => 'Enia Kakombu ZATSEA',
+        'role'     => 'Orador',
+        'org'      => '',
+        'topic'    => 'Fatores Humanos na Gestão do Sistema CNS (Comunicações, Navegação e Vigilância).',
+        'photo'    => 'assets/palestrantes/Enia Kakombu.png',
 
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
     ],

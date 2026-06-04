@@ -286,6 +286,16 @@ return [
                 'topic' => 'Garantindo um Ambiente CNS/ATM Ciberseguro: Ameaças Emergentes e Estratégias de Mitigação no Contexto Africano',
                 'bio'   => 'O Eng. Leivan de Carvalho participará como orador da ARM/26, representando Angola.',
             ],
+            'robert_omusonga' => [
+                'role'  => 'Orador',
+                'topic' => 'Fortalecimento da Resiliência dos Sistemas CNS/ATM em África através da integração da Inteligência Artificial na manutenção dos sistemas.',
+                'bio'   => '',
+            ],
+            'enia-kakombu' => [
+                'role'  => 'Orador',
+                'topic' => 'Fatores Humanos na Gestão do Sistema CNS (Comunicações, Navegação e Vigilância).',
+                'bio'   => '',
+            ],
             'carregando' => [
                 'role'  => '',
                 'topic' => '',
@@ -332,6 +342,11 @@ return [
                 'role'  => 'Moderadora',
                 'topic' => 'Moderadora do tema de Inteligência Artificial (IA)',
                 'bio'   => 'Membro ZATSEA',
+            ],
+            'Ifeanyi-frank-ogochukwu' => [
+                'role'  => 'Moderador',
+                'topic' => 'Moderador da sessão "Conversa sobre Liderança"',
+                'bio'   => 'Diretor-Geral da Aviation Africa Plate-Forme',
             ],
             'carregando' => [
                 'role'  => '',

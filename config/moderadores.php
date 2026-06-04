@@ -14,15 +14,18 @@ return [
     ],
 
     [
-        'slug'     => 'chipo-tembo',
-        'initials' => 'CT',
-        'name'     => 'Chipo Tembo, Membro ZATSEA',
+        'slug'     => 'Ifeanyi-frank-ogochukwu',
+        'initials' => 'TO',
+        'name'     => 'Eng. Ifeanyi Frank Ogochukwu,Diretor-Geral da Aviation Africa Plate-Forme',
         'role'     => 'Moderadora',
         'org'      => '',
-        'topic'    => 'Moderadora do tema de Inteligência Artificial (IA)',
-        'photo'    => 'assets/moderadores/Chipo Tembo.png',
-        'bio'      => 'Membro ZATSEA',
+        'topic'    => 'Moderador da sessão "Conversa sobre Liderança"',
+        'photo'    => 'assets/moderadores/Eng Ifeanyi Frank Ogochukwu.png',
+        'bio'      => 'Diretor-Geral da Aviation Africa Plate-Forme',
     ],
+
+
+
 
 
 ];

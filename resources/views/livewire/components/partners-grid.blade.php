@@ -10,13 +10,15 @@
 
             @foreach ($partners as $p)
                 <article class="text-center">
-                    <div class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[160px] flex items-center justify-center">
-                        @if (!empty($p['logo']))
-                            <img src="{{ asset($p['logo']) }}" alt="{{ $p['name'] }}"
-                                class="h-full max-h-[100px] w-auto object-contain">
-                        @endif
-                    </div>
-                    <p class="mt-3 text-sm text-indigo-900 font-medium">{{ $p['name'] }}</p>
+                    <a href="{{ $p['url'] ?? '#' }}" target="_blank" rel="noopener">
+                        <div class="bg-white rounded-lg shadow-sm border border-slate-100 p-6 h-[160px] flex items-center justify-center hover:shadow-md transition-shadow">
+                            @if (!empty($p['logo']))
+                                <img src="{{ asset($p['logo']) }}" alt="{{ $p['name'] }}"
+                                    class="h-full max-h-[100px] w-auto object-contain">
+                            @endif
+                        </div>
+                        <p class="mt-3 text-sm text-indigo-900 font-medium">{{ $p['name'] }}</p>
+                    </a>
                 </article>
             @endforeach
 

@@ -16,7 +16,7 @@ class Partners extends Component
             [
                 'name' => 'MinTrans',
                 'logo' => 'assets/parceiros/angola-gov.jpg',
-                'url'  => '#',
+                'url'  => 'https://www.mintrans.gov.ao/',
             ],
             [
                 'name' => 'ENNA-EP',
@@ -26,17 +26,17 @@ class Partners extends Component
             [
                 'name' => 'TAAG-SA',
                 'logo' => 'assets/parceiros/taag.jpg',
-                'url'  => '#',
+                'url'  => 'https://flytaag.com/en/-TAAG-Book-Flight-Hotel-and-Online-Check-in',
             ],
             [
                 'name' => 'ROHDE & SCHWARZ',
                 'logo' => 'assets/parceiros/rohde_schwarz.png',
-                'url'  => '#',
+                'url'  => 'https://www.rohde-schwarz.com/us/home_48230.html',
             ],
             [
                 'name' => 'Teltech',
                 'logo' => 'assets/parceiros/teltech.png',
-                'url'  => '#',
+                'url'  => 'https://teltech.com.na/',
             ],
             [
                 'name' => 'RNA',
@@ -46,24 +46,24 @@ class Partners extends Component
             [
                 'name' => 'ACAMS',
                 'logo' => 'assets/parceiros/ACAMS_Logo.jpg',
-                'url'  => '#',
+                'url'  => 'https://acams.com/solutions/',
             ],
             [
                 'name' => 'JOTRON',
                 'logo' => 'assets/parceiros/jotron.png',
-                'url'  => '#',
+                'url'  => 'https://www.jotron.com/',
             ],
 
 
             [
                 'name' => 'KLIBITY',
                 'logo' =>  'assets/parceiros/kbility.png',
-                'url'  => '#',
+                'url'  => 'https://kbility.com/en/services/',
             ],
             [
                 'name' => 'MARAVE',
                 'logo' =>  'assets/parceiros/marave.png',
-                'url'  => '#',
+                'url'  => 'https://marave.net/',
             ],
             [
                 'name' => 'LANTECH',
@@ -73,17 +73,17 @@ class Partners extends Component
             [
                 'name' => 'EASA',
                 'logo' => 'assets/parceiros/easa.png',
-                'url'  => '#',
+                'url'  => 'https://www.easa.ac.ke/',
             ],
             [
                 'name' => 'CAA',
                 'logo' => 'assets/parceiros/CAA.png',
-                'url'  => '#',
+                'url'  => 'https://caa.go.ug/',
             ],
             [
                 'name' => 'ATNS',
                 'logo' => 'assets/parceiros/ATNS.png',
-                'url'  => '#',
+                'url'  => 'https://atns.com/',
             ],
 
         ];

@@ -268,8 +268,8 @@ return [
             ],
             'rishard-sembatya' => [
                 'role'  => 'Speaker - President of IFATSEA',
-                'topic' => 'Promoting Safety.',
-                'bio'   => 'President of IFATSEA. Will participate in the panel discussion on the theme "Promoting Safety."',
+                'topic' => 'Advancing Safety and Compliance with Regulatory Requirements: Implementation of Responsive Maintenance Philosophies.',
+                'bio'   => '',
             ],
             'domingos-lima-de-carvalho' => [
                 'role'  => 'Speaker - from Angola',
@@ -294,6 +294,11 @@ return [
             'enia-kakombu' => [
                 'role'  => 'Speaker',
                 'topic' => 'Human Factors in the Management of the CNS System (Communications, Navigation and Surveillance).',
+                'bio'   => '',
+            ],
+            'lerato-morure' => [
+                'role'  => 'Speaker',
+                'topic' => 'Strengthening the Resilience of CNS/ATM Systems in Africa through the Integration of Artificial Intelligence in System Maintenance.',
                 'bio'   => '',
             ],
             'carregando' => [

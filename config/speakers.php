@@ -13,8 +13,7 @@ return [
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
     ],
 
-  /* 
-  alterar 
+  
   [
         'slug'     => 'rishard-sembatya',
         'initials' => 'RS',
@@ -24,8 +23,8 @@ return [
         'topic'    => 'Promover a Segurança.',
         'photo'    => 'assets/palestrantes/Eng. Richard Katos Sembaty .png',
 
-        'bio'      => 'Presidente da IFATSEA Participará no debate em painel sob o tema “Promover a Segurança.”',
-    ],/*
+        'bio'      => 'Avanço da Segurança e Cumprimento dos Requisitos Regulatórios: Implementação de Filosofias de Manutenção Responsivas.',
+    ],
 
     [
         'slug'     => 'miguel-queta',
@@ -113,7 +112,7 @@ return [
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
     ],
 
-      [
+    [
         'slug'     => 'enia-kakombu',
         'initials' => 'EK',
         'name'     => 'Enia Kakombu ZATSEA',
@@ -124,6 +123,21 @@ return [
 
         //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
     ],
+
+    [
+        'slug'     => 'lerato-morure',
+        'initials' => 'LM',
+        'name'     => 'Lerato Morure',
+        'role'     => 'Orador',
+        'org'      => '',
+        'topic'    => 'Fortalecimento da Resiliência dos Sistemas CNS/ATM em África através da Integração da Inteligência Artificial na Manutenção dos Sistemas.',
+        'photo'    => 'assets/palestrantes/Lerato Morure.png',
+
+        //'bio'      => 'O Director Regional da IFATSEA para África, Senhor Sam Mahlangu, participará como orador da ARM/26.',
+    ],
+
+
+
 
 
 

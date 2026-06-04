@@ -268,8 +268,8 @@ return [
             ],
             'rishard-sembatya' => [
                 'role'  => 'Orador - Presidente da IFATSEA',
-                'topic' => 'Promover a Segurança.',
-                'bio'   => 'Presidente da IFATSEA. Participará no debate em painel sob o tema "Promover a Segurança."',
+                'topic' => 'Avanço da Segurança e Cumprimento dos Requisitos Regulatórios: Implementação de Filosofias de Manutenção Responsivas.',
+                'bio'   => '',
             ],
             'domingos-lima-de-carvalho' => [
                 'role'  => 'Orador - de Angola',
@@ -294,6 +294,11 @@ return [
             'enia-kakombu' => [
                 'role'  => 'Orador',
                 'topic' => 'Fatores Humanos na Gestão do Sistema CNS (Comunicações, Navegação e Vigilância).',
+                'bio'   => '',
+            ],
+            'lerato-morure' => [
+                'role'  => 'Orador',
+                'topic' => 'Fortalecimento da Resiliência dos Sistemas CNS/ATM em África através da Integração da Inteligência Artificial na Manutenção dos Sistemas.',
                 'bio'   => '',
             ],
             'carregando' => [

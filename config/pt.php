@@ -207,6 +207,12 @@ return [
         'subtitle' => 'Veja o vídeo oficial de apresentação do evento que reúne profissionais de segurança da aviação de todo o continente africano.',
     ],
 
+    'selzing_miri' => [
+        'badge' => 'Estarei presente',
+        'role'  => 'Presidente Nacional',
+        'org'   => 'NAAE 🇳🇬',
+    ],
+
     'jorge_paz' => [
         'badge'    => 'Presidente dos ATSEP de Angola',
         'role'     => 'Presidente da Associação de Profissionais de Engenharia para a Segurança do Tráfego Aéreo',

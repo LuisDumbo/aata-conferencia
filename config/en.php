@@ -207,6 +207,12 @@ return [
         'subtitle' => 'Watch the official presentation video of the event that brings together aviation safety professionals from across Africa.',
     ],
 
+    'selzing_miri' => [
+        'badge' => 'I will be attending',
+        'role'  => 'National President',
+        'org'   => 'NAAE 🇳🇬',
+    ],
+
     'jorge_paz' => [
         'badge'    => 'President of ATSEP Angola',
         'role'     => 'President of the Association of Engineering Professionals for Air Traffic Safety',

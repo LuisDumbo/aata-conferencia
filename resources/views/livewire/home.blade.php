@@ -191,6 +191,30 @@
 
 
 
+    {{-- Secção: Selzing D Miri --}}
+    <section class="relative w-full overflow-hidden bg-white py-16">
+        <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+
+            {{-- Imagem com borda circular --}}
+            <div class="w-full md:w-1/2 flex-shrink-0 flex justify-center">
+                <img src="{{ asset('assets/Selxing D Miri .png') }}" alt="Selzing D Miri"
+                     class="w-80 sm:w-96">
+            </div>
+
+            {{-- Texto --}}
+            <div class="w-full md:w-1/2 flex flex-col justify-center">
+                <p class="text-sm font-bold uppercase tracking-widest text-orange-500 mb-3">{{ t('selzing_miri.badge') }}</p>
+                <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+                    <span class="text-slate-900">Selzing </span><span class="text-orange-500">D Miri</span>
+                </h2>
+                <div class="mt-4 border-l-4 border-orange-500 pl-4">
+                    <p class="text-slate-800 text-lg font-semibold leading-snug">{{ t('selzing_miri.role') }}</p>
+                    <p class="text-indigo-900 text-base font-medium mt-1">{{ t('selzing_miri.org') }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <livewire:components.speakers />
     <livewire:components.moderadores />
     <livewire:components.partners />

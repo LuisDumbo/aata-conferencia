@@ -14,7 +14,7 @@ class PartnersGrid extends Component
             ['name' => 'TAAG-SA',   'logo' => 'assets/parceiros/taag.jpg', 'url'  => 'https://flytaag.com/en/-TAAG-Book-Flight-Hotel-and-Online-Check-in'],
             ['name' => 'ROHDE & SCHWARZ',   'logo' => 'assets/parceiros/rohde_schwarz.png', 'url'  => 'https://www.rohde-schwarz.com/us/home_48230.html'],
             ['name' => 'Teltech',   'logo' => 'assets/parceiros/teltech.png', 'url'  => 'https://teltech.com.na/'],
-            ['name' => 'RNA',       'logo' => 'assets/parceiros/rna.jpeg'],
+            ['name' => 'RNA',       'logo' => 'assets/parceiros/rna.jpeg',  'url'  => 'https://rna.ao/rna.ao/'],
             ['name' => 'ACAMS',     'logo' => 'assets/parceiros/ACAMS_Logo.jpg',  'url'  => 'https://acams.com/solutions/',],
             ['name' => 'JOTRON',    'logo' => 'assets/parceiros/jotron.png', 'url' => 'https://www.jotron.com/'],
 

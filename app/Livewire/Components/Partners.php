@@ -41,7 +41,7 @@ class Partners extends Component
             [
                 'name' => 'RNA',
                 'logo' => 'assets/parceiros/rna.jpeg',
-                'url'  => '#',
+                'url'  => 'https://rna.ao/rna.ao/',
             ],
             [
                 'name' => 'ACAMS',

@@ -364,6 +364,11 @@ return [
                 'topic' => 'Moderator of the "Leadership Conversation" session',
                 'bio'   => 'Director-General of Aviation Africa Plate-Forme',
             ],
+            'bless-kevin-adjei' => [
+                'role'  => 'Moderator',
+                'topic' => 'Advancing Safety and Maintaining Regulatory Requirements: Implementation of Responsive Maintenance Philosophies.',
+                'bio'   => '',
+            ],
             'carregando' => [
                 'role'  => '',
                 'topic' => '',

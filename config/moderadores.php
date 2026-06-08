@@ -35,6 +35,17 @@ return [
         //'bio'      => 'Diretor-Geral da Aviation Africa Plate-Forme',
     ],
 
+    [
+        'slug'     => 'bless-kevin-adjei',
+        'initials' => 'BKA',
+        'name'     => 'Eng. Bless Kevin Adjei',
+        'role'     => 'Moderador',
+        'org'      => '',
+        'topic'    => 'Promoção da Segurança e Manutenção dos Requisitos Regulamentares: Implementação de Filosofias de Manutenção Responsiva.',
+        'photo'    => 'assets/moderadores/Eng. Bless Kevin Adjei .png',
+        //'bio'      => 'Diretor-Geral da Aviation Africa Plate-Forme',
+    ],
+
 
 
 

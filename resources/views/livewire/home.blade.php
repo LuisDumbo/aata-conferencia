@@ -133,6 +133,16 @@
                     <source src="{{ asset('assets/videos/apresentação .mp4') }}" type="video/mp4">
                 </video>
             </div>
+
+            <div class="relative rounded-2xl overflow-hidden shadow-xl ring-1 ring-slate-200 mt-10">
+                <video
+                    controls
+                    preload="metadata"
+                    class="w-full aspect-video bg-black"
+                >
+                    <source src="{{ asset('assets/videos/apresnetação do convidados .mp4') }}" type="video/mp4">
+                </video>
+            </div>
         </div>
     </section>
 

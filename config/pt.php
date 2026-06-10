@@ -95,7 +95,7 @@ return [
 
     'event' => [
         'title'   => '16ª Reunião da Região África da IFATSEA',
-        'tagline' => 'Aprimorando a segurança e a excelência operacional: Implementando e mantendo sistemas CNS/ATM modernos na África.',
+        'tagline' => 'Promovendo a segurança e a excelência operacional: Implementação e manutenção de sistemas CNS/ATM modernos em África.',
         'dates'   => '23–26 de Junho de 2026',
         'venue'   => 'Hotel Diamante',
     ],
@@ -528,7 +528,7 @@ return [
         'intro' => 'O <strong>16.º Encontro Regional África da IFATSEA (ARM)</strong> será realizado em <strong>Luanda-Angola</strong>, de <strong>23 a 26 de junho</strong>. Este importante evento reunirá profissionais de engenharia de Electrónica para a Segurança do Tráfego Aéreo (ATSEP\'s) de toda África para discutir avanços em <strong>Comunicação, Navegação e Vigilância / Gestão do Tráfego Aéreo (CNS/ATM)</strong>.',
 
         'theme_label' => 'Tema:',
-        'theme_text'  => 'Aprimorando a segurança e a excelência operacional: Implementando e mantendo sistemas CNS/ATM modernos na África."',
+        'theme_text'  => 'Promovendo a segurança e a excelência operacional: Implementação e manutenção de sistemas CNS/ATM modernos em África."',
         'theme_focus' => 'A reunião deste ano terá como foco a <strong>integração de tecnologias emergentes</strong>, o desenvolvimento de competências e as melhores práticas para reforçar a segurança do tráfego aéreo.',
 
         'highlights_label' => 'Principais Destaques:',

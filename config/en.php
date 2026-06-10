@@ -95,7 +95,7 @@ return [
 
     'event' => [
         'title'   => '16th IFATSEA Africa Regional Meeting',
-        'tagline' => 'Advancing safety and operational excellence: Implementing and maintaining modern CNS/ATM systems in Africa',
+        'tagline' => 'Promoting safety and operational excellence: Implementation and maintenance of modern CNS/ATM systems in Africa',
         'dates'   => 'June 23–26, 2026',
         'venue'   => 'Hotel Diamante',
     ],
@@ -539,7 +539,7 @@ return [
         'intro' => 'The <strong>16th IFATSEA Africa Regional Meeting (ARM)</strong> will be held in <strong>Luanda-Angola</strong>, from <strong>23 to 26 June</strong>. This important event will bring together Air Traffic Safety Electronics Engineering Professionals (ATSEP\'s) from across Africa to discuss advances in <strong>Communication, Navigation and Surveillance / Air Traffic Management (CNS/ATM)</strong>.',
 
         'theme_label' => 'Theme:',
-        'theme_text'  => '"Advancing safety and operational excellence: Implementing and maintaining modern CNS/ATM systems in Africa."',
+        'theme_text'  => '"Promoting safety and operational excellence: Implementation and maintenance of modern CNS/ATM systems in Africa."',
         'theme_focus' => 'This year\'s meeting will focus on the <strong>integration of emerging technologies</strong>, skills development and best practices to strengthen air traffic safety.',
 
         'highlights_label' => 'Key Highlights:',

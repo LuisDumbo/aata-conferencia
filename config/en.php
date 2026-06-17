@@ -369,6 +369,11 @@ return [
                 'topic' => 'Advancing Safety and Maintaining Regulatory Requirements: Implementation of Responsive Maintenance Philosophies.',
                 'bio'   => '',
             ],
+            'Frank-ogochukwu-Avelino-dias' => [
+                'role'  => 'Moderator',
+                'topic' => 'CEO Conversation',
+                'bio'   => '',
+            ],
             'carregando' => [
                 'role'  => '',
                 'topic' => '',

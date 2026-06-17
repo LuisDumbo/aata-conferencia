@@ -369,6 +369,11 @@ return [
                 'topic' => 'Promoção da Segurança e Manutenção dos Requisitos Regulamentares: Implementação de Filosofias de Manutenção Responsiva.',
                 'bio'   => '',
             ],
+            'Frank-ogochukwu-Avelino-dias' => [
+                'role'  => 'Moderador',
+                'topic' => 'CEO Conversation',
+                'bio'   => '',
+            ],
             'carregando' => [
                 'role'  => '',
                 'topic' => '',

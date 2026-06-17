@@ -46,6 +46,18 @@ return [
         //'bio'      => 'Diretor-Geral da Aviation Africa Plate-Forme',
     ],
 
+     [
+        'slug'     => 'Frank-ogochukwu-Avelino-dias',
+        'initials' => 'FO-AD',
+        'name'     => 'Engr. Frank Ogochukwu – MD Aviation Plate-forme & Avelino Dias – CEO MARAVE ',
+        'role'     => 'Moderador',
+        'org'      => '',
+        'topic'    => 'CEO Conversation',
+        'photo'    => 'assets/moderadores/Frank Ogochukwu  - Avelino Dias .png',
+        //'bio'      => 'Diretor-Geral da Aviation Africa Plate-Forme',
+    ],
+
+
 
 
 

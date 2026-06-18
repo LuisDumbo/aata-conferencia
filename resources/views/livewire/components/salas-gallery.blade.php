@@ -29,7 +29,9 @@
                     {{-- Texto em baixo --}}
                     <div class="absolute bottom-0 left-0 right-0 p-5 text-center">
                         <h3 class="text-white font-extrabold text-lg leading-tight">{{ $sala['name'] }}</h3>
-                        <p class="mt-2 text-xs uppercase tracking-wide text-indigo-100/90">{{ $sala['role'] }}</p>
+                        @if (!empty($sala['role'] ?? ''))
+                            <p class="mt-2 text-xs uppercase tracking-wide text-indigo-100/90">{{ $sala['role'] }}</p>
+                        @endif
                         <div class="mx-auto mt-4 h-[2px] w-14 bg-amber-500/90 rounded"></div>
                     </div>
                 </a>

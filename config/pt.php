@@ -8,6 +8,7 @@ return [
         'schedule'     => 'Programa',
         'speakers'     => 'Palestrantes',
         'moderadores'  => 'Moderadores',
+        'salas'        => 'Salas',
         'partners'     => 'Parceiros',
         'hotels'       => 'Hotéis & Alojamentos',
         'countries'    => 'Países Isentos de Visto',
@@ -57,6 +58,71 @@ return [
         'see_all_title' => 'Ver todos os palestrantes',
         'see_all_desc' => 'Consulte a lista completa de especialistas convidados.',
         'see_all_cta'  => 'Ver lista completa',
+    ],
+
+    'salas_home' => [
+        'title'         => 'Salas do Evento',
+        'subtitle'      => 'Espaços onde decorrem as sessões técnicas, plenárias e momentos de networking.',
+        'topic_label'   => 'Utilização',
+        'see_all_title' => 'Ver todas as salas',
+        'see_all_desc'  => 'Consulte a lista completa dos espaços do evento.',
+        'see_all_cta'   => 'Ver lista completa',
+    ],
+
+    'salas' => [
+        'page_title'       => 'Salas do Evento',
+        'page_subtitle'    => 'Conheça os espaços onde decorrem as sessões do 16.º Encontro Regional África da IFATSEA.',
+        'gallery_title'    => 'Salas do Evento',
+        'gallery_subtitle' => 'Espaços oficiais do 16.º Encontro Regional África da IFATSEA.',
+        'load_more'        => 'Ver mais',
+        'loading'          => 'A carregar...',
+        'back'             => '← Voltar às salas',
+        'topic_label'      => 'Utilização',
+        'profile_title'    => 'Informação da Sala',
+        'profile_subtitle' => 'Detalhes sobre o espaço, capacidade e tipo de sessões que acolhe.',
+        'scroll_top'       => 'Voltar ao topo',
+
+        'perfis' => [
+            'seguranca-responsiva' => [
+                'name'         => 'Avançando a Segurança e Mantendo os Requisitos Regulatórios: Implementação de Filosofias de Manutenção Responsiva.',
+                'participants' => [
+                    'Eng. Richard Kato Sembatya – UGATSEA',
+                    'Eng. Leivan de Carvalho – AATA',
+                    'Eng. Elijah Mithanga – KATSEA',
+                    'Ing. Bless Kevin Adjei – Moderador',
+                ],
+            ],
+            'fatores-umanos-cns' => [
+                'name'         => 'Fatores Humanos na Gestão do Sistema CNS',
+                'participants' => [
+                    'Enia Kakombu – ZATSEA',
+                    'Eng. Jacques Tshimpanga – ATAC',
+                    'Miguel Queta – AATA',
+                    'Ivon Setswe – SAATSEPA',
+                    'Thomas Chauque – Moderador',
+                ],
+            ],
+            'sala-diamante' => [
+                'role'  => 'Sala Principal',
+                'topic' => 'Sessões plenárias e cerimónias oficiais.',
+                'bio'   => 'Sala principal do evento, destinada às sessões plenárias, cerimónia de abertura e encerramento.',
+            ],
+            'sala-imbondeiro' => [
+                'role'  => 'Sala Técnica',
+                'topic' => 'Painéis técnicos e workshops especializados.',
+                'bio'   => 'Sala destinada a painéis técnicos, workshops e sessões especializadas do evento.',
+            ],
+            'sala-baia' => [
+                'role'  => 'Sala de Comissão',
+                'topic' => 'Reuniões de comissões e sessões paralelas.',
+                'bio'   => 'Sala reservada para reuniões de comissões, sessões paralelas e articulação institucional.',
+            ],
+            'terraço-executivo' => [
+                'role'  => 'Espaço de Networking',
+                'topic' => 'Networking e encontros institucionais entre delegações.',
+                'bio'   => 'Espaço ao ar livre reservado para networking, encontros informais e momentos de convívio entre delegações.',
+            ],
+        ],
     ],
 
     'moderadores_home' => [

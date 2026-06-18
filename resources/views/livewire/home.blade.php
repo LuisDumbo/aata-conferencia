@@ -226,6 +226,7 @@
     </section>
 
     <livewire:components.speakers />
+    <livewire:components.salas />
     <livewire:components.moderadores />
     <livewire:components.partners />
     <livewire:components.hero-banner />

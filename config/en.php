@@ -8,6 +8,7 @@ return [
         'schedule'     => 'Schedule',
         'speakers'     => 'Speakers',
         'moderadores'  => 'Moderators',
+        'salas'        => 'Rooms',
         'partners'     => 'Partners',
         'hotels'       => 'Hotels & Accommodation',
         'countries'    => 'Visa-Free Countries',
@@ -57,6 +58,71 @@ return [
         'see_all_title' => 'See all speakers',
         'see_all_desc'  => 'View the full list of invited experts.',
         'see_all_cta'   => 'View full list',
+    ],
+
+    'salas_home' => [
+        'title'         => 'Event Rooms',
+        'subtitle'      => 'Spaces where technical sessions, plenaries and networking moments take place.',
+        'topic_label'   => 'Usage',
+        'see_all_title' => 'See all rooms',
+        'see_all_desc'  => 'View the full list of event spaces.',
+        'see_all_cta'   => 'View full list',
+    ],
+
+    'salas' => [
+        'page_title'       => 'Event Rooms',
+        'page_subtitle'    => 'Discover the spaces where the sessions of the 16th IFATSEA Africa Regional Meeting take place.',
+        'gallery_title'    => 'Event Rooms',
+        'gallery_subtitle' => 'Official spaces of the 16th IFATSEA Africa Regional Meeting.',
+        'load_more'        => 'Load more',
+        'loading'          => 'Loading...',
+        'back'             => '← Back to rooms',
+        'topic_label'      => 'Usage',
+        'profile_title'    => 'Room Information',
+        'profile_subtitle' => 'Details about the space, capacity and type of sessions it hosts.',
+        'scroll_top'       => 'Back to top',
+
+        'perfis' => [
+            'seguranca-responsiva' => [
+                'name'         => 'Advancing Safety and Maintaining Regulatory Requirements: Implementation of Responsive Maintenance Philosophies.',
+                'participants' => [
+                    'Eng. Richard Kato Sembatya – UGATSEA',
+                    'Eng. Leivan de Carvalho – AATA',
+                    'Eng. Elijah Mithanga – KATSEA',
+                    'Ing. Bless Kevin Adjei – Moderator',
+                ],
+            ],
+            'fatores-umanos-cns' => [
+                'name'         => 'Human Factors in CNS System Management',
+                'participants' => [
+                    'Enia Kakombu – ZATSEA',
+                    'Eng. Jacques Tshimpanga – ATAC',
+                    'Miguel Queta – AATA',
+                    'Ivon Setswe – SAATSEPA',
+                    'Thomas Chauque – Moderator',
+                ],
+            ],
+            'sala-diamante' => [
+                'role'  => 'Main Hall',
+                'topic' => 'Plenary sessions and official ceremonies.',
+                'bio'   => 'Main event hall, hosting plenary sessions, opening and closing ceremonies.',
+            ],
+            'sala-imbondeiro' => [
+                'role'  => 'Technical Room',
+                'topic' => 'Technical panels and specialised workshops.',
+                'bio'   => 'Room dedicated to technical panels, workshops and specialised sessions.',
+            ],
+            'sala-baia' => [
+                'role'  => 'Commission Room',
+                'topic' => 'Committee meetings and parallel sessions.',
+                'bio'   => 'Room reserved for committee meetings, parallel sessions and institutional coordination.',
+            ],
+            'terraço-executivo' => [
+                'role'  => 'Networking Space',
+                'topic' => 'Networking and institutional meetings between delegations.',
+                'bio'   => 'Open-air space reserved for networking, informal meetings and social moments between delegations.',
+            ],
+        ],
     ],
 
     'moderadores_home' => [

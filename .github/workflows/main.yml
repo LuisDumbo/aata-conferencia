@@ -54,10 +54,43 @@ jobs:
           script: |
             set -e
 
+            # Detectar automaticamente o PHP disponível no servidor
+            if command -v /usr/local/bin/php &> /dev/null; then
+              PHP="/usr/local/bin/php"
+            elif command -v /opt/cpanel/ea-php82/root/usr/bin/php &> /dev/null; then
+              PHP="/opt/cpanel/ea-php82/root/usr/bin/php"
+            elif command -v /opt/cpanel/ea-php81/root/usr/bin/php &> /dev/null; then
+              PHP="/opt/cpanel/ea-php81/root/usr/bin/php"
+            elif command -v php &> /dev/null; then
+              PHP="php"
+            else
+              echo "ERRO: Nenhum PHP encontrado no servidor!"
+              exit 1
+            fi
+
+            echo "✅ PHP encontrado: $PHP"
+            $PHP -v
+
             cd /mnt/home8/aataao/ifatseaarm26.aata.ao
 
-            composer dump-autoload --optimize --no-scripts
+            # Garantir que o .env existe
+            if [ ! -f .env ]; then
+              echo "ERRO: ficheiro .env não encontrado!"
+              exit 1
+            fi
 
-            php artisan config:cache
-            php artisan route:cache
-            php artisan view:cache
+            $PHP -r "require 'vendor/autoload.php';" 2>/dev/null || {
+              echo "ERRO: vendor/autoload.php não encontrado. Corre composer install no servidor primeiro."
+              exit 1
+            }
+
+            $PHP $(which composer || echo "/usr/local/bin/composer") dump-autoload --optimize --no-scripts
+
+            $PHP artisan config:clear
+            $PHP artisan config:cache
+            $PHP artisan route:clear
+            $PHP artisan route:cache
+            $PHP artisan view:clear
+            $PHP artisan view:cache
+
+            echo "🚀 Deploy concluído com sucesso!"

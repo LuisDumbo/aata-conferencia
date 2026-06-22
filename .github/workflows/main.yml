@@ -61,6 +61,10 @@ jobs:
             COMPOSER="/usr/local/bin/composer"
             APP_DIR="/mnt/home8/aataao/ifatseaarm26.aata.ao"
 
+            # Forçar o PHP correto para o Composer ignorar o alt-php82
+            export PHP_BIN="$PHP"
+            export COMPOSER_ALLOW_SUPERUSER=1
+
             echo "✅ PHP: $($PHP -v | head -1)"
             echo "✅ Composer: $COMPOSER"
 
@@ -69,7 +73,7 @@ jobs:
 
             # Verificar .env
             if [ ! -f .env ]; then
-              echo "❌ ERRO: .env não encontrado! Cria o ficheiro .env no servidor."
+              echo "❌ ERRO: .env não encontrado!"
               exit 1
             fi
             echo "✅ .env encontrado"
@@ -81,7 +85,8 @@ jobs:
             fi
             echo "✅ vendor/ encontrado"
 
-            $PHP $COMPOSER dump-autoload --optimize --no-scripts
+            # dump-autoload sem scripts do composer.json (evita alt-php82)
+            $PHP $COMPOSER dump-autoload --optimize --no-scripts --no-interaction
 
             $PHP artisan config:clear
             $PHP artisan config:cache

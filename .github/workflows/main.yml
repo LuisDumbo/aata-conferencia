@@ -54,37 +54,46 @@ jobs:
           script: |
             set -e
 
-            # Detectar automaticamente o PHP disponível no servidor
-            if command -v /usr/local/bin/php &> /dev/null; then
-              PHP="/usr/local/bin/php"
-            elif command -v /opt/cpanel/ea-php82/root/usr/bin/php &> /dev/null; then
-              PHP="/opt/cpanel/ea-php82/root/usr/bin/php"
-            elif command -v /opt/cpanel/ea-php81/root/usr/bin/php &> /dev/null; then
-              PHP="/opt/cpanel/ea-php81/root/usr/bin/php"
-            elif command -v php &> /dev/null; then
-              PHP="php"
+            PHP="/usr/local/bin/php"
+
+            echo "✅ PHP: $($PHP -v | head -1)"
+
+            # Localizar o composer
+            if command -v /usr/local/bin/composer &> /dev/null; then
+              COMPOSER="/usr/local/bin/composer"
+            elif command -v composer &> /dev/null; then
+              COMPOSER="composer"
+            elif [ -f "/usr/local/bin/composer.phar" ]; then
+              COMPOSER="$PHP /usr/local/bin/composer.phar"
+            elif [ -f "$HOME/bin/composer" ]; then
+              COMPOSER="$HOME/bin/composer"
             else
-              echo "ERRO: Nenhum PHP encontrado no servidor!"
+              echo "ERRO: Composer não encontrado!"
               exit 1
             fi
 
-            echo "✅ PHP encontrado: $PHP"
-            $PHP -v
+            echo "✅ Composer: $COMPOSER"
 
             cd /mnt/home8/aataao/ifatseaarm26.aata.ao
 
-            # Garantir que o .env existe
+            echo "📁 Diretório: $(pwd)"
+            echo "📋 Ficheiros: $(ls -la | head -20)"
+
+            # Verificar .env
             if [ ! -f .env ]; then
-              echo "ERRO: ficheiro .env não encontrado!"
-              exit 1
+              echo "⚠️  AVISO: .env não encontrado!"
+            else
+              echo "✅ .env encontrado"
             fi
 
-            $PHP -r "require 'vendor/autoload.php';" 2>/dev/null || {
-              echo "ERRO: vendor/autoload.php não encontrado. Corre composer install no servidor primeiro."
-              exit 1
-            }
-
-            $PHP $(which composer || echo "/usr/local/bin/composer") dump-autoload --optimize --no-scripts
+            # Verificar vendor
+            if [ ! -f vendor/autoload.php ]; then
+              echo "⚠️  vendor/ não encontrado. A correr composer install..."
+              $PHP $COMPOSER install --no-dev --optimize-autoloader --no-interaction
+            else
+              echo "✅ vendor/ encontrado"
+              $PHP $COMPOSER dump-autoload --optimize --no-scripts
+            fi
 
             $PHP artisan config:clear
             $PHP artisan config:cache

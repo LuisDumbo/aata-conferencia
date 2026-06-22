@@ -30,6 +30,9 @@ jobs:
       - name: Build frontend com Vite
         run: npm run build
 
+      - name: Instalar dependências PHP (Composer)
+        run: composer install --no-dev --optimize-autoloader --no-interaction
+
       - name: Enviar arquivos para o servidor
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -55,45 +58,30 @@ jobs:
             set -e
 
             PHP="/usr/local/bin/php"
+            COMPOSER="/usr/local/bin/composer"
+            APP_DIR="/mnt/home8/aataao/ifatseaarm26.aata.ao"
 
             echo "✅ PHP: $($PHP -v | head -1)"
-
-            # Localizar o composer
-            if command -v /usr/local/bin/composer &> /dev/null; then
-              COMPOSER="/usr/local/bin/composer"
-            elif command -v composer &> /dev/null; then
-              COMPOSER="composer"
-            elif [ -f "/usr/local/bin/composer.phar" ]; then
-              COMPOSER="$PHP /usr/local/bin/composer.phar"
-            elif [ -f "$HOME/bin/composer" ]; then
-              COMPOSER="$HOME/bin/composer"
-            else
-              echo "ERRO: Composer não encontrado!"
-              exit 1
-            fi
-
             echo "✅ Composer: $COMPOSER"
 
-            cd /mnt/home8/aataao/ifatseaarm26.aata.ao
-
+            cd $APP_DIR
             echo "📁 Diretório: $(pwd)"
-            echo "📋 Ficheiros: $(ls -la | head -20)"
 
             # Verificar .env
             if [ ! -f .env ]; then
-              echo "⚠️  AVISO: .env não encontrado!"
-            else
-              echo "✅ .env encontrado"
+              echo "❌ ERRO: .env não encontrado! Cria o ficheiro .env no servidor."
+              exit 1
             fi
+            echo "✅ .env encontrado"
 
             # Verificar vendor
             if [ ! -f vendor/autoload.php ]; then
-              echo "⚠️  vendor/ não encontrado. A correr composer install..."
-              $PHP $COMPOSER install --no-dev --optimize-autoloader --no-interaction
-            else
-              echo "✅ vendor/ encontrado"
-              $PHP $COMPOSER dump-autoload --optimize --no-scripts
+              echo "❌ ERRO: vendor/ não encontrado!"
+              exit 1
             fi
+            echo "✅ vendor/ encontrado"
+
+            $PHP $COMPOSER dump-autoload --optimize --no-scripts
 
             $PHP artisan config:clear
             $PHP artisan config:cache

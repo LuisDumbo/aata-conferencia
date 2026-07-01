@@ -1,4 +1,4 @@
-<section class="relative h-[400px] bg-cover bg-center"
+<section class="relative h-[400px] bg-cover bg-center overflow-hidden"
     style="background-image:url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=2400&q=80');">
 
     <!-- Overlay escuro -->

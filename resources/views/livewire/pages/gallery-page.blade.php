@@ -30,34 +30,6 @@
             const list = this.type === 'photo' ? this.photos : this.videos;
             this.current = (this.current + 1) % list.length;
             this.$nextTick(() => { const v = document.getElementById('lb-video'); if(v) v.load(); });
-        },
-
-        /* drag-to-scroll */
-        _drag: { active: false, moved: false, startX: 0, scrollLeft: 0 },
-
-        dragStart(e, ref) {
-            const el = this.$refs[ref];
-            this._drag.active    = true;
-            this._drag.moved     = false;
-            this._drag.startX    = e.pageX - el.getBoundingClientRect().left;
-            this._drag.scrollLeft = el.scrollLeft;
-            el.style.cursor = 'grabbing';
-        },
-        dragMove(e, ref) {
-            if (!this._drag.active) return;
-            const el   = this.$refs[ref];
-            const x    = e.pageX - el.getBoundingClientRect().left;
-            const walk = x - this._drag.startX;
-            if (Math.abs(walk) > 4) this._drag.moved = true;
-            el.scrollLeft = this._drag.scrollLeft - walk;
-        },
-        dragEnd(ref) {
-            if (!this._drag.active) return;
-            this._drag.active = false;
-            this.$refs[ref].style.cursor = 'grab';
-        },
-        canOpen() {
-            return !this._drag.moved;
         }
     }"
     @keydown.escape.window="close()"
@@ -89,15 +61,17 @@
                 </div>
 
                 {{-- scroll arrows --}}
-                <div class="flex items-center gap-2">
-                    <button @click="$refs.photosRow.scrollBy({ left: -300, behavior: 'smooth' })"
-                        class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 text-slate-600 hover:bg-slate-100 transition">
+                <div class="relative z-10 flex items-center gap-2">
+                    <button type="button"
+                        onclick="document.getElementById('photos-row').scrollLeft -= 300"
+                        class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 text-slate-600 hover:bg-slate-100 transition cursor-pointer">
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                         </svg>
                     </button>
-                    <button @click="$refs.photosRow.scrollBy({ left: 300, behavior: 'smooth' })"
-                        class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 text-slate-600 hover:bg-slate-100 transition">
+                    <button type="button"
+                        onclick="document.getElementById('photos-row').scrollLeft += 300"
+                        class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 text-slate-600 hover:bg-slate-100 transition cursor-pointer">
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -107,12 +81,8 @@
 
             {{-- scroll row --}}
             <div
-                x-ref="photosRow"
-                @mousedown="dragStart($event, 'photosRow')"
-                @mousemove="dragMove($event, 'photosRow')"
-                @mouseup="dragEnd('photosRow')"
-                @mouseleave="dragEnd('photosRow')"
-                class="flex gap-4 overflow-x-auto px-4 pb-4 select-none
+                id="photos-row"
+                class="gallery-scroll-row flex gap-4 overflow-x-auto px-4 pb-4 select-none
                        [&::-webkit-scrollbar]:h-1.5
                        [&::-webkit-scrollbar-track]:bg-slate-100
                        [&::-webkit-scrollbar-thumb]:bg-slate-300
@@ -123,20 +93,20 @@
                 @foreach($photos as $i => $photo)
                 <button
                     type="button"
-                    @click="if(canOpen()) openPhoto({{ $i }})"
-                    @mousedown.stop
+                    data-gallery-type="photo"
+                    data-gallery-index="{{ $i }}"
                     class="group relative flex-none w-64 h-64 sm:w-72 sm:h-72 overflow-hidden rounded-2xl bg-slate-100 shadow-sm
                            hover:shadow-xl transition-all duration-300 hover:-translate-y-1
-                           focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                           focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
                 >
                     <img
                         src="{{ asset($photo['src']) }}"
                         alt="{{ $photo['alt'] }}"
                         loading="lazy"
                         decoding="async"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 pointer-events-none"
                     >
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center pointer-events-none">
                         <svg class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg"
                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -162,15 +132,17 @@
                     <span class="text-sm text-slate-400 font-medium">({{ count($videos) }})</span>
                 </div>
 
-                <div class="flex items-center gap-2">
-                    <button @click="$refs.videosRow.scrollBy({ left: -300, behavior: 'smooth' })"
-                        class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 text-slate-600 hover:bg-slate-100 transition">
+                <div class="relative z-10 flex items-center gap-2">
+                    <button type="button"
+                        onclick="document.getElementById('videos-row').scrollLeft -= 300"
+                        class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 text-slate-600 hover:bg-slate-100 transition cursor-pointer">
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                         </svg>
                     </button>
-                    <button @click="$refs.videosRow.scrollBy({ left: 300, behavior: 'smooth' })"
-                        class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 text-slate-600 hover:bg-slate-100 transition">
+                    <button type="button"
+                        onclick="document.getElementById('videos-row').scrollLeft += 300"
+                        class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 text-slate-600 hover:bg-slate-100 transition cursor-pointer">
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -179,12 +151,8 @@
             </div>
 
             <div
-                x-ref="videosRow"
-                @mousedown="dragStart($event, 'videosRow')"
-                @mousemove="dragMove($event, 'videosRow')"
-                @mouseup="dragEnd('videosRow')"
-                @mouseleave="dragEnd('videosRow')"
-                class="flex gap-4 overflow-x-auto px-4 pb-4 select-none
+                id="videos-row"
+                class="gallery-scroll-row flex gap-4 overflow-x-auto px-4 pb-4 select-none
                        [&::-webkit-scrollbar]:h-1.5
                        [&::-webkit-scrollbar-track]:bg-slate-100
                        [&::-webkit-scrollbar-thumb]:bg-slate-300
@@ -195,24 +163,24 @@
                 @foreach($videos as $i => $video)
                 <button
                     type="button"
-                    @click="if(canOpen()) openVideo({{ $i }})"
-                    @mousedown.stop
+                    data-gallery-type="video"
+                    data-gallery-index="{{ $i }}"
                     class="group relative flex-none w-72 sm:w-80 aspect-video overflow-hidden rounded-2xl bg-slate-800
                            shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1
-                           focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                           focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
                 >
                     {{-- thumbnail --}}
                     <video
                         src="{{ asset($video['src']) }}#t=0.5"
-                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-80 group-hover:opacity-100"
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-80 group-hover:opacity-100 pointer-events-none"
                         preload="metadata"
                         muted
                         playsinline
                     ></video>
-                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-300"></div>
+                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-300 pointer-events-none"></div>
 
                     {{-- play button --}}
-                    <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
                         <div class="w-14 h-14 rounded-full bg-white/90 group-hover:bg-white flex items-center justify-center
                                     shadow-xl transition-all duration-300 group-hover:scale-110">
                             <svg class="w-6 h-6 text-indigo-700 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
@@ -231,82 +199,148 @@
     {{-- ══════════════════════════════════════════════════════════════ --}}
     <div
         x-show="lightbox"
-        x-cloak
-        x-transition:enter="transition ease-out duration-250"
+        x-transition:enter="transition ease-out duration-200"
         x-transition:enter-start="opacity-0"
         x-transition:enter-end="opacity-100"
         x-transition:leave="transition ease-in duration-150"
         x-transition:leave-start="opacity-100"
         x-transition:leave-end="opacity-0"
-        class="fixed inset-0 z-[9999] bg-slate-900/80 backdrop-blur-[2px]"
-        @click.self="close()"
+        class="fixed inset-0 z-[9999] bg-slate-900/85 backdrop-blur-[2px] flex flex-col"
+        style="display:none"
     >
-        {{-- Close --}}
-        <button @click="close()"
-            class="absolute top-5 right-5 z-20 w-11 h-11 flex items-center justify-center rounded-full bg-white text-slate-800 shadow-lg hover:bg-slate-100 transition text-lg font-bold">
-            ✕
-        </button>
+        {{-- Top bar: close --}}
+        <div class="flex-none flex items-center justify-end px-4 py-3">
+            <button @click="close()"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-slate-800 shadow-lg hover:bg-white transition text-base font-bold cursor-pointer">
+                ✕
+            </button>
+        </div>
 
-        {{-- Layout: prev | media | next --}}
-        <div class="absolute inset-0 flex items-center justify-between px-4 sm:px-8 pointer-events-none">
+        {{-- Media area (flex-1 so it fills remaining height) --}}
+        <div class="flex-1 relative flex items-center justify-center overflow-hidden px-14 sm:px-20"
+             @click.self="close()">
 
-            {{-- Prev button --}}
-            <button @click="prev()" class="pointer-events-auto flex-none w-11 h-11 flex items-center justify-center rounded-full bg-white text-slate-800 shadow-lg hover:bg-slate-100 transition">
+            {{-- Prev --}}
+            <button @click="prev()"
+                class="absolute left-2 sm:left-4 z-10 w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-full bg-white/90 text-slate-800 shadow-lg hover:bg-white transition cursor-pointer">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
                 </svg>
             </button>
 
-            {{-- Media container --}}
-            <div class="pointer-events-auto flex-1 flex flex-col items-center gap-3 px-3 sm:px-6 max-h-screen py-16">
+            {{-- Photo --}}
+            <template x-if="type === 'photo'">
+                <img
+                    :src="'/'+photos[current].src"
+                    :alt="photos[current].alt"
+                    class="max-h-full max-w-full rounded-xl shadow-2xl object-contain"
+                    x-transition:enter="transition ease-out duration-200"
+                    x-transition:enter-start="opacity-0 scale-95"
+                    x-transition:enter-end="opacity-100 scale-100"
+                >
+            </template>
 
-                <template x-if="type === 'photo'">
-                    <div class="flex flex-col items-center gap-3 w-full h-full">
-                        <img
-                            :src="'/'+photos[current].src"
-                            :alt="photos[current].alt"
-                            class="max-h-[82vh] max-w-full rounded-2xl shadow-2xl object-contain"
-                            x-transition:enter="transition ease-out duration-200"
-                            x-transition:enter-start="opacity-0 scale-95"
-                            x-transition:enter-end="opacity-100 scale-100"
-                        >
-                    </div>
-                </template>
+            {{-- Video --}}
+            <template x-if="type === 'video'">
+                <video
+                    id="lb-video"
+                    :src="'/'+videos[current].src"
+                    controls
+                    autoplay
+                    class="max-h-full max-w-full rounded-xl shadow-2xl bg-black"
+                    x-transition:enter="transition ease-out duration-200"
+                    x-transition:enter-start="opacity-0 scale-95"
+                    x-transition:enter-end="opacity-100 scale-100"
+                ></video>
+            </template>
 
-                <template x-if="type === 'video'">
-                    <div class="w-full flex flex-col items-center gap-3">
-                        <video
-                            id="lb-video"
-                            :src="'/'+videos[current].src"
-                            controls
-                            autoplay
-                            class="w-full max-h-[82vh] rounded-2xl shadow-2xl bg-black"
-                            x-transition:enter="transition ease-out duration-200"
-                            x-transition:enter-start="opacity-0 scale-95"
-                            x-transition:enter-end="opacity-100 scale-100"
-                        ></video>
-                    </div>
-                </template>
-
-                {{-- Dots --}}
-                <div class="flex items-center gap-1.5">
-                    <template x-for="(item, i) in (type === 'photo' ? photos : videos)" :key="i">
-                        <button
-                            @click="current = i"
-                            :class="i === current ? 'bg-white w-4' : 'bg-white/40 w-1.5'"
-                            class="h-1.5 rounded-full transition-all duration-300 pointer-events-auto"
-                        ></button>
-                    </template>
-                </div>
-            </div>
-
-            {{-- Next button --}}
-            <button @click="next()" class="pointer-events-auto flex-none w-11 h-11 flex items-center justify-center rounded-full bg-white text-slate-800 shadow-lg hover:bg-slate-100 transition">
+            {{-- Next --}}
+            <button @click="next()"
+                class="absolute right-2 sm:right-4 z-10 w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-full bg-white/90 text-slate-800 shadow-lg hover:bg-white transition cursor-pointer">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
                 </svg>
             </button>
         </div>
+
+        {{-- Bottom bar: dots --}}
+        <div class="flex-none flex items-center justify-center gap-1.5 px-4 py-3">
+            <template x-for="(item, i) in (type === 'photo' ? photos : videos)" :key="i">
+                <button
+                    @click="current = i"
+                    :class="i === current ? 'bg-white w-4' : 'bg-white/40 w-1.5'"
+                    class="h-1.5 rounded-full transition-all duration-300 cursor-pointer"
+                ></button>
+            </template>
+        </div>
     </div>
 
 </div>
+
+<script>
+(function () {
+    var dragged = false;
+
+    function initDragScroll(el) {
+        var active = false;
+        var startX = 0;
+        var startScrollLeft = 0;
+
+        el.addEventListener('mousedown', function (e) {
+            if (e.button !== 0) return;
+            active = true;
+            dragged = false;
+            startX = e.pageX - el.getBoundingClientRect().left;
+            startScrollLeft = el.scrollLeft;
+            el.style.cursor = 'grabbing';
+            e.preventDefault();
+        });
+
+        window.addEventListener('mousemove', function (e) {
+            if (!active) return;
+            var x = e.pageX - el.getBoundingClientRect().left;
+            var walk = x - startX;
+            if (Math.abs(walk) > 4) dragged = true;
+            el.scrollLeft = startScrollLeft - walk;
+        });
+
+        window.addEventListener('mouseup', function () {
+            if (!active) return;
+            active = false;
+            el.style.cursor = 'grab';
+        });
+
+        el.addEventListener('mouseleave', function () {
+            if (!active) return;
+            active = false;
+            el.style.cursor = 'grab';
+        });
+    }
+
+    function initCardClicks(el, alpineRoot) {
+        el.addEventListener('click', function (e) {
+            if (dragged) return;
+            var btn = e.target.closest('[data-gallery-type]');
+            if (!btn) return;
+            var type  = btn.dataset.galleryType;
+            var index = parseInt(btn.dataset.galleryIndex, 10);
+            var comp  = Alpine.$data(alpineRoot);
+            if (type === 'photo') comp.openPhoto(index);
+            else comp.openVideo(index);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var photosRow = document.getElementById('photos-row');
+        var videosRow = document.getElementById('videos-row');
+        var alpineRoot = photosRow ? photosRow.closest('[x-data]') : null;
+
+        if (photosRow) initDragScroll(photosRow);
+        if (videosRow) initDragScroll(videosRow);
+        if (alpineRoot) {
+            if (photosRow) initCardClicks(photosRow, alpineRoot);
+            if (videosRow) initCardClicks(videosRow, alpineRoot);
+        }
+    });
+}());
+</script>

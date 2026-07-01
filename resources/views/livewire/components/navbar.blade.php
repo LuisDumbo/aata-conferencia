@@ -84,11 +84,6 @@
                                     {{ t('nav.countries') }}
                                 </a>
 
-                                <a href="{{ route('gallery') }}" @click="dropdownOpen = false"
-                                    class="block px-4 py-2 text-sm {{ request()->routeIs('gallery') ? 'bg-indigo-50 text-indigo-700' : 'text-slate-700 hover:bg-slate-50 hover:text-indigo-700' }}">
-                                    {{ t('nav.gallery') }}
-                                </a>
-
                                 <hr class="my-1 border-slate-100">
 
                                 <a href="{{ route('biografia.avelino') }}" @click="dropdownOpen = false"
@@ -106,6 +101,12 @@
                     </a>
                 </nav>
 
+                <!-- GALERIA CTA -->
+                <a href="{{ route('gallery') }}"
+                    class="bg-indigo-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-indigo-800">
+                    {{ t('nav.gallery') }}
+                </a>
+
                 <!-- LANGUAGE TOGGLE -->
                 <div class="flex items-center rounded-lg border border-slate-200 overflow-hidden text-xs font-bold">
                     <a href="{{ route('lang.switch', 'pt') }}"
@@ -118,11 +119,6 @@
                     </a>
                 </div>
 
-                <!-- CTA -->
-                <a href="{{ route('registration') }}"
-                    class="bg-indigo-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-indigo-800">
-                    {{ t('nav.registration') }}
-                </a>
             </div>
 
             <!-- MOBILE BUTTON -->
@@ -173,15 +169,19 @@
                             class="{{ request()->routeIs('hotels') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.hotels') }}</a>
                         <a @click="open=false; mobileDropdownOpen=false" href="{{ route('countries') }}"
                             class="{{ request()->routeIs('countries') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.countries') }}</a>
-                        <a @click="open=false; mobileDropdownOpen=false" href="{{ route('gallery') }}"
-                            class="{{ request()->routeIs('gallery') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.gallery') }}</a>
-                        <a @click="open=false; mobileDropdownOpen=false" href="{{ route('biografia.avelino') }}"
+<a @click="open=false; mobileDropdownOpen=false" href="{{ route('biografia.avelino') }}"
                             class="{{ request()->routeIs('biografia.avelino') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">Biografia – Avelino Dias</a>
                     </div>
                 </div>
 
                 <a @click="open=false" href="{{ route('contact') }}"
                     class="{{ request()->routeIs('contact') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.contact') }}</a>
+
+                <!-- MOBILE GALERIA CTA -->
+                <a @click="open=false" href="{{ route('gallery') }}"
+                    class="mt-2 bg-indigo-700 text-white px-5 py-2.5 rounded-lg text-center font-semibold">
+                    {{ t('nav.gallery') }}
+                </a>
 
                 <!-- MOBILE LANGUAGE TOGGLE -->
                 <div class="flex items-center gap-2 pt-1">
@@ -198,10 +198,6 @@
                     </div>
                 </div>
 
-                <a @click="open=false" href="{{ route('registration') }}"
-                    class="mt-2 bg-indigo-700 text-white px-5 py-2.5 rounded-lg text-center font-semibold">
-                    {{ t('nav.registration') }}
-                </a>
             </div>
         </div>
 

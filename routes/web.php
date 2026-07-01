@@ -4,6 +4,7 @@ use App\Livewire\Home;
 use App\Exports\InscricoesExport;
 use App\Livewire\Pages\AboutPage;
 use App\Livewire\Pages\AvelinoBiografiaPage;
+use App\Livewire\Pages\GalleryPage;
 use App\Livewire\Pages\ContactPage;
 use App\Livewire\Pages\CountriesPage;
 use App\Livewire\Pages\ModeradoresPage;
@@ -42,6 +43,7 @@ Route::get('/parceiros', PartnersPage::class)->name('partners');
 Route::get('/paises-isentos', CountriesPage::class)->name('countries');
 Route::get('/inscricao', RegistrationPage::class)->name('registration');
 Route::get('/biografia/avelino-dias', AvelinoBiografiaPage::class)->name('biografia.avelino');
+Route::get('/galeria', GalleryPage::class)->name('gallery');
 
 Route::get('/admin/inscricoes/export', function () {
     return Excel::download(new InscricoesExport, 'inscricoes-' . now()->format('Y-m-d') . '.xlsx');

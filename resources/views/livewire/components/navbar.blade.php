@@ -35,7 +35,7 @@
                     <div class="relative">
 
                         <button type="button" @click="dropdownOpen = !dropdownOpen"
-                            class="flex items-center gap-1 py-2 {{ request()->routeIs('schedule') || request()->routeIs('speakers') || request()->routeIs('speakers.show') || request()->routeIs('partners') || request()->routeIs('hotels') || request()->routeIs('countries') || request()->routeIs('moderadores') || request()->routeIs('moderadores.show') || request()->routeIs('salas') || request()->routeIs('salas.show') || request()->routeIs('biografia.avelino') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
+                            class="flex items-center gap-1 py-2 {{ request()->routeIs('schedule') || request()->routeIs('speakers') || request()->routeIs('speakers.show') || request()->routeIs('partners') || request()->routeIs('hotels') || request()->routeIs('countries') || request()->routeIs('moderadores') || request()->routeIs('moderadores.show') || request()->routeIs('salas') || request()->routeIs('salas.show') || request()->routeIs('biografia.avelino') || request()->routeIs('gallery') ? 'text-indigo-700' : 'text-slate-700 hover:text-slate-950' }}">
                             {{ t('nav.event') }}
                             <svg class="w-4 h-4 transition" :class="dropdownOpen ? 'rotate-180' : ''" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -82,6 +82,11 @@
                                 <a href="{{ route('countries') }}" @click="dropdownOpen = false"
                                     class="block px-4 py-2 text-sm {{ request()->routeIs('countries') ? 'bg-indigo-50 text-indigo-700' : 'text-slate-700 hover:bg-slate-50 hover:text-indigo-700' }}">
                                     {{ t('nav.countries') }}
+                                </a>
+
+                                <a href="{{ route('gallery') }}" @click="dropdownOpen = false"
+                                    class="block px-4 py-2 text-sm {{ request()->routeIs('gallery') ? 'bg-indigo-50 text-indigo-700' : 'text-slate-700 hover:bg-slate-50 hover:text-indigo-700' }}">
+                                    {{ t('nav.gallery') }}
                                 </a>
 
                                 <hr class="my-1 border-slate-100">
@@ -147,7 +152,7 @@
                 <!-- MOBILE DROPDOWN -->
                 <div>
                     <button @click="mobileDropdownOpen = !mobileDropdownOpen"
-                        class="flex justify-between w-full {{ request()->routeIs('schedule') || request()->routeIs('speakers') || request()->routeIs('speakers.show') || request()->routeIs('partners') || request()->routeIs('hotels') || request()->routeIs('countries') || request()->routeIs('moderadores') || request()->routeIs('moderadores.show') || request()->routeIs('salas') || request()->routeIs('salas.show') || request()->routeIs('biografia.avelino') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">
+                        class="flex justify-between w-full {{ request()->routeIs('schedule') || request()->routeIs('speakers') || request()->routeIs('speakers.show') || request()->routeIs('partners') || request()->routeIs('hotels') || request()->routeIs('countries') || request()->routeIs('moderadores') || request()->routeIs('moderadores.show') || request()->routeIs('salas') || request()->routeIs('salas.show') || request()->routeIs('biografia.avelino') || request()->routeIs('gallery') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">
                         {{ t('nav.event') }}
                         <span x-text="mobileDropdownOpen ? '−' : '+'"></span>
                     </button>
@@ -168,6 +173,8 @@
                             class="{{ request()->routeIs('hotels') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.hotels') }}</a>
                         <a @click="open=false; mobileDropdownOpen=false" href="{{ route('countries') }}"
                             class="{{ request()->routeIs('countries') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.countries') }}</a>
+                        <a @click="open=false; mobileDropdownOpen=false" href="{{ route('gallery') }}"
+                            class="{{ request()->routeIs('gallery') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">{{ t('nav.gallery') }}</a>
                         <a @click="open=false; mobileDropdownOpen=false" href="{{ route('biografia.avelino') }}"
                             class="{{ request()->routeIs('biografia.avelino') ? 'text-indigo-700' : 'text-slate-700 hover:text-indigo-700' }}">Biografia – Avelino Dias</a>
                     </div>

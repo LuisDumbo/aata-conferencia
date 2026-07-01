@@ -14,6 +14,7 @@ return [
         'countries'    => 'Países Isentos de Visto',
         'contact'      => 'CONTACTO',
         'registration'  => 'INSCRIÇÃO',
+        'gallery'       => 'Galeria',
         'brand_title'   => 'CONFERÊNCIA INTERNACIONAL',
         'brand_subtitle' => 'Website Oficial do Evento',
     ],
@@ -265,6 +266,15 @@ return [
         'become_title'  => 'Torne-se Parceiro',
         'become_text'   => 'Junte-se a nós e apoie a maior conferência de segurança da aviação em África. Contacte-nos para saber mais sobre as oportunidades de patrocínio.',
         'become_cta'    => 'Contactar',
+    ],
+
+    'galeria' => [
+        'page_title'    => 'Galeria',
+        'page_subtitle' => 'Explore momentos em fotos e vídeos da 16.ª Reunião Regional África da IFATSEA.',
+        'photos_label'  => 'Fotos',
+        'videos_label'  => 'Vídeos',
+        'video1_title'  => 'Apresentação Oficial do Evento',
+        'video2_title'  => 'Apresentação dos Convidados',
     ],
 
     'video_apresentacao' => [

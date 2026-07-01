@@ -14,6 +14,7 @@ return [
         'countries'    => 'Visa-Free Countries',
         'contact'      => 'CONTACT',
         'registration'  => 'REGISTER',
+        'gallery'       => 'Gallery',
         'brand_title'   => 'INTERNATIONAL CONFERENCE',
         'brand_subtitle' => 'Official Event Website',
     ],
@@ -265,6 +266,15 @@ return [
         'become_title'  => 'Become a Partner',
         'become_text'   => 'Join us and support the largest aviation safety conference in Africa. Contact us to learn more about sponsorship opportunities.',
         'become_cta'    => 'Contact Us',
+    ],
+
+    'galeria' => [
+        'page_title'    => 'Gallery',
+        'page_subtitle' => 'Explore moments in photos and videos from the 16th IFATSEA Africa Regional Meeting.',
+        'photos_label'  => 'Photos',
+        'videos_label'  => 'Videos',
+        'video1_title'  => 'Official Event Presentation',
+        'video2_title'  => 'Guest Presentation',
     ],
 
     'video_apresentacao' => [
